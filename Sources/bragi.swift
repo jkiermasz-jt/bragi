@@ -11,9 +11,13 @@ struct Bragi: ParsableCommand {
     @Option(name: .shortAndLong, help: "Path to .lproj directory")
     var path: String
     
+    @Option(name: .shortAndLong, help: "Path where generated Swift file should be created")
+    var output: String
+    
     mutating func run() throws {
         let fileManager = FileManager.default
         let lprojPath = (path as NSString).expandingTildeInPath
+        let outputPath = (output as NSString).expandingTildeInPath
         
         var isDirectory: ObjCBool = false
         guard fileManager.fileExists(atPath: lprojPath, isDirectory: &isDirectory),
@@ -24,12 +28,10 @@ struct Bragi: ParsableCommand {
         
         let parser = LprojParser()
         let translations = try parser.parseDirectory(at: lprojPath)
-        print("\nTranslations found in \(lprojPath):")
-        translations.forEach { translation in
-            switch translation {
-            case .singular(let data):
-                print("Key: \"\(data.key)\" = \"\(data.value)\"")
-            }
-        }
+        
+        let generator = OutputGenerator()
+        try generator.generate(translations: translations, to: outputPath)
+        
+        print("Successfully generated localizations to: \(outputPath)")
     }
 }
