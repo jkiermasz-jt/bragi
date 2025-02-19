@@ -115,7 +115,7 @@ enum L10n {
             }
         }
     }
-    enum Activateaccount {
+    enum ActivateAccount {
         static let subtitle = tr("Localizable", "activateAccount_subtitle", fallback: "Enter your email and we’ll send you an email to activate your account.")
         static let title = tr("Localizable", "activateAccount_title", fallback: "Activate your account")
     }
@@ -130,21 +130,21 @@ enum L10n {
         }
     }
     static let appName = tr("Localizable", "appName", fallback: "J&T Business")
-    enum Approvehours {
+    enum ApproveHours {
         static let body = tr("Localizable", "approveHours_body", fallback: "Confirm that these details are correct before approving hours.")
         enum Button {
             static let approve = tr("Localizable", "approveHours_button_approve", fallback: "Yes, approve")
         }
         static let title = tr("Localizable", "approveHours_title", fallback: "Approve hours?")
     }
-    enum Assignsupervisor {
+    enum AssignSupervisor {
         enum Empty {
             static let description = tr("Localizable", "assignSupervisor_empty_description", fallback: "Contact your Job&Talent account manager to create supervisors for your workplace.")
             static let title = tr("Localizable", "assignSupervisor_empty_title", fallback: "No supervisors created yet")
         }
         static let title = tr("Localizable", "assignSupervisor_title", fallback: "Assign supervisor")
     }
-    enum Assignworkers {
+    enum AssignWorkers {
         enum Operation {
             enum In {
                 enum Progress {
@@ -170,7 +170,7 @@ enum L10n {
         enum Attendee {
             static let empty = tr("Localizable", "attendance_attendee_empty", fallback: "It looks like no one attended. Make sure everyone clocked in.")
         }
-        enum Attendeelist {
+        enum AttendeeList {
             static let empty = tr("Localizable", "attendance_attendeeList_empty", fallback: "No one turned up at work today.")
         }
         enum Chart {
@@ -186,17 +186,17 @@ enum L10n {
             static let attended = tr("Localizable", "attendance_kpi_attended", fallback: "Attended")
             static let noshows = tr("Localizable", "attendance_kpi_noshows", fallback: "No shows")
         }
-        enum Noshifts {
+        enum NoShifts {
             static let notToday = tr("Localizable", "attendance_noShifts_notToday", fallback: "There were no clockings on this day")
             static let today = tr("Localizable", "attendance_noShifts_today", fallback: "There are no clockings today")
         }
-        enum Noshow {
+        enum NoShow {
             static let empty = tr("Localizable", "attendance_noShow_empty", fallback: "Good job. Everyone attended. ")
         }
-        enum Noshowlist {
+        enum NoShowList {
             static let empty = tr("Localizable", "attendance_noShowList_empty", fallback: "Everyone turned up today.")
         }
-        enum Shiftlist {
+        enum ShiftList {
             static func header(_ p0: Int64) -> String {
                 tr("Localizable", "attendance_shiftList_header", p0, fallback: "%d shifts")
             }
@@ -229,7 +229,7 @@ enum L10n {
             }
         }
     }
-    enum Bulkapprove {
+    enum BulkApprove {
         enum Error {
             static let description = tr("Localizable", "bulkApprove_error_description", fallback: "We could not approve hours for %1$d people. 
 Try again?")
@@ -244,12 +244,12 @@ Try again?")
         static let cancel = tr("Localizable", "button_cancel", fallback: "Cancel")
         static let done = tr("Localizable", "button_done", fallback: "Done")
     }
-    enum Clockingdetail {
+    enum ClockingDetail {
         enum Field {
             static let break = tr("Localizable", "clockingDetail_field_break", fallback: "Break")
         }
     }
-    enum Clockingdetails {
+    enum ClockingDetails {
         enum Break {
             enum Bottomsheet {
                 enum Button {
@@ -265,8 +265,8 @@ Try again?")
             }
         }
         enum Geoattendance {
-            enum Bottomsheet {
-                enum Infohint {
+            enum BottomSheet {
+                enum InfoHint {
                     static let available = tr("Localizable", "clockingDetails_geoattendance_bottomSheet_infoHint_available", fallback: "This person was on site, but they may have clocked in elsewhere.")
                     static let missingHours = tr("Localizable", "clockingDetails_geoattendance_bottomSheet_infoHint_missingHours", fallback: "This person was on site, but their times are missing.")
                 }
@@ -278,7 +278,7 @@ Try again?")
         enum Geolocation {
             static let available = tr("Localizable", "clockingDetails_geolocation_available", fallback: "Confirmed on site with geolocation. ")
             static let finishonsite = tr("Localizable", "clockingDetails_geolocation_finishonsite", fallback: "Finish time confirmed with geolocation.")
-            enum Noshow {
+            enum NoShow {
                 static let confirmation = tr("Localizable", "clockingDetails_geolocation_noShow_confirmation", fallback: "Geolocation shows that this person was on site for this shift. Be certain before you confirm.")
             }
             static let notAvailable = tr("Localizable", "clockingDetails_geolocation_notAvailable", fallback: "Geolocation not available.")
@@ -297,12 +297,12 @@ Try again?")
             }
         }
     }
-    enum Clockingshift {
+    enum ClockingShift {
         enum Label {
             static let ended = tr("Localizable", "clockingShift_label_ended", fallback: "Review")
         }
     }
-    enum Clockingshiftdetails {
+    enum ClockingShiftDetails {
         enum Actions {
             static let approveHours = tr("Localizable", "clockingShiftDetails_actions_approveHours", fallback: "Approve hours")
         }
@@ -310,7 +310,7 @@ Try again?")
             static let chip = tr("Localizable", "clockingShiftDetails_approved_chip", fallback: "Approved")
             static let title = tr("Localizable", "clockingShiftDetails_approved_title", fallback: "%1$d people")
         }
-        enum Bulkcomplete {
+        enum BulkComplete {
             static let selectedPeople = tr("Localizable", "clockingShiftDetails_bulkComplete_selectedPeople", fallback: "%1$d selected")
         }
         enum Button {
@@ -319,7 +319,7 @@ Try again?")
         enum Date {
             static let info = tr("Localizable", "clockingShiftDetails_date_info", fallback: "Started on %s")
         }
-        enum Editedhours {
+        enum EditedHours {
             enum Single {
                 static func data(_ p0: String) -> String {
                     tr("Localizable", "clockingShiftDetails_editedHours_single_data", p0, fallback: "Times edited, was %@")
@@ -330,15 +330,15 @@ Try again?")
             static let chip = tr("Localizable", "clockingShiftDetails_ended_chip", fallback: "Review")
             static let title = tr("Localizable", "clockingShiftDetails_ended_title", fallback: "%1$d people")
         }
-        enum Hoursapprovedandratingsaved {
+        enum HoursApprovedAndRatingSaved {
             static let description = tr("Localizable", "clockingShiftDetails_hoursApprovedAndRatingSaved_description", fallback: "Recognize this person’s work with a star rating. ")
             static let title = tr("Localizable", "clockingShiftDetails_hoursApprovedAndRatingSaved_title", fallback: "Hours approved and rating saved")
         }
         enum Incomplete {
             static let chip = tr("Localizable", "clockingShiftDetails_incomplete_chip", fallback: "Incomplete")
         }
-        enum Inputhours {
-            enum Autofill {
+        enum InputHours {
+            enum AutoFill {
                 static let startAndFinishTimes = tr("Localizable", "clockingShiftDetails_inputHours_autoFill_startAndFinishTimes", fallback: "Add scheduled times")
                 static let startTime = tr("Localizable", "clockingShiftDetails_inputHours_autoFill_startTime", fallback: "Add scheduled time")
             }
@@ -354,18 +354,18 @@ Try again?")
                 }
             }
         }
-        enum Noshow {
-            enum Changejustification {
+        enum NoShow {
+            enum ChangeJustification {
                 enum Error {
                     static let description = tr("Localizable", "clockingShiftDetails_noShow_changeJustification_error_description", fallback: "We couldn't save your selection.")
                 }
             }
-            enum Confirmjustified {
+            enum ConfirmJustified {
                 enum Snackbar {
                     static let description = tr("Localizable", "clockingShiftDetails_noShow_confirmJustified_snackbar_description", fallback: "Absence marked as justified.")
                 }
             }
-            enum Confirmnoshow {
+            enum ConfirmNoShow {
                 static let description = tr("Localizable", "clockingShiftDetails_noShow_confirmNoShow_description", fallback: "Once you confirm, this person will be marked as a no show and then notified.")
                 enum Error {
                     enum Snackbar {
@@ -379,12 +379,12 @@ Please try again.")
                 }
                 static let title = tr("Localizable", "clockingShiftDetails_noShow_confirmNoShow_title", fallback: "Confirm this no show?")
             }
-            enum Confirmnotjustified {
+            enum ConfirmNotJustified {
                 enum Snackbar {
                     static let description = tr("Localizable", "clockingShiftDetails_noShow_confirmNotJustified_snackbar_description", fallback: "Absence marked as not justified.")
                 }
             }
-            enum Confirmshow {
+            enum ConfirmShow {
                 static let description = tr("Localizable", "clockingShiftDetails_noShow_confirmShow_description", fallback: "Once you undo this no show, this person’s hours can be approved and their performance rated.")
                 enum Error {
                     enum Snackbar {
@@ -402,7 +402,7 @@ Please try again.")
                 static let description = tr("Localizable", "clockingShiftDetails_noShow_justified_description", fallback: "Sudden illness, emergency or other suitable reason provided.")
                 static let title = tr("Localizable", "clockingShiftDetails_noShow_justified_title", fallback: "Justified")
             }
-            enum Notjustified {
+            enum NotJustified {
                 static let description = tr("Localizable", "clockingShiftDetails_noShow_notJustified_description", fallback: "Did not notify me or provide a suitable reason.")
                 static let title = tr("Localizable", "clockingShiftDetails_noShow_notJustified_title", fallback: "Not justified")
             }
@@ -423,25 +423,25 @@ Please try again.")
                 static let title = tr("Localizable", "clockingShiftDetails_noShow_toggle_title", fallback: "No show")
             }
         }
-        enum Noshowconfirmationsheet {
+        enum NoShowConfirmationSheet {
             static let confirm = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_confirm", fallback: "Yes, confirm")
             enum Justified {
                 static let description = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_justified_description", fallback: "Once you confirm this no show as being justified, this person will be notified.")
                 static let title = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_justified_title", fallback: "Confirm no show as being justified? ")
             }
-            enum Notjustified {
+            enum NotJustified {
                 static let description = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_notJustified_description", fallback: "Once you confirm this no show as not justified, this person will be notified.")
                 static let title = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_notJustified_title", fallback: "Confirm no show as not justified?")
             }
-            enum Turnoff {
+            enum TurnOff {
                 static let button = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_turnOff_button", fallback: "Undo no show")
             }
-            enum Turnon {
+            enum TurnOn {
                 static let button = tr("Localizable", "clockingShiftDetails_noShowConfirmationSheet_turnOn_button", fallback: "Confirm no show")
             }
         }
         static let openHistory = tr("Localizable", "clockingShiftDetails_openHistory", fallback: "View")
-        enum Overlaperror {
+        enum OverlapError {
             static let description = tr("Localizable", "clockingShiftDetails_overlapError_description", fallback: "These hours clash with an existing clocking from another shift and cannot be saved.")
             static let title = tr("Localizable", "clockingShiftDetails_overlapError_title", fallback: "Clash with existing clocking")
         }
@@ -466,14 +466,14 @@ Please try again.")
                 }
             }
         }
-        enum Roundedhours {
+        enum RoundedHours {
             enum Single {
                 static func data(_ p0: String) -> String {
                     tr("Localizable", "clockingShiftDetails_roundedHours_single_data", p0, fallback: "Times rounded, was %@")
                 }
             }
         }
-        enum Savesuccess {
+        enum SaveSuccess {
             static let description = tr("Localizable", "clockingShiftDetails_saveSuccess_description", fallback: "Changes have been saved succesfully.")
             static let title = tr("Localizable", "clockingShiftDetails_saveSuccess_title", fallback: "Changes saved")
         }
@@ -486,25 +486,25 @@ Please try again.")
             static let onSite = tr("Localizable", "clockingShiftDetails_worker_onSite", fallback: "Working")
             static let worked = tr("Localizable", "clockingShiftDetails_worker_worked", fallback: "Worked")
         }
-        enum Workerrating {
+        enum WorkerRating {
             static let description = tr("Localizable", "clockingShiftDetails_workerRating_description", fallback: "Recognize this person’s work with a star rating. ")
-            enum Savebutton {
+            enum SaveButton {
                 static let title = tr("Localizable", "clockingShiftDetails_workerRating_saveButton_title", fallback: "Save rating")
             }
-            enum Savesuccess {
+            enum SaveSuccess {
                 static let description = tr("Localizable", "clockingShiftDetails_workerRating_saveSuccess_description", fallback: "We’ve saved your changes.")
                 static let title = tr("Localizable", "clockingShiftDetails_workerRating_saveSuccess_title", fallback: "Rating successfully updated")
             }
             static let title = tr("Localizable", "clockingShiftDetails_workerRating_title", fallback: "Rate their performance")
-            enum Updatebutton {
+            enum UpdateButton {
                 static let title = tr("Localizable", "clockingShiftDetails_workerRating_updateButton_title", fallback: "Update rating")
             }
         }
-        enum Workerslist {
+        enum WorkersList {
             static let attendance = tr("Localizable", "clockingShiftDetails_workersList_attendance", fallback: "Attendance")
         }
     }
-    enum Clockingshifts {
+    enum ClockingShifts {
         enum Description {
             enum Approved {
                 static let status = tr("Localizable", "clockingShifts_description_approved_status", fallback: "Review completed")
@@ -693,7 +693,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let continue = tr("Localizable", "common_continue", fallback: "Continue")
         static let copied = tr("Localizable", "common_copied", fallback: "Copied")
         static let date = tr("Localizable", "common_date", fallback: "Shift date")
-        enum Datepicker {
+        enum DatePicker {
             static let day = tr("Localizable", "common_datePicker_day", fallback: "Day")
             static let month = tr("Localizable", "common_datePicker_month", fallback: "Month")
             static let year = tr("Localizable", "common_datePicker_year", fallback: "Year")
@@ -755,7 +755,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let reload = tr("Localizable", "common_reload", fallback: "Reload")
         static let save = tr("Localizable", "common_save", fallback: "Save")
         enum Search {
-            enum Noresult {
+            enum NoResult {
                 static let description = tr("Localizable", "common_search_noResult_description", fallback: "Try writing the name differently. If no results, the name may not exist.")
             }
         }
@@ -765,7 +765,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let shift = tr("Localizable", "common_shift", fallback: "shift")
         enum Snackbar {
             enum Error {
-                enum Toomanyrequests {
+                enum TooManyRequests {
                     static let subtitle = tr("Localizable", "common_snackbar_error_tooManyRequests_subtitle", fallback: "Please try again in a few minutes.")
                     static let title = tr("Localizable", "common_snackbar_error_tooManyRequests_title", fallback: "Too many requests")
                 }
@@ -776,7 +776,7 @@ Contact your Job&Talent account manager to add your hour types. ")
                 static let tooManyRequests = tr("Localizable", "common_text_error_tooManyRequests", fallback: "Too many requests. Please try again in a few minutes.")
             }
         }
-        enum Textfield {
+        enum TextField {
             static let charactersCount = tr("Localizable", "common_textField_charactersCount", fallback: "%1$d/%2$d characters")
         }
         static let to = tr("Localizable", "common_to", fallback: "to")
@@ -788,52 +788,52 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let yesterday = tr("Localizable", "common_yesterday", fallback: "Yesterday")
         static let you = tr("Localizable", "common_you", fallback: "you")
     }
-    enum Confirmclockings {
+    enum ConfirmClockings {
         static let approveButton = tr("Localizable", "confirmClockings_approveButton", fallback: "Yes, approve hours")
         static let content = tr("Localizable", "confirmClockings_content", fallback: "Confirm that these details are correct before approving hours.")
         static let header = tr("Localizable", "confirmClockings_header", fallback: "Approve these hours?")
         static let people = tr("Localizable", "confirmClockings_people", fallback: "People")
         static let timeWorked = tr("Localizable", "confirmClockings_timeWorked", fallback: "Time worked")
     }
-    enum Createshift {
-        enum Actionbutton {
+    enum CreateShift {
+        enum ActionButton {
             static let title = tr("Localizable", "createShift_actionButton_title", fallback: "Start")
         }
-        enum Assignworkeractionbutton {
+        enum AssignWorkerActionButton {
             static let prefix = tr("Localizable", "createShift_assignWorkerActionButton_prefix", fallback: "Assigned")
         }
-        enum Assignworkers {
-            enum Descriptionprefix {
+        enum AssignWorkers {
+            enum DescriptionPrefix {
                 static let text = tr("Localizable", "createShift_assignWorkers_descriptionPrefix_text", fallback: "People assigned")
             }
-            enum Needmoreworker {
+            enum NeedMoreWorker {
                 static let text = tr("Localizable", "createShift_assignWorkers_needMoreWorker_text", fallback: "It looks like you do not have enough available and qualified people for this shift. Please contact your J&T Account Manager if you need assistance.")
             }
-            enum Returnshiftlist {
+            enum ReturnShiftlist {
                 static let text = tr("Localizable", "createShift_assignWorkers_returnShiftlist_text", fallback: "Back to shift list")
             }
-            enum Shiftsaved {
+            enum ShiftSaved {
                 static let description = tr("Localizable", "createShift_assignWorkers_shiftSaved_description", fallback: "Your shift has been saved but not published. Remember to publish it to notify everyone you’ve assigned about this shift.")
                 static let title = tr("Localizable", "createShift_assignWorkers_shiftSaved_title", fallback: "Shift saved")
             }
-            enum Shiftseriessaved {
+            enum ShiftSeriesSaved {
                 static let description = tr("Localizable", "createShift_assignWorkers_shiftSeriesSaved_description", fallback: "Your shifts have been saved but not published. Remember to publish them to notify everyone you’ve assigned about these shifts.")
             }
             static let text = tr("Localizable", "createShift_assignWorkers_text", fallback: "Assign work and notify them")
         }
-        enum Commonerror {
+        enum CommonError {
             static let message = tr("Localizable", "createShift_commonError_message", fallback: "We’re sorry, it looks like there was an issue at our end. Please try again.")
             static let title = tr("Localizable", "createShift_commonError_title", fallback: "An error has occurred")
         }
-        enum Confirmdismiss {
+        enum ConfirmDismiss {
             static let buttonTitle = tr("Localizable", "createShift_confirmDismiss_buttonTitle", fallback: "Yes, discard")
             static let message = tr("Localizable", "createShift_confirmDismiss_message", fallback: "If you exit, all data entered for this shift will be lost.")
             static let title = tr("Localizable", "createShift_confirmDismiss_title", fallback: "Discard shift?")
         }
-        enum Continuetopeople {
+        enum ContinueToPeople {
             static let buton = tr("Localizable", "createShift_continueToPeople_buton", fallback: "Continue to assign people")
         }
-        enum Dateandtime {
+        enum DateAndTime {
             static let date = tr("Localizable", "createShift_dateAndTime_date", fallback: "Date")
             static let end = tr("Localizable", "createShift_dateAndTime_end", fallback: "End")
             static let finish = tr("Localizable", "createShift_dateAndTime_finish", fallback: "Finish")
@@ -842,7 +842,7 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let title = tr("Localizable", "createShift_dateAndTime_title", fallback: "Date and time")
             static let totalHours = tr("Localizable", "createShift_dateAndTime_totalHours", fallback: "Total hours")
         }
-        enum Firstrow {
+        enum FirstRow {
             static let description = tr("Localizable", "createShift_firstRow_description", fallback: "Select times and dates")
             static let title = tr("Localizable", "createShift_firstRow_title", fallback: "Set up your shift")
         }
@@ -858,129 +858,129 @@ Contact your Job&Talent account manager to add your hour types. ")
         enum People {
             static let title = tr("Localizable", "createShift_people_title", fallback: "People")
         }
-        enum Peopleassigned {
+        enum PeopleAssigned {
             static let label = tr("Localizable", "createShift_peopleAssigned_label", fallback: "Assigned %1$d/%2$d")
         }
-        enum Peoplerequired {
+        enum PeopleRequired {
             static let label = tr("Localizable", "createShift_peopleRequired_label", fallback: "Required")
         }
-        enum Repeateverydialog {
+        enum RepeatEveryDialog {
             static let months = tr("Localizable", "createShift_repeatEveryDialog_months", fallback: "Months")
             static let title = tr("Localizable", "createShift_repeatEveryDialog_title", fallback: "Repeat every")
             static let weeks = tr("Localizable", "createShift_repeatEveryDialog_weeks", fallback: "Weeks")
         }
-        enum Requestworker {
-            enum Shiftsaved {
+        enum RequestWorker {
+            enum ShiftSaved {
                 static let description = tr("Localizable", "createShift_requestWorker_shiftSaved_description", fallback: "Your shift has been saved without adding number of people needed. Remember to add people, assign work and then let them know.")
             }
-            enum Shiftseriessaved {
+            enum ShiftSeriesSaved {
                 static let description = tr("Localizable", "createShift_requestWorker_shiftSeriesSaved_description", fallback: "Your shifts have been saved without adding the number of people needed. Remember to add people, assign work and then let them know.")
             }
         }
-        enum Requestworkeralldepartments {
+        enum RequestWorkerAllDepartments {
             static let text = tr("Localizable", "createShift_requestWorkerAllDepartments_text", fallback: "All departments")
         }
-        enum Requestworkerallroles {
+        enum RequestWorkerAllRoles {
             static let text = tr("Localizable", "createShift_requestWorkerAllRoles_text", fallback: "All roles")
         }
-        enum Requestworkerdepartment {
+        enum RequestWorkerDepartment {
             static let text = tr("Localizable", "createShift_requestWorkerDepartment_text", fallback: "Department")
         }
-        enum Requestworkernodepartment {
+        enum RequestWorkerNoDepartment {
             static let text = tr("Localizable", "createShift_requestWorkerNoDepartment_text", fallback: "No department")
         }
-        enum Requestworkeroptional {
+        enum RequestWorkerOptional {
             static let text = tr("Localizable", "createShift_requestWorkerOptional_text", fallback: "Optional")
         }
-        enum Requestworkerrole {
+        enum RequestWorkerRole {
             static let text = tr("Localizable", "createShift_requestWorkerRole_text", fallback: "Role")
         }
-        enum Requestworkerselectdepartment {
+        enum RequestWorkerSelectDepartment {
             static let text = tr("Localizable", "createShift_requestWorkerSelectDepartment_text", fallback: "Select department")
         }
-        enum Requestworkershiftname {
+        enum RequestWorkerShiftName {
             static let placeholder = tr("Localizable", "createShift_requestWorkerShiftName_placeholder", fallback: "Add the shift or role name")
         }
-        enum Requestworkerscountwarning {
+        enum RequestWorkersCountWarning {
             static let text = tr("Localizable", "createShift_requestWorkersCountWarning_text", fallback: "It looks like you haven’t added people to this shift.")
         }
-        enum Requestworkerspeoplerequired {
+        enum RequestWorkersPeopleRequired {
             static let text = tr("Localizable", "createShift_requestWorkersPeopleRequired_text", fallback: "People required")
         }
-        enum Requestworkerssavebuttonwithoutadd {
+        enum RequestWorkersSaveButtonWithoutAdd {
             static let title = tr("Localizable", "createShift_requestWorkersSaveButtonWithoutAdd_title", fallback: "Save and exit")
         }
-        enum Requestworkerssavebuttonwithoutassign {
+        enum RequestWorkersSaveButtonWithoutAssign {
             static let title = tr("Localizable", "createShift_requestWorkersSaveButtonWithoutAssign_title", fallback: "Save and exit")
         }
-        enum Saveandexit {
+        enum SaveAndExit {
             static let button = tr("Localizable", "createShift_saveAndExit_button", fallback: "Save and exit")
         }
-        enum Saveassignedworkers {
+        enum SaveAssignedWorkers {
             static let text = tr("Localizable", "createShift_saveAssignedWorkers_text", fallback: "Save assigned people")
         }
-        enum Secondrow {
+        enum SecondRow {
             static let description = tr("Localizable", "createShift_secondRow_description", fallback: "Select the number of people needed and enter shift details visible to workers")
             static let title = tr("Localizable", "createShift_secondRow_title", fallback: "Enter shift details")
         }
-        enum Shiftcolor {
+        enum ShiftColor {
             static let title = tr("Localizable", "createShift_shiftColor_title", fallback: "Shift color")
         }
-        enum Shiftcolorselection {
+        enum ShiftColorSelection {
             static let actionButtonTitle = tr("Localizable", "createShift_shiftColorSelection_actionButtonTitle", fallback: "Apply")
         }
-        enum Shiftdetails {
+        enum ShiftDetails {
             static let title = tr("Localizable", "createShift_shiftDetails_title", fallback: "Shift details")
         }
-        enum Shiftname {
+        enum ShiftName {
             static let customTitle = tr("Localizable", "createShift_shiftName_customTitle", fallback: "Shift name")
             static let description = tr("Localizable", "createShift_shiftName_description", fallback: "Write a descriptive name. If left blank we will fill it with the role and department selected.")
             static let subtitle = tr("Localizable", "createShift_shiftName_subtitle", fallback: "Write a descriptive name. Consider including the role name for clarity. This information will be visible to workers.")
             static let title = tr("Localizable", "createShift_shiftName_title", fallback: "Shift name")
         }
-        enum Shifttimeframeduration {
+        enum ShiftTimeframeDuration {
             enum Text {
                 static let 2 = tr("Localizable", "createShift_shiftTimeframeDuration_text_2", fallback: "%s")
             }
         }
-        enum Shifttimeframedurationnextday {
+        enum ShiftTimeframeDurationNextDay {
             enum Text {
                 static let 2 = tr("Localizable", "createShift_shiftTimeframeDurationNextDay_text_2", fallback: "%s (+1 day)")
             }
         }
-        enum Shifttimeframerepeaton {
+        enum ShiftTimeframeRepeatOn {
             static let text = tr("Localizable", "createShift_shiftTimeframeRepeatOn_text", fallback: "Repeat on")
         }
-        enum Shifttimeframerepeatperiod {
+        enum ShiftTimeframeRepeatPeriod {
             static let text = tr("Localizable", "createShift_shiftTimeframeRepeatPeriod_text", fallback: "Repeat every")
         }
-        enum Shifttimeframerepeatselection {
+        enum ShiftTimeframeRepeatSelection {
             static let text = tr("Localizable", "createShift_shiftTimeframeRepeatSelection_text", fallback: "Select the days when you want to repeat this shift")
         }
-        enum Shifttimeframerepeattoggle {
+        enum ShiftTimeframeRepeatToggle {
             static let title = tr("Localizable", "createShift_shiftTimeframeRepeatToggle_title", fallback: "Repeat this shift")
         }
-        enum Shifttimeframerepeatuntil {
+        enum ShiftTimeframeRepeatUntil {
             static let text = tr("Localizable", "createShift_shiftTimeframeRepeatUntil_text", fallback: "Repeat until")
         }
         enum Supervisor {
             static let label = tr("Localizable", "createShift_supervisor_label", fallback: "Supervisor")
         }
-        enum Thirdrow {
+        enum ThirdRow {
             static let description = tr("Localizable", "createShift_thirdRow_description", fallback: "Confirm who will work and let them know")
             static let title = tr("Localizable", "createShift_thirdRow_title", fallback: "Assign work and notify")
         }
         static let title = tr("Localizable", "createShift_title", fallback: "New Shift")
     }
-    enum Daydetails {
+    enum DayDetails {
         static let attendedWorkersEmptyHint = tr("Localizable", "dayDetails_attendedWorkersEmptyHint", fallback: "People who attend will appear here after the shifts start.")
         static let noShowWorkersEmptyHint = tr("Localizable", "dayDetails_noShowWorkersEmptyHint", fallback: "No shows will appear here if you have any after the shifts start.")
     }
-    enum Deleteshiftconfirmation {
+    enum DeleteShiftConfirmation {
         static let positiveButtonLabel = tr("Localizable", "deleteShiftConfirmation_positiveButtonLabel", fallback: "Delete")
         static let title = tr("Localizable", "deleteShiftConfirmation_title", fallback: "What shift do you want to delete?")
     }
-    enum Displayrejectionreasons {
+    enum DisplayRejectionReasons {
         static let commuteProblem = tr("Localizable", "displayRejectionReasons_commuteProblem", fallback: "Problem on my way to work")
         static let emergency = tr("Localizable", "displayRejectionReasons_emergency", fallback: "Emergency")
         static let medicalSupport = tr("Localizable", "displayRejectionReasons_medicalSupport", fallback: "Medical support for family")
@@ -988,7 +988,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let schedule = tr("Localizable", "displayRejectionReasons_schedule", fallback: "Not my agreed schedule")
         static let sick = tr("Localizable", "displayRejectionReasons_sick", fallback: "Sick or unwell")
     }
-    enum Editassignment {
+    enum EditAssignment {
         enum Draft {
             enum Snackbar {
                 static let description = tr("Localizable", "editAssignment_draft_snackbar_description", fallback: "The people assigned have been updated")
@@ -1002,14 +1002,14 @@ Contact your Job&Talent account manager to add your hour types. ")
         enum Snackbar {
             static let title = tr("Localizable", "editAssignment_snackbar_title", fallback: "Assignment updated")
         }
-        enum Workerlist {
+        enum WorkerList {
             enum Snackbar {
                 static let title = tr("Localizable", "editAssignment_workerList_snackbar_title", fallback: "Assignment updated")
             }
         }
     }
-    enum Editprofile {
-        enum Confirmationdialog {
+    enum EditProfile {
+        enum ConfirmationDialog {
             static let subtitle = tr("Localizable", "editProfile_confirmationDialog_subtitle", fallback: "If you do not save, you’ll lose your changes.")
             static let title = tr("Localizable", "editProfile_confirmationDialog_title", fallback: "Leave without saving changes?")
         }
@@ -1017,8 +1017,8 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let saveChanges = tr("Localizable", "editProfile_saveChanges", fallback: "Save changes")
         static let saveErrorBody = tr("Localizable", "editProfile_saveErrorBody", fallback: "We could not save the changes. Please try again.")
     }
-    enum Editshift {
-        enum Assignpeople {
+    enum EditShift {
+        enum AssignPeople {
             enum Button {
                 static let saveSelection = tr("Localizable", "editShift_assignPeople_button_saveSelection", fallback: "Save selection")
             }
@@ -1026,34 +1026,34 @@ Contact your Job&Talent account manager to add your hour types. ")
         enum Banner {
             static let publishedShift = tr("Localizable", "editShift_banner_publishedShift", fallback: "Shift changes will be visible to workers. Note that they'll be notified and have to confirm shifts again after any time or date changes.")
         }
-        enum Changesdialog {
+        enum ChangesDialog {
             static let backToShiftDetail = tr("Localizable", "editShift_changesDialog_backToShiftDetail", fallback: "Back to shift detail")
         }
-        enum Changespublisheddialog {
+        enum ChangesPublishedDialog {
             static let description = tr("Localizable", "editShift_changesPublishedDialog_description", fallback: "Your shift has been published and the people you’ve assigned have been notified.")
             static let title = tr("Localizable", "editShift_changesPublishedDialog_title", fallback: "Shift published")
         }
-        enum Changessaveddialog {
+        enum ChangesSavedDialog {
             static let description = tr("Localizable", "editShift_changesSavedDialog_description", fallback: "Your shift has been saved but not published. Remember to publish it to notify everyone that they’re working. ")
             static let title = tr("Localizable", "editShift_changesSavedDialog_title", fallback: "Shift saved")
         }
-        enum Confirmationmodal {
-            enum Otherfieldsedited {
+        enum ConfirmationModal {
+            enum OtherFieldsEdited {
                 static let title = tr("Localizable", "editShift_confirmationModal_otherFieldsEdited_title", fallback: "Edit upcoming shifts")
             }
-            enum Repetitionpatternedited {
+            enum RepetitionPatternEdited {
                 static let title = tr("Localizable", "editShift_confirmationModal_repetitionPatternEdited_title", fallback: "What do you want to edit?")
             }
         }
-        enum Confirmationmodaloptions {
+        enum ConfirmationModalOptions {
             static let allShiftInSeries = tr("Localizable", "editShift_confirmationModalOptions_allShiftInSeries", fallback: "This shift and all the upcoming shifts")
             static let currentShift = tr("Localizable", "editShift_confirmationModalOptions_currentShift", fallback: "Just this shift")
             static let restOfTheWeek = tr("Localizable", "editShift_confirmationModalOptions_restOfTheWeek", fallback: "This shift and the upcoming shifts for the week")
         }
-        enum Datechange {
+        enum DateChange {
             static let tooltip = tr("Localizable", "editShift_dateChange_tooltip", fallback: "Please note that changes to the shift's date and time may affect the availability of the assigned workers")
         }
-        enum Deletedialog {
+        enum DeleteDialog {
             static let cancelButton = tr("Localizable", "editShift_deleteDialog_cancelButton", fallback: "No, go back")
             static let confirmButton = tr("Localizable", "editShift_deleteDialog_confirmButton", fallback: "Yes, delete")
             enum Description {
@@ -1063,17 +1063,17 @@ Contact your Job&Talent account manager to add your hour types. ")
                 static let series = tr("Localizable", "editShift_deleteDialog_title_series", fallback: "Delete these shifts?")
             }
         }
-        enum Deleteshift {
+        enum DeleteShift {
             static let text = tr("Localizable", "editShift_deleteShift_text", fallback: "Delete shift")
         }
-        enum Deleteshiftseries {
+        enum DeleteShiftSeries {
             static let text = tr("Localizable", "editShift_deleteShiftSeries_text", fallback: "Delete shift series")
         }
-        enum Deletesnackbar {
+        enum DeleteSnackbar {
             static let description = tr("Localizable", "editShift_deleteSnackbar_description", fallback: "This shift has been deleted")
             static let title = tr("Localizable", "editShift_deleteSnackbar_title", fallback: "Shift deleted")
         }
-        enum Discardchangesdialog {
+        enum DiscardChangesDialog {
             static let cancelButton = tr("Localizable", "editShift_discardChangesDialog_cancelButton", fallback: "No, go back")
             static let confirmButton = tr("Localizable", "editShift_discardChangesDialog_confirmButton", fallback: "Yes, discard changes")
             static let description = tr("Localizable", "editShift_discardChangesDialog_description", fallback: "You are about to discard changes. Are you sure?")
@@ -1084,10 +1084,10 @@ Contact your Job&Talent account manager to add your hour types. ")
                 static let description = tr("Localizable", "editShift_draft_snackbar_description", fallback: "Changes have been saved")
             }
         }
-        enum Infotab {
+        enum InfoTab {
             static let title = tr("Localizable", "editShift_infoTab_title", fallback: "General info")
         }
-        enum Manageworkers {
+        enum ManageWorkers {
             static let pastPublishedShiftMessage = tr("Localizable", "editShift_manageWorkers_pastPublishedShiftMessage", fallback: "When you add people to a past shift, we use the shift times as clockings.")
         }
         enum Operation {
@@ -1100,16 +1100,16 @@ Contact your Job&Talent account manager to add your hour types. ")
                 }
             }
         }
-        enum Peopleassigned {
+        enum PeopleAssigned {
             static let title = tr("Localizable", "editShift_peopleAssigned_title", fallback: "People assigned")
         }
-        enum Peopletab {
+        enum PeopleTab {
             static let title = tr("Localizable", "editShift_peopleTab_title", fallback: "People (%1$d/%2$d)")
-            enum Workersunavailable {
+            enum WorkersUnavailable {
                 static let message = tr("Localizable", "editShift_peopleTab_workersUnavailable_message", fallback: "Some people might not be available for the new time and date selected.")
             }
         }
-        enum Publishchangesdialog {
+        enum PublishChangesDialog {
             static let cancelButton = tr("Localizable", "editShift_publishChangesDialog_cancelButton", fallback: "No, go back")
             static let confirmButton = tr("Localizable", "editShift_publishChangesDialog_confirmButton", fallback: "Yes, notify changes")
             static let description = tr("Localizable", "editShift_publishChangesDialog_description", fallback: "You are about to make changes on a published shift. This action could affect the availability of the assigned people. Do you still want to publish them?")
@@ -1120,25 +1120,25 @@ Contact your Job&Talent account manager to add your hour types. ")
                 static let description = tr("Localizable", "editShift_published_snackbar_description", fallback: "The people you’ve assigned to work have been notified")
             }
         }
-        enum Requestpeoplerequired {
+        enum RequestPeopleRequired {
             static let text = tr("Localizable", "editShift_requestPeopleRequired_text", fallback: "People required")
         }
-        enum Requestworkerdepartment {
+        enum RequestWorkerDepartment {
             static let text = tr("Localizable", "editShift_requestWorkerDepartment_text", fallback: "Department")
         }
-        enum Requestworkerrole {
+        enum RequestWorkerRole {
             static let text = tr("Localizable", "editShift_requestWorkerRole_text", fallback: "Role")
         }
-        enum Savechanges {
+        enum SaveChanges {
             static let button = tr("Localizable", "editShift_saveChanges_button", fallback: "Save changes")
         }
-        enum Shiftcustomname {
+        enum ShiftCustomName {
             static let title = tr("Localizable", "editShift_shiftCustomName_title", fallback: "Shift name")
         }
-        enum Shiftdetailssection {
+        enum ShiftDetailsSection {
             static let title = tr("Localizable", "editShift_shiftDetailsSection_title", fallback: "Shift details")
         }
-        enum Shiftrepetitionsection {
+        enum ShiftRepetitionSection {
             static let title = tr("Localizable", "editShift_shiftRepetitionSection_title", fallback: "Shift repetition")
         }
         enum Snackbar {
@@ -1160,7 +1160,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let couldntloaddata = tr("Localizable", "error_couldntloaddata", fallback: "Sorry, we could not load the data.")
         static let malformedData = tr("Localizable", "error_malformedData", fallback: "Invalid data")
         static let missingResponseData = tr("Localizable", "error_missingResponseData", fallback: "Missing data")
-        enum Nointernet {
+        enum NoInternet {
             static let description = tr("Localizable", "error_noInternet_description", fallback: "Connection problem. Please check your connection and try again.")
             static let title = tr("Localizable", "error_noInternet_title", fallback: "Network error")
         }
@@ -1184,53 +1184,53 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let you = tr("Localizable", "filter_supervisor_you", fallback: "You")
         }
     }
-    enum Filtershifts {
-        enum Applyaction {
+    enum FilterShifts {
+        enum ApplyAction {
             static let title = tr("Localizable", "filterShifts_applyAction_title", fallback: "Apply")
         }
-        enum Clearaction {
+        enum ClearAction {
             static let title = tr("Localizable", "filterShifts_clearAction_title", fallback: "Clear All")
         }
-        enum Clearfilter {
+        enum ClearFilter {
             static let label = tr("Localizable", "filterShifts_clearFilter_label", fallback: "Clear filters")
         }
-        enum Datesection {
+        enum DateSection {
             static let emptyLabel = tr("Localizable", "filterShifts_dateSection_emptyLabel", fallback: "Select date")
             static let title = tr("Localizable", "filterShifts_dateSection_title", fallback: "Dates")
         }
-        enum Departmentsection {
+        enum DepartmentSection {
             static let title = tr("Localizable", "filterShifts_departmentSection_title", fallback: "Department")
         }
-        enum Namesection {
+        enum NameSection {
             static let title = tr("Localizable", "filterShifts_nameSection_title", fallback: "Shift name")
         }
-        enum Nosupervisor {
+        enum NoSupervisor {
             static let label = tr("Localizable", "filterShifts_noSupervisor_label", fallback: "No supervisor assigned")
         }
-        enum Rolessection {
+        enum RolesSection {
             static let title = tr("Localizable", "filterShifts_rolesSection_title", fallback: "Roles")
         }
-        enum Schedulesection {
+        enum ScheduleSection {
             static let defaultSelection = tr("Localizable", "filterShifts_scheduleSection_defaultSelection", fallback: "Select time")
             static let setSelection = tr("Localizable", "filterShifts_scheduleSection_setSelection", fallback: "Start - end time")
             static let title = tr("Localizable", "filterShifts_scheduleSection_title", fallback: "Schedule")
         }
-        enum Statussection {
+        enum StatusSection {
             static let title = tr("Localizable", "filterShifts_statusSection_title", fallback: "Status")
         }
-        enum Supervisorsection {
+        enum SupervisorSection {
             static let defaultSelection = tr("Localizable", "filterShifts_supervisorSection_defaultSelection", fallback: "Select supervisor")
             static let title = tr("Localizable", "filterShifts_supervisorSection_title", fallback: "Supervisor")
         }
         enum Supervisors {
             static let title = tr("Localizable", "filterShifts_supervisors_title", fallback: "Filter by supervisor")
         }
-        enum Timesection {
+        enum TimeSection {
             static let emptyLabel = tr("Localizable", "filterShifts_timeSection_emptyLabel", fallback: "Select time")
             static let title = tr("Localizable", "filterShifts_timeSection_title", fallback: "Start and end time")
         }
         static let title = tr("Localizable", "filterShifts_title", fallback: "Filters")
-        enum Weekdayssection {
+        enum WeekdaysSection {
             static let title = tr("Localizable", "filterShifts_weekdaysSection_title", fallback: "Days of the week")
         }
     }
@@ -1241,7 +1241,7 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let title = tr("Localizable", "force_update_title", fallback: "Update the app")
         }
     }
-    enum Forgotpassword {
+    enum ForgotPassword {
         static let continueButton = tr("Localizable", "forgotPassword_continueButton", fallback: "Continue")
         static let emailField = tr("Localizable", "forgotPassword_emailField", fallback: "Email")
         static let emailFieldError = tr("Localizable", "forgotPassword_emailFieldError", fallback: "Please enter a valid email")
@@ -1524,7 +1524,7 @@ Contact your Job&Talent account manager to add your hour types. ")
                 }
             }
             enum Card {
-                enum Kpi {
+                enum KPI {
                     static let avg = tr("Localizable", "insightstab_performance_card_KPI_avg", fallback: "avg.")
                     static let worked = tr("Localizable", "insightstab_performance_card_KPI_worked", fallback: "worked")
                 }
@@ -1620,7 +1620,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
     }
     enum Login {
-        enum Confirmcode {
+        enum ConfirmCode {
             static let action = tr("Localizable", "login_ConfirmCode_action", fallback: "Confirm")
             static let footer = tr("Localizable", "login_ConfirmCode_footer", fallback: "Didn’t get a passcode? Go back and log in again.")
             static let subtitle = tr("Localizable", "login_ConfirmCode_subtitle", fallback: "Enter the passcode sent to %1$s")
@@ -1634,7 +1634,7 @@ Contact your Job&Talent account manager to add your hour types. ")
                 static let tooManyRequests = tr("Localizable", "login_Confirmation_error_tooManyRequests", fallback: "Too many requests. Please try again in a few minutes.")
             }
         }
-        enum Activateaccount {
+        enum ActivateAccount {
             static let button = tr("Localizable", "login_activateAccount_button", fallback: "Yes, activate my account")
             static let label = tr("Localizable", "login_activateAccount_label", fallback: "Do you have an invite?")
         }
@@ -1647,21 +1647,21 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let emailPasswordIncorrectDescription = tr("Localizable", "login_emailPasswordIncorrectDescription", fallback: "Please try again or reset your password")
         static let emailPasswordIncorrectTitle = tr("Localizable", "login_emailPasswordIncorrectTitle", fallback: "Email or password incorrect")
         enum Error {
-            enum Accountsetup {
+            enum AccountSetup {
                 static let description = tr("Localizable", "login_error_accountSetup_description", fallback: "Your J&T Business App account setup is incomplete. Please contact your account team for assistance.")
                 static let title = tr("Localizable", "login_error_accountSetup_title", fallback: "Account not ready")
             }
-            enum Missingphonenumber {
+            enum MissingPhoneNumber {
                 static let subtitle = tr("Localizable", "login_error_missingPhoneNumber_subtitle", fallback: "Please contact your account manager.")
                 static let title = tr("Localizable", "login_error_missingPhoneNumber_title", fallback: "Missing phone number")
             }
-            enum Toomanyrequests {
+            enum TooManyRequests {
                 static let description = tr("Localizable", "login_error_tooManyRequests_description", fallback: "Please try again in a few minutes.")
                 static let title = tr("Localizable", "login_error_tooManyRequests_title", fallback: "Too many requests")
             }
         }
         static let forgotPasswordButton = tr("Localizable", "login_forgotPasswordButton", fallback: "Forgot password")
-        enum Getinvite {
+        enum GetInvite {
             static let button = tr("Localizable", "login_getInvite_button", fallback: "Send me an invite")
         }
         enum Linkdoesntwork {
@@ -1702,40 +1702,40 @@ Contact your Job&Talent account manager to add your hour types. ")
             }
         }
     }
-    enum Manageworkers {
-        enum Actionbuttonforpublishedshift {
+    enum ManageWorkers {
+        enum ActionButtonForPublishedShift {
             static let title = tr("Localizable", "manageWorkers_actionButtonForPublishedShift_title", fallback: "Notify assigned people")
         }
-        enum Availableworker {
+        enum AvailableWorker {
             static func description(_ p0: Int64) -> String {
                 tr("Localizable", "manageWorkers_availableWorker_description", p0, fallback: "%d people available for this shift")
             }
         }
-        enum Filteritem {
+        enum FilterItem {
             static let afternoons = tr("Localizable", "manageWorkers_filterItem_afternoons", fallback: "Afternoons")
             static let anyShift = tr("Localizable", "manageWorkers_filterItem_anyShift", fallback: "Any Shift")
             static let mornings = tr("Localizable", "manageWorkers_filterItem_mornings", fallback: "Mornings")
             static let nights = tr("Localizable", "manageWorkers_filterItem_nights", fallback: "Nights")
         }
-        enum Inviteshift {
+        enum InviteShift {
             static let counterWarning = tr("Localizable", "manageWorkers_inviteShift_counterWarning", fallback: "Invite as many people as you require, or more.")
         }
         enum Sort {
-            enum Peopleworking {
+            enum PeopleWorking {
                 static let title = tr("Localizable", "manageWorkers_sort_peopleWorking_title", fallback: "People working")
             }
             enum Roles {
                 static let title = tr("Localizable", "manageWorkers_sort_roles_title", fallback: "Roles")
             }
         }
-        enum Sortitem {
+        enum SortItem {
             static let attendance = tr("Localizable", "manageWorkers_sortItem_attendance", fallback: "Attendance")
             static let hoursAssigned = tr("Localizable", "manageWorkers_sortItem_hoursAssigned", fallback: "Hours assigned")
             static let rating = tr("Localizable", "manageWorkers_sortItem_rating", fallback: "Rating")
             static let responseRate = tr("Localizable", "manageWorkers_sortItem_responseRate", fallback: "Response rate")
         }
     }
-    enum Managerform {
+    enum ManagerForm {
         enum Field {
             static let email = tr("Localizable", "managerForm_field_email", fallback: "Email")
             static let name = tr("Localizable", "managerForm_field_name", fallback: "Full name")
@@ -1746,14 +1746,14 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let phoneInfo = tr("Localizable", "managerForm_field_phoneInfo", fallback: "Include country code (ie. +34661215457)")
             static let save = tr("Localizable", "managerForm_field_save", fallback: "Save changes")
         }
-        enum Successfulupdateprofile {
+        enum SuccessfulUpdateProfile {
             enum Snackbar {
                 static let description = tr("Localizable", "managerForm_successfulUpdateProfile_snackbar_description", fallback: "We've saved successfully your details")
                 static let title = tr("Localizable", "managerForm_successfulUpdateProfile_snackbar_title", fallback: "Changes saved")
             }
         }
     }
-    enum Newpassword {
+    enum NewPassword {
         static let confirmButton = tr("Localizable", "newPassword_confirmButton", fallback: "Confirm")
         enum Description {
             static let code = tr("Localizable", "newPassword_description_code", fallback: "Enter the code we sent to your email.")
@@ -1830,13 +1830,13 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let title = tr("Localizable", "notifications_title", fallback: "Notifications")
     }
     enum Operations {
-        enum Deleteshift {
+        enum DeleteShift {
             enum Fail {
                 static let description = tr("Localizable", "operations_deleteShift_fail_description", fallback: "The shift could not be deleted")
                 static let title = tr("Localizable", "operations_deleteShift_fail_title", fallback: "Something went wrong")
             }
         }
-        enum Editshift {
+        enum EditShift {
             enum Fail {
                 static let description = tr("Localizable", "operations_editShift_fail_description", fallback: "The shift could not be updated")
             }
@@ -1881,7 +1881,7 @@ Contact your Job&Talent account manager to add your hour types. ")
             }
         }
     }
-    enum Peopleoverview {
+    enum PeopleOverview {
         static let activeWorkers = tr("Localizable", "peopleOverview_activeWorkers", fallback: "active workers")
         static let delta = tr("Localizable", "peopleOverview_delta", fallback: "vs last week")
         enum Kpi {
@@ -1890,14 +1890,14 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let unavailable = tr("Localizable", "peopleOverview_kpi_unavailable", fallback: "Unavailable")
         }
         enum Page {
-            enum Endingsoon {
+            enum EndingSoon {
                 static let title = tr("Localizable", "peopleOverview_page_endingSoon_title", fallback: "Ending soon")
             }
             enum Poor {
                 static let alert = tr("Localizable", "peopleOverview_page_poor_alert", fallback: "Consistently rated under 3. Contact our operations team to do a formal performance review. ")
                 static let title = tr("Localizable", "peopleOverview_page_poor_title", fallback: "Poor performers")
             }
-            enum Quickfilters {
+            enum QuickFilters {
                 static let all = tr("Localizable", "peopleOverview_page_quickFilters_all", fallback: "All from today")
                 static let nextWeek = tr("Localizable", "peopleOverview_page_quickFilters_nextWeek", fallback: "Next week")
                 static let thisWeek = tr("Localizable", "peopleOverview_page_quickFilters_thisWeek", fallback: "This week")
@@ -1912,28 +1912,28 @@ Contact your Job&Talent account manager to add your hour types. ")
             }
         }
     }
-    enum Peopleplanning {
-        enum Floatingmenu {
+    enum PeoplePlanning {
+        enum FloatingMenu {
             static let createShiftItem = tr("Localizable", "peoplePlanning_floatingMenu_createShiftItem", fallback: "Create shift")
         }
-        enum Hoursassigned {
+        enum HoursAssigned {
             static func label(_ p0: String) -> String {
                 tr("Localizable", "peoplePlanning_hoursAssigned_label", p0, fallback: "%@h assigned")
             }
         }
-        enum Manageshifts {
+        enum ManageShifts {
             static let button = tr("Localizable", "peoplePlanning_manageShifts_button", fallback: "Save Assignment")
         }
-        enum Multipleshifts {
+        enum MultipleShifts {
             static func label(_ p0: String) -> String {
                 tr("Localizable", "peoplePlanning_multipleShifts_label", p0, fallback: "x%@")
             }
         }
-        enum Noshiftsavailable {
+        enum NoShiftsAvailable {
             static let createNewShift = tr("Localizable", "peoplePlanning_noShiftsAvailable_createNewShift", fallback: "Create new shift")
             static let description = tr("Localizable", "peoplePlanning_noShiftsAvailable_description", fallback: "There are no shifts for date and time selected. Choose different dates or create new shifts. ")
         }
-        enum Workerassignments {
+        enum WorkerAssignments {
             static let manageShifts = tr("Localizable", "peoplePlanning_workerAssignments_manageShifts", fallback: "Manage shifts")
         }
     }
@@ -1949,7 +1949,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     }
     enum Permissions {
         enum Bottomsheet {
-            enum Permissionrequired {
+            enum PermissionRequired {
                 static let body = tr("Localizable", "permissions_bottomsheet_permissionRequired_body", fallback: "It looks like you don’t have permission to perform this action. Contact your system administrator or Job&Talent for assistance.")
                 static let title = tr("Localizable", "permissions_bottomsheet_permissionRequired_title", fallback: "Permission required")
             }
@@ -1963,7 +1963,7 @@ Contact your Job&Talent account manager to add your hour types. ")
                 static let description = tr("Localizable", "permissions_rejected_camera_description", fallback: "You previously denied access. You can allow access in your device settings.")
                 static let title = tr("Localizable", "permissions_rejected_camera_title", fallback: "Allow access to your camera")
             }
-            enum Photolibrary {
+            enum PhotoLibrary {
                 static let title = tr("Localizable", "permissions_rejected_photoLibrary_title", fallback: "Allow access to your gallery")
             }
         }
@@ -1976,41 +1976,41 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let chip = tr("Localizable", "planning_byshifts_chip", fallback: "By shifts")
         }
     }
-    enum Planningalerts {
-        enum Shiftdetails {
+    enum PlanningAlerts {
+        enum ShiftDetails {
             static let assignPeople = tr("Localizable", "planningAlerts_shiftDetails_assignPeople", fallback: "Assign people")
             enum Panic {
                 static let description = tr("Localizable", "planningAlerts_shiftDetails_panic_description", fallback: "People confirmed do not reach people required.")
             }
         }
     }
-    enum Planningshiftdetails {
+    enum PlanningShiftDetails {
         enum Worker {
             static let missingFinish = tr("Localizable", "planningShiftDetails_worker_missingFinish", fallback: "Incomplete clocking")
             static let missingStart = tr("Localizable", "planningShiftDetails_worker_missingStart", fallback: "Incomplete clocking")
             static let onTime = tr("Localizable", "planningShiftDetails_worker_onTime", fallback: "ON TIME")
         }
-        enum Workersassignedlist {
+        enum WorkersAssignedList {
             static let title = tr("Localizable", "planningShiftDetails_workersAssignedList_title", fallback: "Assigned")
         }
-        enum Workersattendancelist {
+        enum WorkersAttendanceList {
             static let title = tr("Localizable", "planningShiftDetails_workersAttendanceList_title", fallback: "Attendance")
         }
-        enum Workersconfirmedlist {
+        enum WorkersConfirmedList {
             static func title(_ p0: Int64) -> String {
                 tr("Localizable", "planningShiftDetails_workersConfirmedList_title", p0, fallback: "%d confirmed")
             }
         }
-        enum Workersnotifiedlist {
+        enum WorkersNotifiedList {
             static let title = tr("Localizable", "planningShiftDetails_workersNotifiedList_title", fallback: "Notified")
         }
     }
-    enum Planningtab {
-        enum Emptyweek {
+    enum PlanningTab {
+        enum EmptyWeek {
             static let description = tr("Localizable", "planningTab_emptyWeek_description", fallback: "There are no shifts scheduled for this week")
             static let title = tr("Localizable", "planningTab_emptyWeek_title", fallback: "Nothing is planned")
         }
-        enum Noworkers {
+        enum NoWorkers {
             static let description = tr("Localizable", "planningTab_noWorkers_description", fallback: "There are no active workers for this week")
             static let title = tr("Localizable", "planningTab_noWorkers_title", fallback: "There is no one here")
         }
@@ -2031,20 +2031,20 @@ Contact your Job&Talent account manager to add your hour types. ")
             }
         }
     }
-    enum Privacypolicy {
+    enum PrivacyPolicy {
         static let url = tr("Localizable", "privacyPolicy_url", fallback: "https://www.jobandtalent.co.uk/legal/privacy-notice")
     }
     enum Profile {
         static let changeWorkplace = tr("Localizable", "profile_changeWorkplace", fallback: "Change workplace")
         static let confirmLogout = tr("Localizable", "profile_confirmLogout", fallback: "Do you want to log out?")
-        enum Developersmenu {
+        enum DevelopersMenu {
             static let button = tr("Localizable", "profile_developersMenu_button", fallback: "Developers Menu")
         }
         static let logOut = tr("Localizable", "profile_logOut", fallback: "Log out")
         static let title = tr("Localizable", "profile_title", fallback: "Profile")
         static let version = tr("Localizable", "profile_version", fallback: "version")
     }
-    enum Publishbulkshifts {
+    enum PublishBulkShifts {
         enum Confirmation {
             static let button = tr("Localizable", "publishBulkShifts_confirmation_button", fallback: "Yes, publish")
             static let hint = tr("Localizable", "publishBulkShifts_confirmation_hint", fallback: "Some shifts in the selected days are not publishable. Make sure that all shifts are assigned.")
@@ -2063,7 +2063,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         enum Error {
             static let description = tr("Localizable", "publishBulkShifts_error_description", fallback: "We're sorry, we couldn't publish the shifts. Please try again.")
         }
-        enum Menuitem {
+        enum MenuItem {
             static let title = tr("Localizable", "publishBulkShifts_menuItem_title", fallback: "Publish shifts")
         }
         enum Success {
@@ -2078,10 +2078,10 @@ Contact your Job&Talent account manager to add your hour types. ")
             tr("Localizable", "publishBulkShifts_week", p0, fallback: "All shifts this week (%@)")
         }
     }
-    enum Publishpastshift {
+    enum PublishPastShift {
         static let description = tr("Localizable", "publishPastShift_description", fallback: "People will see this past shift and clockings in their schedule.")
     }
-    enum Publishshift {
+    enum PublishShift {
         static let description = tr("Localizable", "publishShift_description", fallback: "Once you publish, everyone who has been assigned to work will be notified.")
         enum Fail {
             enum Snackbar {
@@ -2097,17 +2097,17 @@ Contact your Job&Talent account manager to add your hour types. ")
                 }
             }
         }
-        enum Primaryactionpupup {
+        enum PrimaryActionPupup {
             static let description = tr("Localizable", "publishShift_primaryActionPupup_description", fallback: "Your shift has been published and the people you’ve assigned have been notified.")
             static let title = tr("Localizable", "publishShift_primaryActionPupup_title", fallback: "Shift published")
         }
-        enum Primarybutton {
+        enum PrimaryButton {
             static let title = tr("Localizable", "publishShift_primaryButton_title", fallback: "Yes, publish shift")
         }
-        enum Secondarybutton {
+        enum SecondaryButton {
             static let title = tr("Localizable", "publishShift_secondaryButton_title", fallback: "Cancel")
         }
-        enum Shiftcard {
+        enum ShiftCard {
             static let status = tr("Localizable", "publishShift_shiftCard_status", fallback: "people assigned")
         }
         enum Success {
@@ -2119,7 +2119,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let title = tr("Localizable", "publishShift_title", fallback: "Publish shift?")
         static let warning = tr("Localizable", "publishShift_warning", fallback: "It looks like you have not assigned all the people you need for this shift.")
     }
-    enum Ratingsexplanation {
+    enum RatingsExplanation {
         static let additionalInfo = tr("Localizable", "ratingsExplanation_additionalInfo", fallback: "You can edit feedback after it’s been sent. Once you update it, this person will receive another update.")
         static let description = tr("Localizable", "ratingsExplanation_description", fallback: "Give ratings and feedback after a shift or at least once a week. It motivates your top performers, and helps everyone else improve.<br><br>Ratings and feedback is anonymized and is shared instantly.")
         enum List {
@@ -2132,19 +2132,19 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
         static let title = tr("Localizable", "ratingsExplanation_title", fallback: "How ratings work")
     }
-    enum Rejecthours {
+    enum RejectHours {
         static let body = tr("Localizable", "rejectHours_body", fallback: "If you reject these hours, this person will not be paid for this shift. Be certain they did not attend before continuing.")
         enum Button {
             static let reject = tr("Localizable", "rejectHours_button_reject", fallback: "Yes, reject hours")
         }
         static let title = tr("Localizable", "rejectHours_title", fallback: "Reject hours?")
     }
-    enum Requestaccess {
+    enum RequestAccess {
         static let description = tr("Localizable", "requestAccess_description", fallback: "Please contact your Job&Talent Business administrator to get access.")
         static let title = tr("Localizable", "requestAccess_title", fallback: "Request access")
     }
-    enum Rolesassignment {
-        enum Assignmentfailed {
+    enum RolesAssignment {
+        enum AssignmentFailed {
             static let description = tr("Localizable", "rolesAssignment_assignmentFailed_description", fallback: "We're sorry, there was an error. Please try again.")
             static let title = tr("Localizable", "rolesAssignment_assignmentFailed_title", fallback: "Role not updated")
         }
@@ -2164,14 +2164,14 @@ Contact your Job&Talent account manager to add your hour types. ")
     }
     enum Sar {
         enum Request {
-            enum Bottomsheet {
+            enum BottomSheet {
                 enum Detail {
                     enum Cta {
                         static let cancel = tr("Localizable", "sar_request_bottomSheet_detail_cta_cancel", fallback: "Cancel request")
                     }
                     enum Label {
                         static let completedOn = tr("Localizable", "sar_request_bottomSheet_detail_label_completedOn", fallback: "Completed on")
-                        enum Enddate {
+                        enum EndDate {
                             static let j&t = tr("Localizable", "sar_request_bottomSheet_detail_label_endDate_j&t", fallback: "End date with J&T")
                             static let replacement = tr("Localizable", "sar_request_bottomSheet_detail_label_endDate_replacement", fallback: "Replacement’s start date")
                             static let worker = tr("Localizable", "sar_request_bottomSheet_detail_label_endDate_worker", fallback: "End date for")
@@ -2216,19 +2216,19 @@ Contact your Job&Talent account manager to add your hour types. ")
                     static let title = tr("Localizable", "sarlog_requests_empty_state_title", fallback: "No requests yet")
                 }
             }
-            enum Quickfilters {
+            enum QuickFilters {
                 static let all = tr("Localizable", "sarlog_requests_quickFilters_all", fallback: "All")
                 static let completed = tr("Localizable", "sarlog_requests_quickFilters_completed", fallback: "Completed")
                 static let createdByYou = tr("Localizable", "sarlog_requests_quickFilters_createdByYou", fallback: "Created by you")
                 static let declined = tr("Localizable", "sarlog_requests_quickFilters_declined", fallback: "Declined")
-                enum Emptystate {
+                enum EmptyState {
                     static let body = tr("Localizable", "sarlog_requests_quickFilters_emptyState_body", fallback: "Try adjusting or removing your filters")
                     static let clear = tr("Localizable", "sarlog_requests_quickFilters_emptyState_clear", fallback: "Clear filters")
                     static let title = tr("Localizable", "sarlog_requests_quickFilters_emptyState_title", fallback: "No results")
                 }
                 enum Types {
                     static let all = tr("Localizable", "sarlog_requests_quickFilters_types_all", fallback: "All types")
-                    enum Bottomsheet {
+                    enum BottomSheet {
                         static let title = tr("Localizable", "sarlog_requests_quickFilters_types_bottomSheet_title", fallback: "Type")
                     }
                     static let end = tr("Localizable", "sarlog_requests_quickFilters_types_end", fallback: "End job")
@@ -2275,7 +2275,7 @@ Contact your Job&Talent account manager to add your hour types. ")
             enum Invited {
                 static let label = tr("Localizable", "shift_kpi_invited_label", fallback: "invited")
             }
-            enum Noresponse {
+            enum NoResponse {
                 static let label = tr("Localizable", "shift_kpi_noResponse_label", fallback: "no response")
             }
             enum Required {
@@ -2323,7 +2323,7 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let working = tr("Localizable", "shift_workers_working", fallback: "working")
         }
     }
-    enum Shiftcolor {
+    enum ShiftColor {
         static let blue = tr("Localizable", "shiftColor_blue", fallback: "Blue")
         static let darkBlue = tr("Localizable", "shiftColor_darkBlue", fallback: "Dark blue")
         static let darkGreen = tr("Localizable", "shiftColor_darkGreen", fallback: "Dark green")
@@ -2336,32 +2336,32 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let red = tr("Localizable", "shiftColor_red", fallback: "Red")
         static let yellow = tr("Localizable", "shiftColor_yellow", fallback: "Yellow")
     }
-    enum Shiftdetails {
+    enum ShiftDetails {
         enum Attendance {
             static let warningAssignedRetroactively = tr("Localizable", "shiftDetails_attendance_warningAssignedRetroactively", fallback: "Some workers were added after the shift's start time and date")
             static let warningRetroactive = tr("Localizable", "shiftDetails_attendance_warningRetroactive", fallback: "This shift was published after its start time.")
         }
-        enum Clockingsconfirmationerror {
+        enum ClockingsConfirmationError {
             static let description = tr("Localizable", "shiftDetails_clockingsConfirmationError_description", fallback: "We're sorry, we couldn't approve these hours. Please try again shortly.")
         }
         static func clockingsReviewed(_ p0: String, _ p1: String) -> String {
             tr("Localizable", "shiftDetails_clockingsReviewed", p0, p1, fallback: "%@/%@ clockings reviewed")
         }
-        enum Connectionerror {
+        enum ConnectionError {
             enum Action {
                 static let title = tr("Localizable", "shiftDetails_connectionError_action_title", fallback: "Try again")
             }
             static let description = tr("Localizable", "shiftDetails_connectionError_description", fallback: "Please check your internet connection and try again.")
             static let title = tr("Localizable", "shiftDetails_connectionError_title", fallback: "There was a network error")
         }
-        enum Downloadingnextpageerror {
+        enum DownloadingNextPageError {
             static let buttonText = tr("Localizable", "shiftDetails_downloadingNextPageError_buttonText", fallback: "Retry")
             static let description = tr("Localizable", "shiftDetails_downloadingNextPageError_description", fallback: "Something went wrong while loading this content. Please try again.")
         }
-        enum Manageworkersbutton {
+        enum ManageWorkersButton {
             static let title = tr("Localizable", "shiftDetails_manageWorkersButton_title", fallback: "Manage people")
         }
-        enum Notfounderror {
+        enum NotFoundError {
             enum Action {
                 static let title = tr("Localizable", "shiftDetails_notFoundError_action_title", fallback: "Back to shift list")
             }
@@ -2372,7 +2372,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         enum Supervisors {
             static let title = tr("Localizable", "shiftDetails_supervisors_title", fallback: "Supervisors")
         }
-        enum Unknownerror {
+        enum UnknownError {
             enum Action {
                 static let title = tr("Localizable", "shiftDetails_unknownError_action_title", fallback: "Try again")
             }
@@ -2383,14 +2383,14 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let accepted = tr("Localizable", "shiftDetails_worker_accepted", fallback: "Confirmed")
             static let awaitingResponse = tr("Localizable", "shiftDetails_worker_awaitingResponse", fallback: "No response")
             static let declined = tr("Localizable", "shiftDetails_worker_declined", fallback: "Declined")
-            enum Notassigned {
+            enum NotAssigned {
                 enum Action {
                     static let title = tr("Localizable", "shiftDetails_worker_notAssigned_action_title", fallback: "Assign work")
                 }
                 static let description = tr("Localizable", "shiftDetails_worker_notAssigned_description", fallback: "Assign work to any of the following available people")
                 static let title = tr("Localizable", "shiftDetails_worker_notAssigned_title", fallback: "No work assigned yet")
             }
-            enum Notrequested {
+            enum NotRequested {
                 enum Action {
                     static let title = tr("Localizable", "shiftDetails_worker_notRequested_action_title", fallback: "Add quantity")
                 }
@@ -2399,30 +2399,30 @@ Contact your Job&Talent account manager to add your hour types. ")
             }
             static let rejected = tr("Localizable", "shiftDetails_worker_rejected", fallback: "Rejected")
         }
-        enum Workercard {
+        enum WorkerCard {
             static let noShow = tr("Localizable", "shiftDetails_workerCard_noShow", fallback: "No show")
             static let noShowCannotAttend = tr("Localizable", "shiftDetails_workerCard_noShowCannotAttend", fallback: "No show (cannot attend)")
             static let noShowJustified = tr("Localizable", "shiftDetails_workerCard_noShowJustified", fallback: "No show (justified)")
             static let noShowUnjustified = tr("Localizable", "shiftDetails_workerCard_noShowUnjustified", fallback: "No show (not justified)")
         }
-        enum Workerscapacity {
+        enum WorkersCapacity {
             static let assigned = tr("Localizable", "shiftDetails_workersCapacity_assigned", fallback: "People assigned")
             static let attended = tr("Localizable", "shiftDetails_workersCapacity_attended", fallback: "People attended")
             static let confirmed = tr("Localizable", "shiftDetails_workersCapacity_confirmed", fallback: "People confirmed")
             static let notified = tr("Localizable", "shiftDetails_workersCapacity_notified", fallback: "People notified")
             static let requested = tr("Localizable", "shiftDetails_workersCapacity_requested", fallback: "People required")
         }
-        enum Workerslist {
+        enum WorkersList {
             static let title = tr("Localizable", "shiftDetails_workersList_title", fallback: "Assigned")
         }
         static let workersWarningDescription = tr("Localizable", "shiftDetails_workersWarningDescription", fallback: "These people have not been notified yet. Publish the shift to let them know they’re working.")
     }
-    enum Shifthistory {
-        enum Approvalstatus {
+    enum ShiftHistory {
+        enum ApprovalStatus {
             static let approved = tr("Localizable", "shiftHistory_approvalStatus_approved", fallback: "Hours approved")
             static let rejected = tr("Localizable", "shiftHistory_approvalStatus_rejected", fallback: "Hours rejected")
         }
-        enum Operationtype {
+        enum OperationType {
             static let finishTimeUpdated = tr("Localizable", "shiftHistory_operationType_finishTimeUpdated", fallback: "Finish time updated")
             static let startAndFinishUpdated = tr("Localizable", "shiftHistory_operationType_startAndFinishUpdated", fallback: "Start & finish time updated")
             static let startTimeUpdated = tr("Localizable", "shiftHistory_operationType_startTimeUpdated", fallback: "Start time updated")
@@ -2430,30 +2430,30 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
         static let title = tr("Localizable", "shiftHistory_title", fallback: "Shift history")
     }
-    enum Shiftinvitations {
-        enum Assignmenttype {
+    enum ShiftInvitations {
+        enum AssignmentType {
             static let title = tr("Localizable", "shiftInvitations_assignmentType_title", fallback: "Assignment type")
         }
-        enum Fixedassignement {
+        enum FixedAssignement {
             static let description = tr("Localizable", "shiftInvitations_fixedAssignement_description", fallback: "Attendance is mandatory, people must confirm attendance.")
         }
-        enum Openinvite {
+        enum OpenInvite {
             static let description = tr("Localizable", "shiftInvitations_openInvite_description", fallback: "Attendance is optional. Send invites to anyone in your pool and the first to accept is assigned.")
         }
-        enum Sendinvites {
+        enum SendInvites {
             enum Confirmation {
                 static let description = tr("Localizable", "shiftInvitations_sendInvites_confirmation_description", fallback: "Once you send invites, everyone selected will be asked to respond.")
                 static let title = tr("Localizable", "shiftInvitations_sendInvites_confirmation_title", fallback: "Send Invites?")
             }
         }
         static let sendMoreInvites = tr("Localizable", "shiftInvitations_sendMoreInvites", fallback: "Send more invites")
-        enum Shiftdetails {
-            enum Deletefailure {
+        enum ShiftDetails {
+            enum DeleteFailure {
                 enum Snackbar {
                     static let subtitle = tr("Localizable", "shiftInvitations_shiftDetails_deleteFailure_snackbar_subtitle", fallback: "We're sorry, we couldn't delete the shift. Please try again.")
                 }
             }
-            enum Deletesuccess {
+            enum DeleteSuccess {
                 enum Snackbar {
                     static let subtitle = tr("Localizable", "shiftInvitations_shiftDetails_deleteSuccess_snackbar_subtitle", fallback: "People invited have been notified")
                     static let title = tr("Localizable", "shiftInvitations_shiftDetails_deleteSuccess_snackbar_title", fallback: "Shift deleted")
@@ -2466,21 +2466,21 @@ Contact your Job&Talent account manager to add your hour types. ")
                     static let title = tr("Localizable", "shiftInvitations_shiftDetails_draft_empty_title", fallback: "There is nobody here")
                 }
             }
-            enum Expiredmodal {
+            enum ExpiredModal {
                 static func description(_ p0: String, _ p1: String) -> String {
                     tr("Localizable", "shiftInvitations_shiftDetails_expiredModal_description", p0, p1, fallback: "You have %@ of %@ people required for this shift.")
                 }
                 static let title = tr("Localizable", "shiftInvitations_shiftDetails_expiredModal_title", fallback: "Open invite closed")
             }
-            enum Filledmodal {
+            enum FilledModal {
                 static let description = tr("Localizable", "shiftInvitations_shiftDetails_filledModal_description", fallback: "You have all the people you need. Nice one.")
                 static let title = tr("Localizable", "shiftInvitations_shiftDetails_filledModal_title", fallback: "Shift filled")
             }
-            enum Invitessent {
+            enum InvitesSent {
                 static let subtitle = tr("Localizable", "shiftInvitations_shiftDetails_invitesSent_subtitle", fallback: "People will start confirming soon.")
                 static let title = tr("Localizable", "shiftInvitations_shiftDetails_invitesSent_title", fallback: "Invites sent")
             }
-            enum Invitessentsuccessfully {
+            enum InvitesSentSuccessfully {
                 static let subtitle = tr("Localizable", "shiftInvitations_shiftDetails_invitesSentSuccessfully_subtitle", fallback: "We're notified these people.")
             }
             enum Panic {
@@ -2492,8 +2492,8 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
         static let yesSendInvites = tr("Localizable", "shiftInvitations_yesSendInvites", fallback: "Yes, send invites")
     }
-    enum Shiftlist {
-        enum Endlistinfo {
+    enum ShiftList {
+        enum EndListInfo {
             static let button = tr("Localizable", "shiftList_endListInfo_button", fallback: "Create a shift")
             static let description = tr("Localizable", "shiftList_endListInfo_description", fallback: "There are no more shifts scheduled for the future. Start creating upcoming shifts.")
             enum Past {
@@ -2502,25 +2502,25 @@ Contact your Job&Talent account manager to add your hour types. ")
             }
             static let title = tr("Localizable", "shiftList_endListInfo_title", fallback: "Nothing else is planned")
         }
-        enum Optimisticcreation {
-            enum Publishedsnackbar {
+        enum OptimisticCreation {
+            enum PublishedSnackBar {
                 static let description = tr("Localizable", "shiftList_optimisticCreation_publishedSnackBar_description", fallback: "The people you’ve assigned to work have been notified.")
             }
         }
-        enum Optimisticupdate {
-            enum Actionwarning {
+        enum OptimisticUpdate {
+            enum ActionWarning {
                 static let description = tr("Localizable", "shiftList_optimisticUpdate_actionWarning_description", fallback: "This may take a few seconds.")
                 static let title = tr("Localizable", "shiftList_optimisticUpdate_actionWarning_title", fallback: "Shift creation in progress")
             }
         }
         static let shiftsToManage = tr("Localizable", "shiftList_shiftsToManage", fallback: "Shifts to manage")
-        enum Stickyheader {
+        enum StickyHeader {
             static let emptyDay = tr("Localizable", "shiftList_stickyHeader_emptyDay", fallback: "No shifts sheduled")
             static let todayEmptyDay = tr("Localizable", "shiftList_stickyHeader_todayEmptyDay", fallback: "No shifts scheduled for today")
         }
         static let title = tr("Localizable", "shiftList_title", fallback: "Shifts")
     }
-    enum Shiftseries {
+    enum ShiftSeries {
         static func label(_ p0: String, _ p1: String) -> String {
             tr("Localizable", "shiftSeries_label", p0, p1, fallback: "Repeats every %@ on %@")
         }
@@ -2535,7 +2535,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum Shifts {
         static let approveHours = tr("Localizable", "shifts_approveHours", fallback: "Approve hours")
         static let assignWorkers = tr("Localizable", "shifts_assignWorkers", fallback: "Assign work")
-        enum Emptylist {
+        enum EmptyList {
             static let button = tr("Localizable", "shifts_emptyList_button", fallback: "Create your first shift")
             static let description = tr("Localizable", "shifts_emptyList_description", fallback: "Create upcoming shifts and publish them to start notifying people.")
             static let title = tr("Localizable", "shifts_emptyList_title", fallback: "Start creating shifts")
@@ -2559,15 +2559,15 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let requestWorkers = tr("Localizable", "shifts_requestWorkers", fallback: "Add quantity")
         static let title = tr("Localizable", "shifts_title", fallback: "Shifts")
     }
-    enum Shiftsplanning {
-        enum Lastweek {
+    enum ShiftsPlanning {
+        enum LastWeek {
             static let buttonTitle = tr("Localizable", "shiftsPlanning_lastWeek_buttonTitle", fallback: "Ok, go back to current week")
             static let message = tr("Localizable", "shiftsPlanning_lastWeek_message", fallback: "You can manage shifts until 2 months ahead")
             static let title = tr("Localizable", "shiftsPlanning_lastWeek_title", fallback: "Calendar view ends here")
         }
         static let thisWeek = tr("Localizable", "shiftsPlanning_thisWeek", fallback: "This week")
     }
-    enum Signoutconfirmationdialog {
+    enum SignOutConfirmationDialog {
         static let confirmButton = tr("Localizable", "signOutConfirmationDialog_confirmButton", fallback: "Log out")
         static let title = tr("Localizable", "signOutConfirmationDialog_title", fallback: "Do you want to logout?")
     }
@@ -2576,19 +2576,19 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let deletebreak = tr("Localizable", "snackbar_error_deletebreak", fallback: "We couldn’t delete the break. Please try again. ")
             static let updatebreak = tr("Localizable", "snackbar_error_updatebreak", fallback: "We couldn’t update the break. Please try again. ")
         }
-        enum Linkexpirederror {
+        enum LinkexpiredError {
             static let title = tr("Localizable", "snackbar_linkexpiredError_title", fallback: "Link expired or already used")
         }
-        enum Successchangepassword {
+        enum SuccessChangePassword {
             static let subtitle = tr("Localizable", "snackbar_successChangePassword_subtitle", fallback: "You can now log in to your account.")
             static let title = tr("Localizable", "snackbar_successChangePassword_title", fallback: "Password set")
         }
-        enum Unknownerror {
+        enum UnknownError {
             static let subtitle = tr("Localizable", "snackbar_unknownError_subtitle", fallback: "Please try again later")
             static let title = tr("Localizable", "snackbar_unknownError_title", fallback: "Something went wrong")
         }
     }
-    enum Starratingview {
+    enum StarRatingView {
         enum Value {
             static let 1 = tr("Localizable", "starRatingView_value_1", fallback: "Bad")
             static let 2 = tr("Localizable", "starRatingView_value_2", fallback: "Poor")
@@ -2621,7 +2621,7 @@ Contact your Job&Talent account manager to add your hour types. ")
             static let peopleAttended = tr("Localizable", "stats_kpis_peopleAttended", fallback: "people attended")
             static let peopleAttending = tr("Localizable", "stats_kpis_peopleAttending", fallback: "people attending so far")
             static let peoplePlanned = tr("Localizable", "stats_kpis_peoplePlanned", fallback: "people planned")
-            enum Previousperioddifference {
+            enum PreviousPeriodDifference {
                 static func android(_ p0: String, _ p1: String) -> String {
                     tr("Localizable", "stats_kpis_previousPeriodDifference_android", p0, p1, fallback: "%@ p.p. vs %@")
                 }
@@ -2633,7 +2633,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         enum Message {
             static let doShiftsForDay = tr("Localizable", "stats_message_doShiftsForDay", fallback: "No shifts planned for this day")
         }
-        enum Noshows {
+        enum NoShows {
             enum Worker {
                 static let attendanceRate = tr("Localizable", "stats_noShows_worker_attendanceRate", fallback: "att. rate")
                 static func hoursWorked(_ p0: Int64) -> String {
@@ -2646,13 +2646,13 @@ Contact your Job&Talent account manager to add your hour types. ")
                 }
             }
         }
-        enum Periodselector {
+        enum PeriodSelector {
             static let today = tr("Localizable", "stats_periodSelector_today", fallback: "Today")
         }
         enum Tab {
             static let title = tr("Localizable", "stats_tab_title", fallback: "Stats")
         }
-        enum Workerfilters {
+        enum WorkerFilters {
             static func assignedFilter(_ p0: Int64) -> String {
                 tr("Localizable", "stats_workerFilters_assignedFilter", p0, fallback: "Assigned (%d)")
             }
@@ -2711,7 +2711,7 @@ in a couple of minutes.")
             static let whatelse = tr("Localizable", "teo_chat_whatelse", fallback: "Or something else?")
         }
         enum Feedback {
-            enum Bottomsheet {
+            enum BottomSheet {
                 static let comment = tr("Localizable", "teo_feedback_bottomSheet_comment", fallback: "Comment")
             }
             enum Confirmation {
@@ -2745,19 +2745,19 @@ in a couple of minutes.")
             }
         }
     }
-    enum Termsandconditions {
+    enum TermsAndConditions {
         static func description(_ p0: String, _ p1: String) -> String {
             tr("Localizable", "termsAndConditions_description", p0, p1, fallback: "By logging in, you agree to Job&Talent Business' %@ and %@")
         }
         static let url = tr("Localizable", "termsAndConditions_url", fallback: "https://www.jobandtalent.co.uk/legal/terms-of-use-companies")
     }
     static let termsOfService = tr("Localizable", "termsOfService", fallback: "Terms of Use")
-    enum Upcomingplacements {
+    enum UpcomingPlacements {
         static let active = tr("Localizable", "upcomingPlacements_active", fallback: "Active")
         static let upcoming = tr("Localizable", "upcomingPlacements_upcoming", fallback: "Upcoming")
     }
-    enum Userprofile {
-        enum Attendanceratedkpi {
+    enum UserProfile {
+        enum AttendanceRatedKpi {
             static func amount(_ p0: Int64) -> String {
                 tr("Localizable", "userProfile_attendanceRatedKpi_amount", p0, fallback: "%d shifts - last 30 days")
             }
@@ -2767,14 +2767,14 @@ in a couple of minutes.")
             static let rateLabel = tr("Localizable", "userProfile_attendanceRatedKpi_rateLabel", fallback: "Attended")
             static let title = tr("Localizable", "userProfile_attendanceRatedKpi_title", fallback: "Shift attendance rate")
         }
-        enum Editphoto {
+        enum EditPhoto {
             static let button = tr("Localizable", "userProfile_editPhoto_button", fallback: "Edit")
             enum Menu {
                 static let chooseAPicture = tr("Localizable", "userProfile_editPhoto_menu_chooseAPicture", fallback: "Choose a picture")
                 static let takeAPicture = tr("Localizable", "userProfile_editPhoto_menu_takeAPicture", fallback: "Take a picture")
                 static let title = tr("Localizable", "userProfile_editPhoto_menu_title", fallback: "Edit profile picture")
             }
-            enum Missingaccess {
+            enum MissingAccess {
                 enum Button {
                     static let allowTitle = tr("Localizable", "userProfile_editPhoto_missingAccess_button_allowTitle", fallback: "Allow access")
                 }
@@ -2793,11 +2793,11 @@ in a couple of minutes.")
                     static let title = tr("Localizable", "userProfile_editPhoto_preview_confirmation_title", fallback: "Leave without saving profile picture?")
                 }
             }
-            enum Uploadfailure {
+            enum UploadFailure {
                 static let description = tr("Localizable", "userProfile_editPhoto_uploadFailure_description", fallback: "We could not upload your photo. Please try again.")
                 static let title = tr("Localizable", "userProfile_editPhoto_uploadFailure_title", fallback: "Something went wrong ")
             }
-            enum Uploadsuccess {
+            enum UploadSuccess {
                 static let description = tr("Localizable", "userProfile_editPhoto_uploadSuccess_description", fallback: "We’ve successfully updated your picture.")
                 static let title = tr("Localizable", "userProfile_editPhoto_uploadSuccess_title", fallback: "Profile picture saved")
             }
@@ -2815,7 +2815,7 @@ in a couple of minutes.")
             static let peopleRated = tr("Localizable", "userProfile_kpis_peopleRated", fallback: "People rated")
             static let satisfaction = tr("Localizable", "userProfile_kpis_satisfaction", fallback: "Satisfaction")
         }
-        enum Peopleratedkpi {
+        enum PeopleRatedKpi {
             static func amount(_ p0: Int64) -> String {
                 tr("Localizable", "userProfile_peopleRatedKpi_amount", p0, fallback: "%d people - last 30 days")
             }
@@ -2825,23 +2825,23 @@ in a couple of minutes.")
             static let rateLabel = tr("Localizable", "userProfile_peopleRatedKpi_rateLabel", fallback: "Rated")
             static let title = tr("Localizable", "userProfile_peopleRatedKpi_title", fallback: "People you've rated")
         }
-        enum Personalinformation {
+        enum PersonalInformation {
             static let email = tr("Localizable", "userProfile_personalInformation_email", fallback: "Email")
             static let fullName = tr("Localizable", "userProfile_personalInformation_fullName", fallback: "Full name")
             static let phone = tr("Localizable", "userProfile_personalInformation_phone", fallback: "Cell phone")
             static let title = tr("Localizable", "userProfile_personalInformation_title", fallback: "Personal information")
         }
-        enum Workplaceaddress {
+        enum WorkplaceAddress {
             static let noMapAppFoundError = tr("Localizable", "userProfile_workplaceAddress_noMapAppFoundError", fallback: "No map apps were found. Please, install a maps application to proceed.")
         }
     }
-    enum Vacancyrequestdetails {
+    enum VacancyRequestDetails {
         static let contractJustification = tr("Localizable", "vacancyRequestDetails_contractJustification", fallback: "Contract justification")
         static let contractType = tr("Localizable", "vacancyRequestDetails_contractType", fallback: "Contract type")
         static let createdOn = tr("Localizable", "vacancyRequestDetails_createdOn", fallback: "Created on %s")
         static let dates = tr("Localizable", "vacancyRequestDetails_dates", fallback: "Dates")
         static let id = tr("Localizable", "vacancyRequestDetails_id", fallback: "ID %s")
-        enum Newrequesterror {
+        enum NewRequestError {
             static let description = tr("Localizable", "vacancyRequestDetails_newRequestError_description", fallback: "We're sorry, there was an error. Please try again.")
             static let title = tr("Localizable", "vacancyRequestDetails_newRequestError_title", fallback: "Request not sent")
         }
@@ -2849,7 +2849,7 @@ in a couple of minutes.")
         static let peopleNeeded = tr("Localizable", "vacancyRequestDetails_peopleNeeded", fallback: "People needed")
         static let timetable = tr("Localizable", "vacancyRequestDetails_timetable", fallback: "Timetable")
     }
-    enum Vacancyrequests {
+    enum VacancyRequests {
         enum Created {
             static let action = tr("Localizable", "vacancyRequests_created_action", fallback: "OK, great")
             static let description = tr("Localizable", "vacancyRequests_created_description", fallback: "We’ve received your request and will confirm receipt by email. Your requests appear in <b>Hiring</b> once we start working on it.")
@@ -2861,7 +2861,7 @@ in a couple of minutes.")
             static let title = tr("Localizable", "vacancyRequests_empty_title", fallback: "Hire more people")
         }
         static let hint = tr("Localizable", "vacancyRequests_hint", fallback: "Requests appear here once we start working on them. If you need to know the status of a request, please contact your Job&Talent account manager.")
-        enum Jobcard {
+        enum JobCard {
             static func startToFinish(_ p0: String, _ p1: String) -> String {
                 tr("Localizable", "vacancyRequests_jobCard_startToFinish", p0, p1, fallback: "%@ to %@")
             }
@@ -2880,7 +2880,7 @@ in a couple of minutes.")
             static let title = tr("Localizable", "virtual_shift_title", fallback: "Unassigned workers")
         }
     }
-    enum Virtualshift {
+    enum VirtualShift {
         static let label = tr("Localizable", "virtualShift_label", fallback: "All day")
         enum Title {
             static let singular = tr("Localizable", "virtualShift_title_singular", fallback: "Unassigned worker")
@@ -2893,7 +2893,7 @@ in a couple of minutes.")
                 static let title = tr("Localizable", "worker_list_empty_title", fallback: "People not added yet")
             }
         }
-        enum Norole {
+        enum NoRole {
             static let label = tr("Localizable", "worker_noRole_label", fallback: "No roles assigned")
         }
         enum Profile {
@@ -3081,8 +3081,8 @@ in a couple of minutes.")
             }
         }
     }
-    enum Workerdetail {
-        enum Assignmentsnackbar {
+    enum WorkerDetail {
+        enum AssignmentSnackbar {
             enum Error {
                 static let description = tr("Localizable", "workerDetail_assignmentSnackbar_error_description", fallback: "We're sorry, there was an error. The shift assignments were not updated.")
                 static let title = tr("Localizable", "workerDetail_assignmentSnackbar_error_title", fallback: "Shifts not updated")
@@ -3092,18 +3092,18 @@ in a couple of minutes.")
             }
         }
     }
-    enum Workerdetails {
-        enum Attendancekpi {
+    enum WorkerDetails {
+        enum AttendanceKpi {
             static let header = tr("Localizable", "workerDetails_attendanceKpi_header", fallback: "Attendance")
         }
-        enum Ratingkpi {
+        enum RatingKpi {
             static let header = tr("Localizable", "workerDetails_ratingKpi_header", fallback: "Performance")
         }
-        enum Responsekpi {
+        enum ResponseKpi {
             static let header = tr("Localizable", "workerDetails_responseKpi_header", fallback: "Response")
         }
     }
-    enum Workerdetailsscreen {
+    enum WorkerDetailsScreen {
         enum Approve {
             enum Hours {
                 static let button = tr("Localizable", "workerDetailsScreen_approve_hours_button", fallback: "Approve hours")
@@ -3157,7 +3157,7 @@ in a couple of minutes.")
             }
         }
     }
-    enum Workerlist {
+    enum WorkerList {
         static let absent = tr("Localizable", "workerList_absent", fallback: "No clocking")
         static let assigned = tr("Localizable", "workerList_assigned", fallback: "Assigned")
         enum Clocking {
@@ -3169,7 +3169,7 @@ in a couple of minutes.")
         static let hoursRejected = tr("Localizable", "workerList_hoursRejected", fallback: "Hours rejected")
         static let missingStart = tr("Localizable", "workerList_missingStart", fallback: "Incomplete clocking")
     }
-    enum Workersatisfaction {
+    enum WorkerSatisfaction {
         static let description = tr("Localizable", "workerSatisfaction_description", fallback: "This shows the average satisfaction rating people have given your shifts.")
         static func numberOfRatings(_ p0: Int64) -> String {
             tr("Localizable", "workerSatisfaction_numberOfRatings", p0, fallback: "%d ratings")
@@ -3228,7 +3228,7 @@ in a couple of minutes.")
         }
     }
     enum Workers {
-        enum Assignshifts {
+        enum AssignShifts {
             static let button = tr("Localizable", "workers_assignShifts_button", fallback: "Edit assignments")
         }
         enum Card {
@@ -3241,36 +3241,36 @@ in a couple of minutes.")
                 static let noRoles = tr("Localizable", "workers_card_role_noRoles", fallback: "No roles assigned")
             }
         }
-        enum Hoursassigned {
+        enum HoursAssigned {
             static func label(_ p0: String) -> String {
                 tr("Localizable", "workers_hoursAssigned_label", p0, fallback: "%@h assigned this week")
             }
         }
-        enum Joiningsoon {
+        enum JoiningSoon {
             static let label = tr("Localizable", "workers_joiningSoon_label", fallback: "Joining soon")
         }
-        enum Newjoiner {
+        enum NewJoiner {
             static let label = tr("Localizable", "workers_newJoiner_label", fallback: "New")
         }
-        enum Selectpeople {
+        enum SelectPeople {
             static let title = tr("Localizable", "workers_selectPeople_title", fallback: "Select people")
         }
-        enum Selectedpeopleheader {
+        enum SelectedPeopleHeader {
             static func text(_ p0: String) -> String {
                 tr("Localizable", "workers_selectedPeopleHeader_text", p0, fallback: "%@ selected")
             }
         }
-        enum Successfullyassignedmessage {
+        enum SuccessfullyAssignedMessage {
             static let action = tr("Localizable", "workers_successfullyAssignedMessage_action", fallback: "OK, great")
             static let description = tr("Localizable", "workers_successfullyAssignedMessage_description", fallback: "We'll notify people about published shifts, so they can accept or reject them.")
         }
         enum Suggested {
-            enum Alreadyrequested {
-                enum Chipview {
+            enum AlreadyRequested {
+                enum ChipView {
                     static let title = tr("Localizable", "workers_suggested_alreadyRequested_chipView_title", fallback: "Requested")
                 }
             }
-            enum Dynamicliquidity {
+            enum DynamicLiquidity {
                 enum Prefix {
                     static func default(_ p0: String) -> String {
                         tr("Localizable", "workers_suggested_dynamicLiquidity_prefix_default", p0, fallback: "%@")
@@ -3290,7 +3290,7 @@ in a couple of minutes.")
                 static let subtitle = tr("Localizable", "workers_suggested_empty_subtitle", fallback: "We’ll add people who previously worked with you to this page. You’ll be able to rehire them.")
                 static let title = tr("Localizable", "workers_suggested_empty_title", fallback: "No previous workers available")
             }
-            enum Emptyfiltering {
+            enum EmptyFiltering {
                 static let clear = tr("Localizable", "workers_suggested_emptyFiltering_clear", fallback: "Clear all")
                 static let description = tr("Localizable", "workers_suggested_emptyFiltering_description", fallback: "Try adjusting your filters or search term to get some results.")
                 static let title = tr("Localizable", "workers_suggested_emptyFiltering_title", fallback: "No results")
@@ -3327,7 +3327,7 @@ in a couple of minutes.")
                     static let select = tr("Localizable", "workers_suggested_profile_action_select", fallback: "Select")
                     static let unselect = tr("Localizable", "workers_suggested_profile_action_unselect", fallback: "Unselect")
                 }
-                enum Requestfailure {
+                enum RequestFailure {
                     static let title = tr("Localizable", "workers_suggested_profile_requestFailure_title", fallback: "Worker not rehired")
                 }
             }
@@ -3342,17 +3342,17 @@ in a couple of minutes.")
             enum Request {
                 static let rehire = tr("Localizable", "workers_suggested_request_rehire", fallback: "Request rehire")
             }
-            enum Requestconfirmation {
+            enum RequestConfirmation {
                 static let buttonTitle = tr("Localizable", "workers_suggested_requestConfirmation_buttonTitle", fallback: "OK, thanks")
                 static let description = tr("Localizable", "workers_suggested_requestConfirmation_description", fallback: "We've received your request. We'll contact you shortly.")
                 static let title = tr("Localizable", "workers_suggested_requestConfirmation_title", fallback: "Hiring request sent")
             }
-            enum Requestfailure {
+            enum RequestFailure {
                 static let description = tr("Localizable", "workers_suggested_requestFailure_description", fallback: "We're sorry, there was an error. Please try again.")
                 static let title = tr("Localizable", "workers_suggested_requestFailure_title", fallback: "People not rehired")
             }
             enum Selection {
-                enum Confirmbutton {
+                enum ConfirmButton {
                     static let title = tr("Localizable", "workers_suggested_selection_confirmButton_title", fallback: "Request hiring")
                 }
             }
@@ -3391,39 +3391,39 @@ in a couple of minutes.")
             }
         }
     }
-    enum Workersassignshifts {
-        enum Multipleworkers {
+    enum WorkersAssignShifts {
+        enum MultipleWorkers {
             static let title = tr("Localizable", "workersAssignShifts_multipleWorkers_title", fallback: "Assign shifts")
         }
-        enum Noavailableshiftsstate {
+        enum NoAvailableShiftsState {
             static let description = tr("Localizable", "workersAssignShifts_noAvailableShiftsState_description", fallback: "There are not existing shifts in the placement period of this worker")
             static let title = tr("Localizable", "workersAssignShifts_noAvailableShiftsState_title", fallback: "No shifts available")
         }
-        enum Selectallaction {
+        enum SelectAllAction {
             static let title = tr("Localizable", "workersAssignShifts_selectAllAction_title", fallback: "Select all")
         }
-        enum Singleworker {
+        enum SingleWorker {
             static let title = tr("Localizable", "workersAssignShifts_singleWorker_title", fallback: "Edit assignment of people selected")
         }
-        enum Unselectallaction {
+        enum UnselectAllAction {
             static let title = tr("Localizable", "workersAssignShifts_unselectAllAction_title", fallback: "Unselect all")
         }
     }
-    enum Workersdetail {
-        enum Emptystate {
+    enum WorkersDetail {
+        enum EmptyState {
             static let buttonTitle = tr("Localizable", "workersDetail_emptyState_buttonTitle", fallback: "Manage shifts")
             static func description(_ p0: String) -> String {
                 tr("Localizable", "workersDetail_emptyState_description", p0, fallback: "%@ doesn't have any shifts yet.")
             }
             static let title = tr("Localizable", "workersDetail_emptyState_title", fallback: "Manage shifts")
         }
-        enum Firstsubtab {
+        enum FirstSubTab {
             static let title = tr("Localizable", "workersDetail_firstSubTab_title", fallback: "Schedule")
         }
         enum Header {
             static let noRatings = tr("Localizable", "workersDetail_header_noRatings", fallback: "No ratings")
         }
-        enum Infosection {
+        enum InfoSection {
             static let role = tr("Localizable", "workersDetail_infoSection_role", fallback: "Roles")
             static let selectRole = tr("Localizable", "workersDetail_infoSection_selectRole", fallback: "Update role")
             static let subtitle1 = tr("Localizable", "workersDetail_infoSection_subtitle1", fallback: "Start")
@@ -3431,11 +3431,11 @@ in a couple of minutes.")
             static let subtitle3 = tr("Localizable", "workersDetail_infoSection_subtitle3", fallback: "Position")
             static let title = tr("Localizable", "workersDetail_infoSection_title", fallback: "Latest job")
         }
-        enum Kpisection {
+        enum KpiSection {
             enum Assigned {
                 static let description = tr("Localizable", "workersDetail_kpiSection_assigned_description", fallback: "hours assigned")
             }
-            enum Secondaryaction {
+            enum SecondaryAction {
                 static let title = tr("Localizable", "workersDetail_kpiSection_secondaryAction_title", fallback: "Show all")
             }
             static let title = tr("Localizable", "workersDetail_kpiSection_title", fallback: "This week")
@@ -3443,20 +3443,20 @@ in a couple of minutes.")
                 static let description = tr("Localizable", "workersDetail_kpiSection_worked_description", fallback: "hours worked")
             }
         }
-        enum Nokpis {
+        enum NoKpis {
             static let button = tr("Localizable", "workersDetail_noKpis_button", fallback: "Understood")
             static let subtitle = tr("Localizable", "workersDetail_noKpis_subtitle", fallback: "You'll see the KPIs here when this worker gets rehire and starts having shifts assigned.")
             static let title = tr("Localizable", "workersDetail_noKpis_title", fallback: "No data")
         }
-        enum Roleassignedsnackbar {
+        enum RoleAssignedSnackbar {
             static let description = tr("Localizable", "workersDetail_roleAssignedSnackbar_description", fallback: "You've successfully updated the role")
             static let title = tr("Localizable", "workersDetail_roleAssignedSnackbar_title", fallback: "Role updated")
         }
-        enum Secondsubtab {
+        enum SecondSubTab {
             static let title = tr("Localizable", "workersDetail_secondSubTab_title", fallback: "General information")
         }
     }
-    enum Workersfilter {
+    enum WorkersFilter {
         enum Ratings {
             static let noRating = tr("Localizable", "workersFilter_ratings_noRating", fallback: "No rating")
         }
@@ -3476,16 +3476,16 @@ in a couple of minutes.")
             static let new = tr("Localizable", "workersFilter_status_new", fallback: "New")
         }
     }
-    enum Workersshifts {
-        enum Emptystate {
+    enum WorkersShifts {
+        enum EmptyState {
             static let description = tr("Localizable", "workersShifts_emptyState_description", fallback: "Go to the Shifts tab to create new shifts first, then assign them to people.")
             static let title = tr("Localizable", "workersShifts_emptyState_title", fallback: "No shifts yet")
         }
-        enum Emptystateforfilter {
+        enum EmptyStateForFilter {
             static let description = tr("Localizable", "workersShifts_emptyStateForFilter_description", fallback: "Try adjusting or removing your filters to get more results.")
             static let title = tr("Localizable", "workersShifts_emptyStateForFilter_title", fallback: "No results")
         }
-        enum Emptystateforsearch {
+        enum EmptyStateForSearch {
             static let description = tr("Localizable", "workersShifts_emptyStateForSearch_description", fallback: "Try writing the shift name differently. If no results, the shift may not exist.")
             static let title = tr("Localizable", "workersShifts_emptyStateForSearch_title", fallback: "Shift not found")
         }

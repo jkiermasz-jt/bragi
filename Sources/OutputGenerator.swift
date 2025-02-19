@@ -58,10 +58,12 @@ struct OutputGenerator {
         
         for (key, value) in sortedEntries {
             if let subTree = value as? [String: Any] {
-                // Namespace
+                // Namespace - capitalize only first letter
+                let namespaceName = key.prefix(1).uppercased() + key.dropFirst()
+                
                 content += """
                 
-                \(indent)enum \(key.capitalized) {
+                \(indent)enum \(namespaceName) {
                 """
                 
                 content += generateFromTree(subTree, indent: indent + "    ")
