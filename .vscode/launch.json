@@ -1,0 +1,40 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:bragi}",
+      "name": "Debug bragi",
+      "program": "${workspaceFolder:bragi}/.build/debug/bragi",
+      "preLaunchTask": "swift: Build Debug bragi"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:bragi}",
+      "name": "Release bragi",
+      "program": "${workspaceFolder:bragi}/.build/release/bragi",
+      "preLaunchTask": "swift: Build Release bragi"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:bragi}",
+      "name": "Debug LocalizationTool",
+      "program": "${workspaceFolder:bragi}/.build/debug/LocalizationTool",
+      "preLaunchTask": "swift: Build Debug LocalizationTool"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:bragi}",
+      "name": "Release LocalizationTool",
+      "program": "${workspaceFolder:bragi}/.build/release/LocalizationTool",
+      "preLaunchTask": "swift: Build Release LocalizationTool"
+    }
+  ]
+}
