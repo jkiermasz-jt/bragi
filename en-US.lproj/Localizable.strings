@@ -1,0 +1,2787 @@
+"absence_conflicts_manageshifts_bottomsheet_subtitle" = "Some people will be unavailable for some shifts. You can unassign those shifts if needed";
+
+"absence_conflicts_manageshifts_bottomsheet_subtitle_noconflicts" = "All people are available for the shifts assigned";
+
+"absence_conflicts_manageshifts_bottomsheet_title_noconflicts" = "No conflicts";
+
+"absence_conflicts_manageshifts_button_saveanyway" = "Save anyway";
+
+"absences_assignation_unavailable_period_allday" = "All day";
+
+"absences_assignation_unavailable_period_range" = "From %@ to %@";
+
+"absences_shift_detail_warning_fixed_assignments_draft" = "Some people are unavailable. Consider reassigning shifts before publishing.";
+
+"absences_shift_detail_warning_fixed_assignments_published" = "Some people are unavailable. Consider reassigning shifts to others.";
+
+"absences_shift_detail_warning_open_invites" = "Send more invites. You’ve not met your confirmed target yet.";
+
+"absences_unavailable_assignation_warning_dialog_body" = "You can still publish. However, the shifts will be automatically rejected and they will not be notified.";
+
+"absences_unavailable_assignation_warning_dialog_multipleworkers_body" = "You can still publish. However, the shifts will be automatically rejected and they will not be notified.";
+
+"absences_unavailable_assignation_warning_dialog_primarybutton" = "Publish anyway";
+
+"absences_unavailable_assignation_warning_dialog_singleworker_title" = "%@ is unavailable";
+
+"absences_unavailable_period_allday" = ", all day";
+
+"absences_unavailable_period_range" = ", from %@ to %@";
+
+"absences_unavailable_publish_warning_dialog_body" = "You can still publish. However, the shifts will be automatically rejected without sending any notification.";
+
+"absences_unavailable_publish_warning_dialog_multipleworkers_title" = "%@ people unavailable";
+
+"absences_unavailable_publish_warning_dialog_primarybutton" = "Publish anyway";
+
+"absences_unavailable_publish_warning_dialog_singleworker_title" = "%@ is unavailable";
+
+"absences_unavailable_reason_care_family" = "Medical care for family";
+
+"absences_unavailable_reason_holiday" = "Holiday";
+
+"absences_unavailable_reason_personal" = "Personal reason or event";
+
+"absences_unavailable_reason_personal_emergency" = "Personal emergency";
+
+"absences_unavailable_reason_schedule" = "Not my agreed schedule";
+
+"absences_unavailable_reason_sick" = "Sick or unwell";
+
+"absences_unavailable_reason_travel_issue" = "Travel issue";
+
+"absences_unavailable_warning_dialog_body" = "You can still save changes. However, the shifts will be automatically rejected without sending any notification.";
+
+"absences_unavailable_warning_dialog_multipleworkers_title" = "%@ people unavailable";
+
+"absences_unavailable_warning_dialog_primarybutton" = "Save anyway";
+
+"activateAccount_subtitle" = "Enter your email and we’ll send you an email to activate your account.";
+
+"activateAccount_title" = "Activate your account";
+
+"android_notification_rationale_permission_description" = "Notifications help you organise upcoming shifts and remind you to approve hours.";
+
+"android_notification_rationale_permission_title" = "Don't fall behind";
+
+"appName" = "J&T Business";
+
+"approveHours_body" = "Confirm that these details are correct before approving hours.";
+
+"approveHours_button_approve" = "Yes, approve";
+
+"approveHours_title" = "Approve hours?";
+
+"assignation_filters_category_availability" = "Availability";
+
+"assignSupervisor_empty_description" = "Contact your Job&Talent account manager to create supervisors for your workplace.";
+
+"assignSupervisor_empty_title" = "No supervisors created yet";
+
+"assignSupervisor_title" = "Assign supervisor";
+
+"assignWorkers_operation_in_progress_snackbar_description" = "Your assignments are being updated";
+
+"assignWorkers_operation_in_progress_snackbar_title" = "Updating assignments…";
+
+"attendance_attendanceRateDate" = "attendance • %@";
+
+"attendance_attendee_empty" = "It looks like no one attended. Make sure everyone clocked in.";
+
+"attendance_attendeeList_empty" = "No one turned up at work today.";
+
+"attendance_chart_peopleCount" = "%s people";
+
+"attendance_count_assignedTitle" = "assigned";
+
+"attendance_count_attendedTitle" = "attended";
+
+"attendance_count_noShowsTitle" = "no shows";
+
+"attendance_kpi_assigned" = "Assigned";
+
+"attendance_kpi_attended" = "Attended";
+
+"attendance_kpi_noshows" = "No shows";
+
+"attendance_noShifts_notToday" = "There were no clockings on this day";
+
+"attendance_noShifts_today" = "There are no clockings today";
+
+"attendance_noShow_empty" = "Good job. Everyone attended. ";
+
+"attendance_noShowList_empty" = "Everyone turned up today.";
+
+"attendance_shiftList_header" = "%d shifts";
+
+"attendance_status_available" = "Available";
+
+"attendance_status_unavailable" = "Unavailable";
+
+"attendancetab_attendance_customgraph_body_attendance" = "attendance";
+
+"attendancetab_satisfactionrate_body_satisfaction" = "%@ satisfaction";
+
+"attendancetab_shifts_emptystate_bodytext_futureday" = "No shifts planned for this day";
+
+"bulkApprove_error_description" = "We could not approve hours for %1$d people. \nTry again?";
+
+"bulkApprove_error_title" = "Something went wrong";
+
+"bulkApprove_header" = "Approve hours";
+
+"bulkApprove_tryAgainButton" = "Try again";
+
+"bulkApprove_unapproveMessage" = "We could not approve hours for %1$d people. \nTry again?";
+
+"button_cancel" = "Cancel";
+
+"button_done" = "Done";
+
+"clockingdetail_body_swipe" = "Move between clockings by swiping left or right.";
+
+"clockingdetail_break_bottomsheet_button_addbreak" = "Add another break";
+
+"clockingdetail_break_bottomsheet_button_cancel" = "Cancel";
+
+"clockingdetail_break_bottomsheet_button_update" = "Update";
+
+"clockingdetail_break_bottomsheet_infohint_deductedbreak" = "This break deduction was automatically applied for this workplace. To change it, please contact your Job&Talent account manager.";
+
+"clockingdetail_break_bottomsheet_subtitle_totalhours" = "Total break time";
+
+"clockingdetail_break_bottomsheet_title_break" = "Break ";
+
+"clockingdetail_button_title_gotit" = "Got it";
+
+"clockingdetail_geoattendance_attendancecard_customhint_notavailable" = "Location not available. Why?";
+
+"clockingdetail_geoattendance_attendancecard_customhint_workeronsite" = "Confirmed on site with geolocation";
+
+"clockingdetail_geoattendance_attendancecard_customhint_workerwaspresent" = "Confirmed on site with geolocation";
+
+"clockingdetail_geoattendance_bottomsheet_title_notavailable" = "Geolocation not available";
+
+"clockingdetail_geoattendance_bottomsheet_warninghint_noshowonsite" = "Geolocation shows that this person was on site for this shift. Be certain before you confirm.";
+
+"clockingdetail_geoattendance_bottomsheet_warninghint_notavailable" = "This person may not have geolocation enabled on their device, or the clocking may have occurred off site.";
+
+"clockingdetail_hoursbreakdown_attcard_body_breakdown" = "Breakdown";
+
+"clockingdetail_hoursbreakdown_attcard_body_breakdownnotavailable" = "Breakdown not available. ";
+
+"clockingdetail_hoursbreakdown_attcard_body_classifyhours" = "How we classify hours";
+
+"clockingdetail_hoursbreakdown_attcard_body_why" = "Why?";
+
+"clockingdetail_hoursbreakdown_attcard_dangerhint_loadingerror" = "Sorry, we could not load the data. ";
+
+"clockingdetail_hoursbreakdown_attcard_dangerhint_retry" = " Retry";
+
+"clockingdetail_hoursbreakdown_attcard_infohint_processing" = "This may take a moment to break down the hours.";
+
+"clockingdetail_hoursbreakdown_attcard_infohint_saveorapprove" = "Save or approve these hours in order to see the breakdown.";
+
+"clockingdetail_hoursbreakdown_bottomsheet_body_missinghours" = "By adding your hour types, you can pay people through the app and give better guidance about their hours breakdown. \n\nContact your Job&Talent account manager to add your hour types. ";
+
+"clockingdetail_hoursbreakdown_bottomsheet_hourtypes_configured" = "Configured";
+
+"clockingdetail_hoursbreakdown_bottomsheet_hourtypes_dayovertime" = "More than %dh per day";
+
+"clockingdetail_hoursbreakdown_bottomsheet_hourtypes_overtime" = "Overtime";
+
+"clockingdetail_hoursbreakdown_bottomsheet_hourtypes_weekovertime" = "More than %dh per week";
+
+"clockingdetail_hoursbreakdown_bottomsheet_textbutton_addmissinghours" = "Add missing hour types";
+
+"clockingdetail_hoursbreakdown_bottomsheet_title_hourtypes" = "Hour types";
+
+"clockingdetail_hoursbreakdown_bottomsheet_title_missinghours" = "Your hour types are missing";
+
+"clockingdetail_rating_bottomsheet_bodytext_leave" = "If you leave, your feedback won’t be shared with this person. ";
+
+"clockingdetail_rating_bottomsheet_primarybutton_shareandleave" = "Continue editing";
+
+"clockingdetail_rating_bottomsheet_secondarybutton_leave" = "Yes, leave now";
+
+"clockingdetail_rating_bottomsheet_title_leave" = "Do you want to leave? ";
+
+"clockingdetail_rating_performancecard_bodytext_feedback" = "How can this person improve?";
+
+"clockingdetail_rating_performancecard_bodytext_highlight" = "What did they do well?";
+
+"clockingdetail_rating_performancecard_bodytext_optional" = "(optional) ";
+
+"clockingdetail_rating_performancecard_bodytext_sharefeedback" = "We’ll share this feedback with them.";
+
+"clockingdetail_rating_performancecard_bottomsheet_feedbackinfo" = "You can also provide feedback to help them understand what to improve or continue doing well.";
+
+"clockingdetail_rating_performancecard_button_share" = "Share feedback";
+
+"clockingdetail_rating_performancecard_snackbar_feedbackkosubtitle" = "Something happend and we couldn’t save your feedback. Try again. ";
+
+"clockingdetail_rating_performancecard_snackbar_feedbackkotitle" = "Feedback wasn’t saved";
+
+"clockingdetail_rating_performancecard_snackbar_feedbackoksubtitle" = "We’ve shared the feedback with this person. ";
+
+"clockingdetail_rating_performancecard_snackbar_feedbackoktitle" = "Feedback saved";
+
+"clockingdetail_rating_performancecard_snackbar_tagskosubtitle" = "Please try to rate this person again. ";
+
+"clockingdetail_rating_performancecard_snackbar_tagskotitle" = "Something went wrong";
+
+"clockingdetail_rating_performancecard_textfield_comment" = "Leave a comment...";
+
+"clockingdetail_rating_performancecard_textfield_helper" = "20/120 characters";
+
+"clockingdetail_rating_performancecard_textfield_label" = "Comment";
+
+"clockingdetail_textfield_missingfinish" = "Missing finish";
+
+"clockingdetail_textfield_missingstartandfinish" = "Missing start and finish";
+
+"clockingdetail_title_swipe" = "Swipe to show more";
+
+"clockingDetails_break_bottomsheet_button_canceldeletebreak" = "Cancel";
+
+"clockingDetails_break_bottomsheet_button_deletebreak" = "Yes, delete";
+
+"clockingDetails_break_bottomsheet_description_deletebreak" = "Once you delete this break it won’t appear in the hours breakdown of this clocking. ";
+
+"clockingDetails_break_bottomsheet_title_deletebreak" = "Delete this break?";
+
+"clockingDetails_geoattendance_bottomSheet_infoHint_available" = "This person was on site, but they may have clocked in elsewhere.";
+
+"clockingDetails_geoattendance_bottomSheet_infoHint_missingHours" = "This person was on site, but their times are missing.";
+
+"clockingDetails_geoattendance_bottomSheet_title_available" = "Geolocation available";
+
+"clockingDetails_geolocation_available" = "Confirmed on site with geolocation. ";
+
+"clockingDetails_geolocation_finishonsite" = "Finish time confirmed with geolocation.";
+
+"clockingDetails_geolocation_noShow_confirmation" = "Geolocation shows that this person was on site for this shift. Be certain before you confirm.";
+
+"clockingDetails_geolocation_notAvailable" = "Geolocation not available.";
+
+"clockingDetails_geolocation_startonsite" = "Start time confirmed with geolocation.";
+
+"clockingDetails_geolocation_tip" = "This person may not have geolocation enabled on their device, or the clocking may have occurred off site.";
+
+"clockingDetails_snackbar_subtitle_breakdeleted" = "The clocking details have been updated.";
+
+"clockingDetails_snackbar_subtitle_breakupdated" = "The clocking details have been updated.";
+
+"clockingDetails_snackbar_title_breakdeleted" = "Break deleted";
+
+"clockingDetails_snackbar_title_breakupdated" = "Break updated";
+
+"clockingShift_label_ended" = "Review";
+
+"clockingShiftDetails_actions_approveHours" = "Approve hours";
+
+"clockingShiftDetails_approved_chip" = "Approved";
+
+"clockingShiftDetails_approved_title" = "%1$d people";
+
+"clockingShiftDetails_bulkComplete_selectedPeople" = "%1$d selected";
+
+"clockingShiftDetails_button_approveHours" = "Approve hours";
+
+"clockingShiftDetails_date_info" = "Started on %s";
+
+"clockingShiftDetails_editedHours" = "Times edited, was %@ - %@";
+
+"clockingShiftDetails_editedHours_single_data" = "Times edited, was %@";
+
+"clockingShiftDetails_ended_chip" = "Review";
+
+"clockingShiftDetails_ended_title" = "%1$d people";
+
+"clockingShiftDetails_hoursApprovedAndRatingSaved_description" = "Recognize this person’s work with a star rating. ";
+
+"clockingShiftDetails_hoursApprovedAndRatingSaved_title" = "Hours approved and rating saved";
+
+"clockingShiftDetails_incomplete_chip" = "Incomplete";
+
+"clockingShiftDetails_inputHours_autoFill_startAndFinishTimes" = "Add scheduled times";
+
+"clockingShiftDetails_inputHours_autoFill_startTime" = "Add scheduled time";
+
+"clockingShiftDetails_live_chip" = "Live";
+
+"clockingShiftDetails_live_title" = "%1$d people";
+
+"clockingShiftDetails_no_show_saved_feedback" = "Selection saved";
+
+"clockingShiftDetails_noShow_changeJustification_error_description" = "We couldn't save your selection.";
+
+"clockingShiftDetails_noShow_confirmJustified_snackbar_description" = "Absence marked as justified.";
+
+"clockingShiftDetails_noShow_confirmNoShow_description" = "Once you confirm, this person will be marked as a no show and then notified.";
+
+"clockingShiftDetails_noShow_confirmNoShow_error_snackbar_description" = "We couldn't mark this person as a no show.\nPlease try again.";
+
+"clockingShiftDetails_noShow_confirmNoShow_snackbar_description" = "Marked as a no show and person notified.";
+
+"clockingShiftDetails_noShow_confirmNoShow_snackbar_title" = "No show confirmed";
+
+"clockingShiftDetails_noShow_confirmNoShow_title" = "Confirm this no show?";
+
+"clockingShiftDetails_noShow_confirmNotJustified_snackbar_description" = "Absence marked as not justified.";
+
+"clockingShiftDetails_noShow_confirmShow_description" = "Once you undo this no show, this person’s hours can be approved and their performance rated.";
+
+"clockingShiftDetails_noShow_confirmShow_error_snackbar_description" = "We couldn't undo this no show.\nPlease try again.";
+
+"clockingShiftDetails_noShow_confirmShow_snackbar_description" = "No show was undone and person notified.";
+
+"clockingShiftDetails_noShow_confirmShow_snackbar_title" = "No show undone";
+
+"clockingShiftDetails_noShow_confirmShow_title" = "Undo this no show?";
+
+"clockingShiftDetails_noShow_justified_description" = "Sudden illness, emergency or other suitable reason provided.";
+
+"clockingShiftDetails_noShow_justified_title" = "Justified";
+
+"clockingShiftDetails_noShow_notJustified_description" = "Did not notify me or provide a suitable reason.";
+
+"clockingShiftDetails_noShow_notJustified_title" = "Not justified";
+
+"clockingShiftDetails_noShow_options_description" = "Select if this no show was justified or not.";
+
+"clockingShiftDetails_noShow_options_title" = "Type of absence (optional)";
+
+"clockingShiftDetails_noShow_reason_notifiedInAdvance" = "Notified %@ in advance";
+
+"clockingShiftDetails_noShow_reason_title" = "%@ informed about the absence";
+
+"clockingShiftDetails_noShow_save" = "Save";
+
+"clockingShiftDetails_noShow_toggle_title" = "No show";
+
+"clockingShiftDetails_noShowConfirmationSheet_confirm" = "Yes, confirm";
+
+"clockingShiftDetails_noShowConfirmationSheet_justified_description" = "Once you confirm this no show as being justified, this person will be notified.";
+
+"clockingShiftDetails_noShowConfirmationSheet_justified_title" = "Confirm no show as being justified? ";
+
+"clockingShiftDetails_noShowConfirmationSheet_notJustified_description" = "Once you confirm this no show as not justified, this person will be notified.";
+
+"clockingShiftDetails_noShowConfirmationSheet_notJustified_title" = "Confirm no show as not justified?";
+
+"clockingShiftDetails_noShowConfirmationSheet_turnOff_button" = "Undo no show";
+
+"clockingShiftDetails_noShowConfirmationSheet_turnOn_button" = "Confirm no show";
+
+"clockingShiftDetails_openHistory" = "View";
+
+"clockingShiftDetails_overlapError_description" = "These hours clash with an existing clocking from another shift and cannot be saved.";
+
+"clockingShiftDetails_overlapError_title" = "Clash with existing clocking";
+
+"clockingShiftDetails_performance_subtitle" = "Rate this person’s work";
+
+"clockingShiftDetails_performance_title" = "Performance";
+
+"clockingShiftDetails_person_notified_feedback" = "Absence marked as %@.";
+
+"clockingShiftDetails_punch_hours_updated_snackbar_description" = "We’ve saved your changes";
+
+"clockingShiftDetails_punch_hours_updated_snackbar_title" = "Clocking successfully updated";
+
+"clockingShiftDetails_roundedHours" = "Times rounded, was %@ - %@";
+
+"clockingShiftDetails_roundedHours_single_data" = "Times rounded, was %@";
+
+"clockingShiftDetails_saveSuccess_description" = "Changes have been saved succesfully.";
+
+"clockingShiftDetails_saveSuccess_title" = "Changes saved";
+
+"clockingShiftDetails_selectAll" = "Select all";
+
+"clockingShiftDetails_unselectAll" = "Unselect all";
+
+"clockingShiftDetails_worker_absent" = "No clocking";
+
+"clockingShiftDetails_worker_hoursApproved" = "Hours approved";
+
+"clockingShiftDetails_worker_missingFinish" = "Incomplete clocking";
+
+"clockingShiftDetails_worker_onSite" = "Working";
+
+"clockingShiftDetails_worker_worked" = "Worked";
+
+"clockingShiftDetails_workerRating_description" = "Recognize this person’s work with a star rating. ";
+
+"clockingShiftDetails_workerRating_saveButton_title" = "Save rating";
+
+"clockingShiftDetails_workerRating_saveSuccess_description" = "We’ve saved your changes.";
+
+"clockingShiftDetails_workerRating_saveSuccess_title" = "Rating successfully updated";
+
+"clockingShiftDetails_workerRating_title" = "Rate their performance";
+
+"clockingShiftDetails_workerRating_updateButton_title" = "Update rating";
+
+"clockingShiftDetails_workersList_attendance" = "Attendance";
+
+"clockingShifts_description_approved_status" = "Review completed";
+
+"clockingShifts_description_ended_status" = "Attended";
+
+"clockingShifts_description_live_status" = "On site";
+
+"clockingShifts_hours_approved_feedback" = "Hours have been approved";
+
+"clockingShifts_hours_rejected_feedback" = "Hours have been rejected";
+
+"clockingShifts_worker_notified_feedback" = "We’ve notified this person.";
+
+"clockingShifts_workers_notified_feedback" = "Those people have been notified.";
+
+"common_account_setup_error_description" = "Please contact businessapp@jobandtalent.com to let us know. We'll get it fixed as soon as possible.";
+
+"common_account_setup_error_title" = "Account setup error";
+
+"common_all" = "All";
+
+"common_assign" = "Assign";
+
+"common_cancel" = "Cancel";
+
+"common_clear" = "Clear";
+
+/* MARK: _ Common */
+
+"common_close" = "Close";
+
+"common_continue" = "Continue";
+
+"common_copied" = "Copied";
+
+"common_date" = "Shift date";
+
+"common_datePicker_day" = "Day";
+
+"common_datePicker_month" = "Month";
+
+"common_datePicker_year" = "Year";
+
+"common_day" = "day";
+
+"common_deactivated" = "Deactivated";
+
+"common_done" = "Done";
+
+"common_duration_hours" = "%sh";
+
+"common_duration_hours_and_minutes" = "%1$dh %2$dm";
+
+"common_duration_minutes" = "%sm";
+
+"common_error_action_title" = "Try again";
+
+"common_error_cannot_save_changes" = "We’re sorry, we couldn’t save your changes. Please try again.";
+
+"common_error_generic_description" = "We’re sorry, we could not load this content. Please try again.";
+
+"common_error_generic_title" = "Oops, something went wrong";
+
+"common_error_network_description" = "Please check your connection and try again";
+
+"common_error_network_title" = "There was a network error ";
+
+"common_field_optional" = "Optional";
+
+"common_from" = "From";
+
+"common_gotit" = "Got it";
+
+"common_leave_confirm" = "Leave";
+
+"common_leave_description" = "If you leave, your changes won’t be saved. ";
+
+"common_leave_title" = "Do you want to leave?";
+
+"common_max" = "max";
+
+"common_min" = "min";
+
+/* When selecting a date and there is a Never option */
+
+"common_never" = "Never";
+
+"common_no" = "No";
+
+"common_noResults" = "No results";
+
+"common_of" = "of";
+
+/* When having the option to select a date */
+
+"common_on" = "On";
+
+"common_payable_time_hours" = "%s h";
+
+"common_payable_time_hours_minutes" = "%1$d h %2$d min";
+
+"common_payable_time_minutes" = "%s min";
+
+"common_reload" = "Reload";
+
+"common_save" = "Save";
+
+"common_search" = "Search";
+
+"common_search_noResult" = "No results for %@";
+
+"common_search_noResult_description" = "Try writing the name differently. If no results, the name may not exist.";
+
+/* When have an option to select a value */
+
+"common_select" = "Select";
+
+"common_selectall" = "Select all";
+
+"common_send" = "Send";
+
+"common_shift" = "shift";
+
+"common_snackbar_error_tooManyRequests_subtitle" = "Please try again in a few minutes.";
+
+"common_snackbar_error_tooManyRequests_title" = "Too many requests";
+
+"common_text_error_tooManyRequests" = "Too many requests. Please try again in a few minutes.";
+
+"common_textField_charactersCount" = "%1$d/%2$d characters";
+
+"common_to" = "to";
+
+"common_tomorrow" = "Tomorrow";
+
+"common_tryRemovingFilters" = "Try adjusting or removing your filters to get more results.";
+
+"common_until" = "Until";
+
+"common_why" = "Why?";
+
+"common_yes" = "Yes";
+
+"common_yesterday" = "Yesterday";
+
+"common_you" = "you";
+
+"confirmClockings_approveButton" = "Yes, approve hours";
+
+"confirmClockings_content" = "Confirm that these details are correct before approving hours.";
+
+"confirmClockings_header" = "Approve these hours?";
+
+"confirmClockings_people" = "People";
+
+"confirmClockings_timeWorked" = "Time worked";
+
+"createShift_actionButton_title" = "Start";
+
+"createShift_assignWorkerActionButton_prefix" = "Assigned";
+
+"createShift_assignWorkers_descriptionPrefix_text" = "People assigned";
+
+"createShift_assignWorkers_needMoreWorker_text" = "It looks like you do not have enough available and qualified people for this shift. Please contact your J&T Account Manager if you need assistance.";
+
+"createShift_assignWorkers_returnShiftlist_text" = "Back to shift list";
+
+"createShift_assignWorkers_shiftSaved_description" = "Your shift has been saved but not published. Remember to publish it to notify everyone you’ve assigned about this shift.";
+
+"createShift_assignWorkers_shiftSaved_title" = "Shift saved";
+
+"createShift_assignWorkers_shiftSeriesSaved_description" = "Your shifts have been saved but not published. Remember to publish them to notify everyone you’ve assigned about these shifts.";
+
+"createShift_assignWorkers_text" = "Assign work and notify them";
+
+"createShift_commonError_message" = "We’re sorry, it looks like there was an issue at our end. Please try again.";
+
+"createShift_commonError_title" = "An error has occurred";
+
+"createShift_confirmDismiss_buttonTitle" = "Yes, discard";
+
+"createShift_confirmDismiss_message" = "If you exit, all data entered for this shift will be lost.";
+
+"createShift_confirmDismiss_title" = "Discard shift?";
+
+"createShift_continueToPeople_buton" = "Continue to assign people";
+
+"createShift_dateAndTime_date" = "Date";
+
+/* Title of date selector for end date of shift series */
+
+"createShift_dateAndTime_end" = "End";
+
+"createShift_dateAndTime_finish" = "Finish";
+
+"createShift_dateAndTime_repeatShift" = "Repeat this shift";
+
+"createShift_dateAndTime_start" = "Start";
+
+"createShift_dateAndTime_title" = "Date and time";
+
+"createShift_dateAndTime_totalHours" = "Total hours";
+
+"createShift_firstRow_description" = "Select times and dates";
+
+"createShift_firstRow_title" = "Set up your shift";
+
+"createShift_operation_in_progress_snackbar_description" = "Remember to publish it to notify everyone that they’re working. ";
+
+"createShift_people_title" = "People";
+
+"createShift_peopleAssigned_label" = "Assigned %1$d/%2$d";
+
+"createShift_peopleRequired_label" = "Required";
+
+"createShift_repeatEveryDialog_months" = "Months";
+
+"createShift_repeatEveryDialog_title" = "Repeat every";
+
+"createShift_repeatEveryDialog_weeks" = "Weeks";
+
+"createShift_requestWorker_shiftSaved_description" = "Your shift has been saved without adding number of people needed. Remember to add people, assign work and then let them know.";
+
+"createShift_requestWorker_shiftSeriesSaved_description" = "Your shifts have been saved without adding the number of people needed. Remember to add people, assign work and then let them know.";
+
+"createShift_requestWorkerAllDepartments_text" = "All departments";
+
+"createShift_requestWorkerAllRoles_text" = "All roles";
+
+"createShift_requestWorkerDepartment_text" = "Department";
+
+"createShift_requestWorkerNoDepartment_text" = "No department";
+
+"createShift_requestWorkerOptional_text" = "Optional";
+
+"createShift_requestWorkerRole_text" = "Role";
+
+"createShift_requestWorkersCountWarning_text" = "It looks like you haven’t added people to this shift.";
+
+"createShift_requestWorkerSelectDepartment_text" = "Select department";
+
+"createShift_requestWorkerShiftName_placeholder" = "Add the shift or role name";
+
+"createShift_requestWorkersPeopleRequired_text" = "People required";
+
+"createShift_requestWorkersSaveButtonWithoutAdd_title" = "Save and exit";
+
+"createShift_requestWorkersSaveButtonWithoutAssign_title" = "Save and exit";
+
+"createShift_saveAndExit_button" = "Save and exit";
+
+"createShift_saveAssignedWorkers_text" = "Save assigned people";
+
+"createShift_secondRow_description" = "Select the number of people needed and enter shift details visible to workers";
+
+"createShift_secondRow_title" = "Enter shift details";
+
+"createShift_shiftColor_title" = "Shift color";
+
+"createShift_shiftColorSelection_actionButtonTitle" = "Apply";
+
+"createShift_shiftDetails_title" = "Shift details";
+
+"createShift_shiftName_customTitle" = "Shift name";
+
+"createShift_shiftName_description" = "Write a descriptive name. If left blank we will fill it with the role and department selected.";
+
+"createShift_shiftName_subtitle" = "Write a descriptive name. Consider including the role name for clarity. This information will be visible to workers.";
+
+"createShift_shiftName_title" = "Shift name";
+
+"createShift_shiftTimeframeDuration_text" = "%s shift";
+
+"createShift_shiftTimeframeDuration_text_2" = "%s";
+
+"createShift_shiftTimeframeDurationNextDay_text" = "%s shift (+1 day)";
+
+"createShift_shiftTimeframeDurationNextDay_text_2" = "%s (+1 day)";
+
+"createShift_shiftTimeframeRepeatOn_text" = "Repeat on";
+
+"createShift_shiftTimeframeRepeatPeriod_text" = "Repeat every";
+
+"createShift_shiftTimeframeRepeatSelection_text" = "Select the days when you want to repeat this shift";
+
+"createShift_shiftTimeframeRepeatToggle_title" = "Repeat this shift";
+
+"createShift_shiftTimeframeRepeatUntil_text" = "Repeat until";
+
+"createShift_supervisor_label" = "Supervisor";
+
+"createShift_thirdRow_description" = "Confirm who will work and let them know";
+
+"createShift_thirdRow_title" = "Assign work and notify";
+
+"createShift_title" = "New Shift";
+
+"dayDetails_attendedWorkersEmptyHint" = "People who attend will appear here after the shifts start.";
+
+"dayDetails_noShowWorkersEmptyHint" = "No shows will appear here if you have any after the shifts start.";
+
+"deleteShiftConfirmation_positiveButtonLabel" = "Delete";
+
+"deleteShiftConfirmation_title" = "What shift do you want to delete?";
+
+"displayRejectionReasons_commuteProblem" = "Problem on my way to work";
+
+"displayRejectionReasons_emergency" = "Emergency";
+
+"displayRejectionReasons_medicalSupport" = "Medical support for family";
+
+"displayRejectionReasons_other" = "Other reason";
+
+"displayRejectionReasons_schedule" = "Not my agreed schedule";
+
+"displayRejectionReasons_sick" = "Sick or unwell";
+
+"editAssignment_draft_snackbar_description" = "The people assigned have been updated";
+
+"editAssignment_published_snackbar_description" = "Anyone newly assigned has been notified";
+
+"editAssignment_snackbar_title" = "Assignment updated";
+
+"editAssignment_workerList_snackbar_title" = "Assignment updated";
+
+"editProfile_confirmationDialog_subtitle" = "If you do not save, you’ll lose your changes.";
+
+"editProfile_confirmationDialog_title" = "Leave without saving changes?";
+
+"editProfile_dontSaveChanges" = "Do not save";
+
+"editProfile_saveChanges" = "Save changes";
+
+"editProfile_saveErrorBody" = "We could not save the changes. Please try again.";
+
+"editShift_assignPeople_button_saveSelection" = "Save selection";
+
+"editShift_banner_publishedShift" = "Shift changes will be visible to workers. Note that they'll be notified and have to confirm shifts again after any time or date changes.";
+
+"editShift_changesDialog_backToShiftDetail" = "Back to shift detail";
+
+"editShift_changesPublishedDialog_description" = "Your shift has been published and the people you’ve assigned have been notified.";
+
+"editShift_changesPublishedDialog_title" = "Shift published";
+
+"editShift_changesSavedDialog_description" = "Your shift has been saved but not published. Remember to publish it to notify everyone that they’re working. ";
+
+"editShift_changesSavedDialog_title" = "Shift saved";
+
+"editShift_confirmationModal_otherFieldsEdited_title" = "Edit upcoming shifts";
+
+"editShift_confirmationModal_repetitionPatternEdited_title" = "What do you want to edit?";
+
+"editShift_confirmationModalOptions_allShiftInSeries" = "This shift and all the upcoming shifts";
+
+"editShift_confirmationModalOptions_currentShift" = "Just this shift";
+
+"editShift_confirmationModalOptions_restOfTheWeek" = "This shift and the upcoming shifts for the week";
+
+"editShift_dateChange_tooltip" = "Please note that changes to the shift's date and time may affect the availability of the assigned workers";
+
+"editShift_deleteDialog_cancelButton" = "No, go back";
+
+"editShift_deleteDialog_confirmButton" = "Yes, delete";
+
+"editShift_deleteDialog_description" = "This shift will be permanently removed";
+
+"editShift_deleteDialog_description_series" = "These shifts will be permanently removed";
+
+"editShift_deleteDialog_title" = "Delete this shift?";
+
+"editShift_deleteDialog_title_series" = "Delete these shifts?";
+
+"editShift_deleteShift_text" = "Delete shift";
+
+"editShift_deleteShiftSeries_text" = "Delete shift series";
+
+"editShift_deleteSnackbar_description" = "This shift has been deleted";
+
+"editShift_deleteSnackbar_title" = "Shift deleted";
+
+"editShift_discardChangesDialog_cancelButton" = "No, go back";
+
+"editShift_discardChangesDialog_confirmButton" = "Yes, discard changes";
+
+"editShift_discardChangesDialog_description" = "You are about to discard changes. Are you sure?";
+
+"editShift_discardChangesDialog_title" = "Unsaved Changes";
+
+"editShift_draft_snackbar_description" = "Changes have been saved";
+
+"editShift_infoTab_title" = "General info";
+
+"editShift_manageWorkers_pastPublishedShiftMessage" = "When you add people to a past shift, we use the shift times as clockings.";
+
+"editShift_operation_in_progress_snackbar_description" = "Your shift is being updated";
+
+"editShift_operation_in_progress_snackbar_title" = "Updating shift…";
+
+"editShift_peopleAssigned_title" = "People assigned";
+
+"editShift_peopleTab_title" = "People (%1$d/%2$d)";
+
+"editShift_peopleTab_workersUnavailable_message" = "Some people might not be available for the new time and date selected.";
+
+"editShift_publishChangesDialog_cancelButton" = "No, go back";
+
+"editShift_publishChangesDialog_confirmButton" = "Yes, notify changes";
+
+"editShift_publishChangesDialog_description" = "You are about to make changes on a published shift. This action could affect the availability of the assigned people. Do you still want to publish them?";
+
+"editShift_publishChangesDialog_title" = "Publish changes?";
+
+"editShift_published_snackbar_description" = "The people you’ve assigned to work have been notified";
+
+"editShift_requestPeopleRequired_text" = "People required";
+
+"editShift_requestWorkerDepartment_text" = "Department";
+
+"editShift_requestWorkerRole_text" = "Role";
+
+"editShift_saveChanges_button" = "Save changes";
+
+"editShift_shiftCustomName_title" = "Shift name";
+
+"editShift_shiftDetailsSection_title" = "Shift details";
+
+"editShift_shiftRepetitionSection_title" = "Shift repetition";
+
+"editShift_snackbar_title" = "Shift updated";
+
+"editShift_title" = "Edit Shift";
+
+"error_401_title" = "Authentication error!";
+
+"error_422_title" = "Unprocessable Entity!";
+
+"error_500_description" = "Something went wrong while loading this content. Please try again.";
+
+"error_500_title" = "Oops!";
+
+"error_couldntloaddata" = "Sorry, we could not load the data.";
+
+"error_malformedData" = "Invalid data";
+
+"error_missingResponseData" = "Missing data";
+
+"error_noInternet_description" = "Connection problem. Please check your connection and try again.";
+
+"error_noInternet_title" = "Network error";
+
+"error_title" = "Error";
+
+"error_unknown_description" = "Something went wrong while loading this content. Please try again.";
+
+"error_unknown_title" = "Unknown error occurred";
+
+"filter_supervisor_all" = "All ";
+
+"filter_supervisor_bottomsheet_title" = "Filters";
+
+"filter_supervisor_custom" = "Custom";
+
+"filter_supervisor_disclaimer" = "We'll apply this filter to the whole app";
+
+"filter_supervisor_title_supervisor" = "Supervisor";
+
+"filter_supervisor_you" = "You";
+
+"filterShifts_applyAction_title" = "Apply";
+
+"filterShifts_clearAction_title" = "Clear All";
+
+"filterShifts_clearFilter_label" = "Clear filters";
+
+"filterShifts_dateSection_emptyLabel" = "Select date";
+
+"filterShifts_dateSection_title" = "Dates";
+
+"filterShifts_departmentSection_title" = "Department";
+
+"filterShifts_nameSection_title" = "Shift name";
+
+"filterShifts_noSupervisor_label" = "No supervisor assigned";
+
+"filterShifts_rolesSection_title" = "Roles";
+
+"filterShifts_scheduleSection_defaultSelection" = "Select time";
+
+"filterShifts_scheduleSection_setSelection" = "Start - end time";
+
+"filterShifts_scheduleSection_title" = "Schedule";
+
+"filterShifts_statusSection_title" = "Status";
+
+"filterShifts_supervisors_title" = "Filter by supervisor";
+
+"filterShifts_supervisorSection_defaultSelection" = "Select supervisor";
+
+"filterShifts_supervisorSection_title" = "Supervisor";
+
+"filterShifts_timeSection_emptyLabel" = "Select time";
+
+"filterShifts_timeSection_title" = "Start and end time";
+
+"filterShifts_title" = "Filters";
+
+"filterShifts_weekdaysSection_title" = "Days of the week";
+
+"force_update_button" = "Update app";
+
+"force_update_description" = "Job&Talent Business is not BETA anymore. Download the new version for the greatest experience.";
+
+"force_update_title" = "Update the app";
+
+"forgotPassword_continueButton" = "Continue";
+
+"forgotPassword_emailField" = "Email";
+
+"forgotPassword_emailFieldError" = "Please enter a valid email";
+
+"forgotPassword_subtitle" = "Tell us your email and we'll send you a link to reset your password.";
+
+/* MARK: _ Forgot password */
+
+"forgotPassword_title" = "Reset password";
+
+"hiring_suggested_empty_placeholder_button" = "Hire other workers";
+
+"hiring_suggested_form_char_limit" = "%d/250 characters";
+
+"hiring_suggested_form_info" = "Additional information";
+
+"hiring_suggested_form_info_hint" = "Add a comment for your Job&Talent account manager";
+
+"hiring_suggested_form_optional_hint" = "Optional";
+
+"hiring_suggested_form_people" = "People";
+
+"hiring_suggested_form_select" = "Select";
+
+"hiring_suggested_form_start_date" = "Start date";
+
+"hiring_suggested_form_title" = "Rehire past workers";
+
+"hiring_suggested_tab_name" = "Past workers";
+
+"hiring_vacancies_tab_name" = "Other";
+
+"insightstab_hours_body_nohourtypes" = "Hour types not available.";
+
+"insightstab_hours_bottomsheet_body_hoursapproved" = "Total time a supervisor has verified and approved for payment.";
+
+"insightstab_hours_bottomsheet_body_hoursworked" = "Total time someone has worked in a given period.";
+
+"insightstab_hours_bottomsheet_body_overtime" = "Total time someone has worked beyond their contracted hours. Overtime is typically paid at a higher rate.";
+
+"insightstab_hours_bottomsheet_subtitle_hoursapproved" = "Hours approved";
+
+"insightstab_hours_bottomsheet_subtitle_hoursworked" = "Hours worked";
+
+"insightstab_hours_bottomsheet_subtitle_overtime" = "Overtime";
+
+"insightstab_hours_bottomsheet_title_hours" = "Hours";
+
+"insightstab_hours_chip_previousmonth" = "%@h previous month";
+
+"insightstab_hours_chip_samepreviousmonth" = "Same as previous month";
+
+"insightstab_hours_filterchip_body_all" = "All (%@)";
+
+"insightstab_hours_filterchip_body_needsreview" = "Needs review (%@)";
+
+"insightstab_hours_filterchip_body_readytoapprove" = "Ready to approve (%@)";
+
+"insightstab_hours_header_tab_month" = "Month";
+
+"insightstab_hours_header_tab_week" = "Week";
+
+"insightstab_hours_header_title_hours" = "Hours";
+
+"insightstab_hours_header_title_overtime" = "Overtime (%@)";
+
+"insightstab_hours_header_title_pendingtoapprove" = "Pending to approve";
+
+"insightstab_hours_hint_body_hoursapprovedthismonth" = "All hours <b>approved</b> for this month.";
+
+"insightstab_hours_hint_body_hoursapprovedthisweek" = "All hours <b>approved</b> for this week.";
+
+"insightstab_hours_link_nohourtypes" = "Why?";
+
+"insightstab_hours_snackbar_errordescription" = "We're sorry, we couldn't save your changes. Please try again.";
+
+"insightstab_hours_snackbar_errortitle" = "Something went wrong";
+
+"insightstab_hours_title_hoursworked" = "Hours worked";
+
+"insightstab_hours_title_hourtypes" = "Hour types";
+
+"insightstab_hours_title_overtime" = "Overtime (%@)";
+
+"insightstab_hours_title_pending" = "Pending to approve (%@)";
+
+"insightstab_hours_tooltip_body_approved" = "Approved";
+
+"insightstab_hours_tooltip_body_worked" = "Worked";
+
+"insightstab_hours_type_bank_holiday" = "Holiday";
+
+"insightstab_hours_type_bank_holiday_night" = "Bank holiday night";
+
+"insightstab_hours_type_bank_holiday_night_overtime" = "Holiday night overtime";
+
+"insightstab_hours_type_bank_holiday_night_supplementary" = "Holiday night supplementary";
+
+"insightstab_hours_type_bank_holiday_overtime" = "Bank holiday overtime";
+
+"insightstab_hours_type_bank_holiday_supplementary" = "Bank holiday supplementary";
+
+"insightstab_hours_type_break" = "Break time deducted";
+
+"insightstab_hours_type_extra" = "Overtime";
+
+"insightstab_hours_type_extra_holiday" = "OT holiday";
+
+"insightstab_hours_type_extra_holiday_night" = "OT holiday night";
+
+"insightstab_hours_type_extra_night_sunday" = "OT Sunday night";
+
+"insightstab_hours_type_extra_sunday" = "OT Sunday";
+
+"insightstab_hours_type_holiday_night" = "Holiday night";
+
+"insightstab_hours_type_night" = "Night";
+
+"insightstab_hours_type_night_overtime" = "Night overtime";
+
+"insightstab_hours_type_night_overtime_saturday" = "Night overtime Saturday";
+
+"insightstab_hours_type_night_overtime_sunday" = "Night overtime Sunday";
+
+"insightstab_hours_type_night_overtime_weekend" = "Night overtime weekend";
+
+"insightstab_hours_type_night_saturday" = "Night Saturday";
+
+"insightstab_hours_type_night_saturday_supplementary" = "Night Saturday supplementary";
+
+"insightstab_hours_type_night_sunday" = "Night Sunday";
+
+"insightstab_hours_type_night_sunday_supplementary" = "Night Sunday supplementary";
+
+"insightstab_hours_type_night_supplementary" = "Night supplementary";
+
+"insightstab_hours_type_night_supplementary_weekend" = "Night supplementary weekend";
+
+"insightstab_hours_type_night_weekend" = "Night weekend";
+
+"insightstab_hours_type_normal" = "Regular";
+
+"insightstab_hours_type_other" = "Other";
+
+"insightstab_hours_type_overtime" = "Overtime";
+
+"insightstab_hours_type_overtime_saturday" = "Overtime Saturday";
+
+"insightstab_hours_type_overtime_sunday" = "Overtime Sunday";
+
+"insightstab_hours_type_overtime_weekend" = "Overtime weekend";
+
+"insightstab_hours_type_saturday" = "Saturday";
+
+"insightstab_hours_type_saturday_supplementary" = "Saturday supplementary";
+
+"insightstab_hours_type_sunday" = "Sunday";
+
+"insightstab_hours_type_sunday_supplementary" = "Sunday supplementary";
+
+"insightstab_hours_type_supplementary" = "Supplementary";
+
+"insightstab_hours_type_supplementary_weekend" = "Supplement weekend";
+
+"insightstab_hours_type_unsocial" = "Holiday";
+
+"insightstab_hours_type_weekend" = "Weekend";
+
+"insightstab_insightsdashboard_body_accessibility_assigned" = "Assigned";
+
+"insightstab_insightsdashboard_body_accessibility_attendance" = "Attendance";
+
+"insightstab_insightsdashboard_body_accessibility_week" = "Week";
+
+"insightstab_insightsdashboard_chip_body_hoursworked" = "Previous week was %@h";
+
+"insightstab_insightsdashboard_chip_body_lastweek" = "Previous week was %@ ";
+
+"insightstab_insightsdashboard_chip_body_nodatalastweek" = "No data previous week";
+
+"insightstab_insightsdashboard_chip_body_nodatapreviousweek" = "No data previous week";
+
+"insightstab_insightsdashboard_chip_body_nodatathisweek" = "No data this week";
+
+"insightstab_insightsdashboard_chip_body_previousweek" = "Previous week was %@ ";
+
+"insightstab_insightsdashboard_chip_body_samelastweek" = "Same as previous week";
+
+"insightstab_insightsdashboard_chip_body_samepreviousweek" = "Same as previous week";
+
+"insightstab_insightsdashboard_customcard_body_attlegend" = "Attendance rate";
+
+"insightstab_insightsdashboard_customcard_body_hours" = "%@ approved";
+
+"insightstab_insightsdashboard_customcard_body_hoursapprovedlegend" = "Hours approved";
+
+"insightstab_insightsdashboard_customcard_body_hoursworkedlegend" = "Hours worked";
+
+"insightstab_insightsdashboard_customcard_body_nodata" = "There’s no data to show";
+
+"insightstab_insightsdashboard_customcard_body_people" = "%@ people";
+
+"insightstab_insightsdashboard_customcard_body_peoplelegend" = "People worked";
+
+"insightstab_insightsdashboard_customcard_body_ratings" = "%@ ratings";
+
+"insightstab_insightsdashboard_customcard_body_reviews" = "%@ reviews";
+
+"insightstab_insightsdashboard_customcard_body_week" = "This week,";
+
+"insightstab_insightsdashboard_customcard_buttontext_retry" = "Retry";
+
+"insightstab_insightsdashboard_customcard_title_attendance" = "Attendance";
+
+"insightstab_insightsdashboard_customcard_title_hoursworked" = "Hours worked";
+
+"insightstab_insightsdashboard_customcard_title_performance" = "Performance";
+
+"insightstab_insightsdashboard_customcard_title_satisfaction" = "Satisfaction";
+
+"insightstab_insightsdashboard_dangerhint_body_dataerror" = "Sorry, we could not load the data.";
+
+"insightstab_insightsdashboard_header_title_insights" = "Insights";
+
+"insightstab_insightsdashboard_tab_title_name" = "Insights";
+
+"insightstab_performance_body_avgratingcurrentweek" = "Avg. rating of %@ people this week";
+
+"insightstab_performance_body_avgratingotherweek" = "Avg. rating of %@ people · %@";
+
+"insightstab_performance_body_avgratingthisweek" = "Avg. rating of %@ people";
+
+"insightstab_performance_body_notrateddescription" = "Boost your workers performance by rating them. These workers haven’t been rated in the last 4 weeks. ";
+
+"insightstab_performance_bottomsheet_body_description" = "Performance is based on how well someone achieves tasks, meets goals and contributes to organizational success.";
+
+"insightstab_performance_bottomsheet_hint_performance" = "A person’s average performance rating is based on their <b>last 4 ratings.</b>";
+
+"insightstab_performance_bottomsheet_title_performance" = "Performance";
+
+"insightstab_performance_card_body_ctarate" = "Rate";
+
+"insightstab_performance_card_body_lastrated" = "Last rated %@";
+
+"insightstab_performance_card_body_neverrated" = "Never rated before";
+
+"insightstab_performance_card_chip_topperformer" = "Top performer";
+
+"insightstab_performance_card_KPI_avg" = "avg.";
+
+"insightstab_performance_card_KPI_worked" = "worked";
+
+"insightstab_performance_distribution_body_poorestperformers" = "Very poor performance. Action required.";
+
+"insightstab_performance_distribution_subtitle_bestperfomers" = "Best performers (%@)";
+
+"insightstab_performance_distribution_subtitle_poorestperformers" = "Poorest performers (%@)";
+
+"insightstab_performance_distribution_subtitle_watchlist" = "Watchlist (%@)";
+
+"insightstab_performance_distribution_title_distribution" = "Distribution";
+
+"insightstab_performance_header_title_bestperformers" = "Best performers (%@) ";
+
+"insightstab_performance_header_title_notrated" = "Not rated recently (%@) ";
+
+"insightstab_performance_header_title_performance" = "Performance";
+
+"insightstab_performance_header_title_poorestperformers" = "Poorest performers (%@)";
+
+"insightstab_performance_header_title_watchlist" = "Watchlist (%@)";
+
+"insightstab_performance_hint_body_bestperformers" = "Overall rating <b>between %@ and %@</b>. They always meet or exceed expectations. ";
+
+"insightstab_performance_hint_body_poorestperformers" = "Consistently <b>rated under %@</b>. Contact our operations team to do a formal performance review. ";
+
+"insightstab_performance_hint_body_watchlist" = "Overall <b>rating between %@ and %@</b>. Give more feedback and monitor them to lift performance.";
+
+"insightstab_performance_legend_body_avgrating" = "Average rating";
+
+"insightstab_performance_legend_body_volumepeople" = "People with ratings";
+
+"insightstab_performance_overview_title_overview" = "Overview";
+
+"insightstab_performance_subtitle_notrated" = "Not rated recently (%@)";
+
+"insightstab_performance_tooltip_body_bestperformer" = "Best performers %@%%";
+
+"insightstab_performance_tooltip_body_poorperformer" = "Poorest performers %@%%";
+
+"insightstab_performance_tooltip_body_watchlist" = "Watchlist %@%%";
+
+"Label" = "Label";
+
+"login_activateAccount_button" = "Yes, activate my account";
+
+"login_activateAccount_label" = "Do you have an invite?";
+
+"login_checkemail_description" = "We’ve sent a link to your email to reset your password. Click on the link and enter your new password.";
+
+"login_checkemail_title" = "Check your email";
+
+"login_Confirmation_error_invalidCode" = "Wrong passcode. Log in again to get a new passcode.";
+
+"login_Confirmation_error_invalidInput" = "Invalid input";
+
+"login_Confirmation_error_sessionExpired" = "Passcode expired. Log in again to get a new passcode.";
+
+"login_Confirmation_error_tooManyRequests" = "Too many requests. Please try again in a few minutes.";
+
+"login_ConfirmCode_action" = "Confirm";
+
+"login_ConfirmCode_footer" = "Didn’t get a passcode? Go back and log in again.";
+
+"login_ConfirmCode_subtitle" = "Enter the passcode sent to %1$s";
+
+"login_ConfirmCode_title" = "Enter passcode";
+
+"login_dontHaveAnAccountLabel" = "Don’t have an account?";
+
+"login_emailField" = "Email";
+
+"login_emailPasswordIncorrectDescription" = "Please try again or reset your password";
+
+"login_emailPasswordIncorrectTitle" = "Email or password incorrect";
+
+"login_error_accountSetup_description" = "Your J&T Business App account setup is incomplete. Please contact your account team for assistance.";
+
+"login_error_accountSetup_title" = "Account not ready";
+
+"login_error_missingPhoneNumber_subtitle" = "Please contact your account manager.";
+
+"login_error_missingPhoneNumber_title" = "Missing phone number";
+
+"login_error_tooManyRequests_description" = "Please try again in a few minutes.";
+
+"login_error_tooManyRequests_title" = "Too many requests";
+
+"login_forgotPasswordButton" = "Forgot password";
+
+"login_getInvite_button" = "Send me an invite";
+
+"login_linkdoesntwork_description" = "Link doesn’t work?";
+
+"login_logInButton" = "Log in";
+
+"login_passwordField" = "Password";
+
+"login_passwordWasResetTitle" = "Check your inbox or SMS";
+
+"login_passwordWasResetTitleDescription" = "We've sent a link through email and SMS to reset your password";
+
+"login_requestAccessButton" = "Request access";
+
+"login_resetpassword_link" = "Reset your password another way";
+
+"login_subtitle" = "Welcome to Job&Talent Business";
+
+/* MARK: _ Login */
+
+"login_title" = "Log in";
+
+"manage_shifts_common_select_whole_series" = "Select whole series";
+
+"manage_shifts_common_unselect_whole_series" = "Unselect whole series";
+
+"manage_shifts_search_filter_noresults_body" = "Make sure the shift name or filters applied are correct";
+
+"manage_shifts_search_filter_noresults_title" = "No results";
+
+"managerForm_field_email" = "Email";
+
+"managerForm_field_name" = "Full name";
+
+"managerForm_field_nameError" = "Mandatory field";
+
+"managerForm_field_phone" = "Cell number";
+
+"managerForm_field_phoneError" = "Number not valid";
+
+"managerForm_field_phoneErrorNoCountry" = "Country code missing, for example +1...";
+
+"managerForm_field_phoneInfo" = "Include country code (ie. +34661215457)";
+
+"managerForm_field_save" = "Save changes";
+
+"managerForm_successfulUpdateProfile_snackbar_description" = "We've saved successfully your details";
+
+"managerForm_successfulUpdateProfile_snackbar_title" = "Changes saved";
+
+"manageWorkers_actionButtonForPublishedShift_title" = "Notify assigned people";
+
+"manageWorkers_availableWorker_description" = "%d people available for this shift";
+
+"manageWorkers_filterItem_afternoons" = "Afternoons";
+
+"manageWorkers_filterItem_anyShift" = "Any Shift";
+
+"manageWorkers_filterItem_mornings" = "Mornings";
+
+"manageWorkers_filterItem_nights" = "Nights";
+
+"manageWorkers_inviteShift_counterWarning" = "Invite as many people as you require, or more.";
+
+"manageWorkers_sort_peopleWorking_title" = "People working";
+
+"manageWorkers_sort_roles_title" = "Roles";
+
+"manageWorkers_sortItem_attendance" = "Attendance";
+
+"manageWorkers_sortItem_hoursAssigned" = "Hours assigned";
+
+"manageWorkers_sortItem_rating" = "Rating";
+
+"manageWorkers_sortItem_responseRate" = "Response rate";
+
+"newPassword_confirmButton" = "Confirm";
+
+"newPassword_description_code" = "Enter the code we sent to your email.";
+
+"newPassword_hint_description_invalidcode" = "Please request another code again. ";
+
+"newPassword_hint_description_manyrequests" = "Please try again after some time. ";
+
+"newPassword_hint_incorrectformat" = "Incorrect password format.";
+
+"newPassword_hint_title_invalidcode" = "Invalid code";
+
+"newPassword_hint_title_manyrequests" = "Too many requests";
+
+"newPassword_linkErrorDescription" = "Please try resetting your password again.";
+
+"newPassword_linkErrorTitle" = "Link expired";
+
+"newPassword_passwordField" = "New password";
+
+"newPassword_passwordFieldDescription" = "Password must be at least 12 characters and contain at least 1 uppercase letter and 1 lowercase letter.";
+
+"newPassword_passwordWasResetDescription" = "Your password has been reset";
+
+"newPassword_passwordWasResetTitle" = "Password successfully reset";
+
+"newPassword_repeatPasswordField" = "Repeat new password";
+
+"newPassword_repeatPasswordIncorrectDescription" = "Passwords don’t match. ";
+
+/* MARK: _ New password */
+
+"newPassword_title" = "Create a new password";
+
+"newPassword_title_code" = "Code";
+
+"notification_channel_general_title" = "General";
+
+"notification_rationale_permission_description" = "Get updates about your shifts and reminders to review and approve hours.";
+
+"notification_rationale_permission_title" = "Allow notifications";
+
+"notifications_notifications_push_body_greatatt" = "You had %@%% attendance yesterday. Excellent work. ";
+
+"notifications_notifications_push_body_greatjob" = "You had %@%% attendance and %@ was your average shift satisfaction rate. Fantastic.";
+
+"notifications_notifications_push_body_reviewclockings" = "%@ clockings outstanding from last week. Tap to review now. ";
+
+"notifications_notifications_push_body_satisfaction" = "%@ was your average shift satisfaction rate yesterday. Tap to learn more.";
+
+"notifications_notifications_push_body_yesterdayatt" = "You had %@%% attendance and %@ no shows. Tap to learn more.";
+
+"notifications_notifications_push_body_yesterdayshifts" = "You had %@%% attendance, %@ no shows and %@ average shift satisfaction rate. Tap to learn more.";
+
+"notifications_notifications_push_title_greatatt" = "Amazing attendance";
+
+"notifications_notifications_push_title_greatjob" = "Great job yesterday";
+
+"notifications_notifications_push_title_reviewclockings" = "Clockings to review";
+
+"notifications_notifications_push_title_satisfaction" = "Shift satisfaction update";
+
+"notifications_notifications_push_title_yesterdayatt" = "Your shifts yesterday";
+
+"notifications_notifications_push_title_yesterdayshifts" = "Your shifts yesterday";
+
+"notifications_title" = "Notifications";
+
+"operations_deleteShift_fail_description" = "The shift could not be deleted";
+
+"operations_deleteShift_fail_title" = "Something went wrong";
+
+"operations_editShift_fail_description" = "The shift could not be updated";
+
+"overprovision_info_bottomsheet_body" = "You can increase the number of confirmations required for closing invite period to make sure you hit your shift’s attendance target. ";
+
+"overprovision_info_bottomsheet_title" = "Requesting extra people";
+
+"overprovision_request_extra_input_label" = "Request extra";
+
+"overprovision_request_extra_input_subtext" = "Invites will close after <b>%@</b> people confirm";
+
+"people_filters_all" = "All";
+
+"people_filters_ending_soon" = "Ending soon";
+
+"people_filters_poor_performers" = "Poorest performers";
+
+"people_status_ending_soon" = "Ending soon";
+
+"people_status_ending_soon_days" = "(%@ days)";
+
+"people_status_ending_soon_today" = "(today)";
+
+"peopleOverview_activeWorkers" = "active workers";
+
+"peopleOverview_delta" = "vs last week";
+
+"peopleOverview_kpi_endingSoon" = "Ending soon";
+
+"peopleOverview_kpi_poor" = "Poor performers";
+
+"peopleOverview_kpi_unavailable" = "Unavailable";
+
+"peopleOverview_page_endingSoon_title" = "Ending soon";
+
+"peopleOverview_page_poor_alert" = "Consistently rated under 3. Contact our operations team to do a formal performance review. ";
+
+"peopleOverview_page_poor_title" = "Poor performers";
+
+"peopleOverview_page_quickFilters_all" = "All from today";
+
+"peopleOverview_page_quickFilters_nextWeek" = "Next week";
+
+"peopleOverview_page_quickFilters_thisWeek" = "This week";
+
+"peopleOverview_page_quickFilters_today" = "Today";
+
+"peopleOverview_page_unavailable_empty_body" = "Try selecting other periods";
+
+"peopleOverview_page_unavailable_empty_title" = "No unavailable people in this period";
+
+"peopleOverview_page_unavailable_title" = "Unavailable";
+
+"peoplePlanning_floatingMenu_createShiftItem" = "Create shift";
+
+"peoplePlanning_hoursAssigned_label" = "%@h assigned";
+
+"peoplePlanning_manageShifts_button" = "Save Assignment";
+
+"peoplePlanning_multipleShifts_label" = "x%@";
+
+"peoplePlanning_noShiftsAvailable_createNewShift" = "Create new shift";
+
+"peoplePlanning_noShiftsAvailable_description" = "There are no shifts for date and time selected. Choose different dates or create new shifts. ";
+
+"peoplePlanning_workerAssignments_manageShifts" = "Manage shifts";
+
+"peopletab_topbar_hiring" = "People";
+
+"peopletab_workercard_tag_new" = "New ";
+
+"permissions_bottomsheet_permissionRequired_body" = "It looks like you don’t have permission to perform this action. Contact your system administrator or Job&Talent for assistance.";
+
+"permissions_bottomsheet_permissionRequired_title" = "Permission required";
+
+"permissions_dialog_camera" = "Required for your profile picture";
+
+"permissions_rejected_camera_button" = "Allow access";
+
+"permissions_rejected_camera_description" = "You previously denied access. You can allow access in your device settings.";
+
+"permissions_rejected_camera_title" = "Allow access to your camera";
+
+"permissions_rejected_photoLibrary_title" = "Allow access to your gallery";
+
+"planning_bypeople_chip" = "By people";
+
+"planning_byshifts_chip" = "By shifts";
+
+"planningAlerts_shiftDetails_assignPeople" = "Assign people";
+
+"planningAlerts_shiftDetails_panic_description" = "People confirmed do not reach people required.";
+
+"planningShiftDetails_worker_missingFinish" = "Incomplete clocking";
+
+"planningShiftDetails_worker_missingStart" = "Incomplete clocking";
+
+"planningShiftDetails_worker_onTime" = "ON TIME";
+
+"planningShiftDetails_workersAssignedList_title" = "Assigned";
+
+"planningShiftDetails_workersAttendanceList_title" = "Attendance";
+
+"planningShiftDetails_workersConfirmedList_title" = "%d confirmed";
+
+"planningShiftDetails_workersNotifiedList_title" = "Notified";
+
+/* Description of the empty week screen in the planning tab */
+
+"planningTab_emptyWeek_description" = "There are no shifts scheduled for this week";
+
+/* Title of the empty week screen in the planning tab */
+
+"planningTab_emptyWeek_title" = "Nothing is planned";
+
+"planningTab_noWorkers_description" = "There are no active workers for this week";
+
+"planningTab_noWorkers_title" = "There is no one here";
+
+"pln_summary_category_peoplewithoutshifts" = "People without shifts";
+
+"pln_summary_category_risk" = "Shifts at risk";
+
+"pln_summary_hoursassigned" = "hours assigned";
+
+"pln_summary_kpisheet_emptyatrisk" = "Good job. All shifts are under control.";
+
+"pln_summary_kpisheet_emptypeoplewithoutshifts" = "Great work. Everyone has shifts assigned.";
+
+"pln_summary_weekavg" = "Week avg %@h";
+
+"privacyPolicy" = "Privacy Policy";
+
+"privacyPolicy_url" = "https://www.jobandtalent.co.uk/legal/privacy-notice";
+
+"profile_changeWorkplace" = "Change workplace";
+
+"profile_confirmLogout" = "Do you want to log out?";
+
+"profile_developersMenu_button" = "Developers Menu";
+
+"profile_logOut" = "Log out";
+
+"profile_title" = "Profile";
+
+"profile_version" = "version";
+
+"publishBulkShifts_confirmation_button" = "Yes, publish";
+
+"publishBulkShifts_confirmation_hint" = "Some shifts in the selected days are not publishable. Make sure that all shifts are assigned.";
+
+"publishBulkShifts_confirmation_title_range" = "Publish the shifts from %@ to %@?";
+
+"publishBulkShifts_confirmation_title_singleDate" = "Publish the shifts of %@?";
+
+"publishBulkShifts_custom" = "Custom";
+
+"publishBulkShifts_custom_warning" = "There are no shifts to publish between the dates selected. Please try other dates";
+
+"publishBulkShifts_error_description" = "We're sorry, we couldn't publish the shifts. Please try again.";
+
+"publishBulkShifts_menuItem_title" = "Publish shifts";
+
+"publishBulkShifts_success_description" = "People assigned have been notified.";
+
+"publishBulkShifts_success_title" = "Shifts published";
+
+"publishBulkShifts_title" = "What shifts do you want to publish?";
+
+"publishBulkShifts_tomorrow" = "All shifts tomorrow (%@)";
+
+"publishBulkShifts_week" = "All shifts this week (%@)";
+
+"publishPastShift_description" = "People will see this past shift and clockings in their schedule.";
+
+"publishShift_description" = "Once you publish, everyone who has been assigned to work will be notified.";
+
+"publishShift_fail_snackbar_description" = "We're sorry, there was an error. Your shift was not published. Please try again";
+
+"publishShift_fail_snackbar_title" = "Shift not published";
+
+"publishShift_operation_in_progress_description" = "Your shift is being published";
+
+"publishShift_operation_in_progress_title" = "Publishing shift…";
+
+"publishShift_primaryActionPupup_description" = "Your shift has been published and the people you’ve assigned have been notified.";
+
+"publishShift_primaryActionPupup_title" = "Shift published";
+
+"publishShift_primaryButton_title" = "Yes, publish shift";
+
+"publishShift_secondaryButton_title" = "Cancel";
+
+"publishShift_shiftCard_status" = "people assigned";
+
+"publishShift_success_snackbar_description" = "The people you’ve assigned to work have been notified";
+
+"publishShift_success_snackbar_title" = "Shift published ";
+
+"publishShift_title" = "Publish shift?";
+
+"publishShift_warning" = "It looks like you have not assigned all the people you need for this shift.";
+
+"ratingsExplanation_additionalInfo" = "You can edit feedback after it’s been sent. Once you update it, this person will receive another update.";
+
+"ratingsExplanation_description" = "Give ratings and feedback after a shift or at least once a week. It motivates your top performers, and helps everyone else improve.<br><br>Ratings and feedback is anonymized and is shared instantly.";
+
+"ratingsExplanation_list_1star" = "<b>1 star</b> = Bad: Their performance was significantly below expectations.";
+
+"ratingsExplanation_list_2stars" = "<b>2 stars</b> = Poor: Their performance was below average and requires attention.";
+
+"ratingsExplanation_list_3stars" = "<b>3 stars</b> = Needs improvement: They require feedback to meet certain expectations.";
+
+"ratingsExplanation_list_4stars" = "<b>4 stars</b> =  Good: They have met expectations.";
+
+"ratingsExplanation_list_5stars" = "<b>5 stars</b> = Excellent: A great performance above expectations.";
+
+"ratingsExplanation_list_title" = "<b>What the star ratings means</b>";
+
+"ratingsExplanation_title" = "How ratings work";
+
+"rejectHours_body" = "If you reject these hours, this person will not be paid for this shift. Be certain they did not attend before continuing.";
+
+"rejectHours_button_reject" = "Yes, reject hours";
+
+"rejectHours_title" = "Reject hours?";
+
+"requestAccess_description" = "Please contact your Job&Talent Business administrator to get access.";
+
+/* MARK: _ Request access */
+
+"requestAccess_title" = "Request access";
+
+"rolesAssignment_assignmentFailed_description" = "We're sorry, there was an error. Please try again.";
+
+"rolesAssignment_assignmentFailed_title" = "Role not updated";
+
+"rolesAssignment_empty_description" = "Contact your Job&Talent account manager to create roles for your workplace.";
+
+"rolesAssignment_empty_title" = "No roles created yet";
+
+"rolesAssignment_title" = "Update role";
+
+"root_attendanceTab" = "Attendance";
+
+"root_notificationsTab" = "Notifications";
+
+"root_planningTab" = "Planning";
+
+"root_profileTab" = "Profile";
+
+/* MARK: _ Root view */
+
+"root_shiftsTab" = "Shifts";
+
+"root_workersTab" = "People";
+
+"sar_request_bottomSheet_detail_cta_cancel" = "Cancel request";
+
+"sar_request_bottomSheet_detail_label_completedOn" = "Completed on";
+
+"sar_request_bottomSheet_detail_label_endDate_j&t" = "End date with J&T";
+
+"sar_request_bottomSheet_detail_label_endDate_replacement" = "Replacement’s start date";
+
+"sar_request_bottomSheet_detail_label_endDate_worker" = "End date for";
+
+"sar_request_bottomSheet_detail_label_new_endDate" = "New end date";
+
+"sar_request_bottomSheet_detail_label_original_endDate" = "Original end date";
+
+"sar_request_bottomSheet_detail_label_reason" = "Reason";
+
+"sar_request_bottomSheet_detail_label_replace_worker" = "Replace worker";
+
+"sar_request_bottomSheet_detail_label_replacement_startDate" = "Replacement’s start date";
+
+"sar_request_bottomSheet_detail_label_requestDate" = "Date";
+
+"sar_request_bottomSheet_detail_label_requestedBy" = "Requested by";
+
+"sar_request_bottomSheet_detail_label_status" = "Status";
+
+"sar_request_bottomSheet_detail_title_end" = "Requested to end job";
+
+"sar_request_bottomSheet_detail_title_extend" = "Requested to extend";
+
+"sar_request_bottomSheet_detail_title_hire" = "Requested to hire";
+
+"sar_request_bottomSheet_detail_title_replace" = "Requested to be replaced";
+
+"sar_request_status_completed" = "Completed";
+
+"sar_request_status_declined" = "Declined";
+
+"sar_request_status_wip" = "In progress";
+
+"sarlog_requests_empty_state_body" = "Track requests to extend or end jobs, and to hire or replace workers here.";
+
+"sarlog_requests_empty_state_title" = "No requests yet";
+
+"sarlog_requests_quickFilters_all" = "All";
+
+"sarlog_requests_quickFilters_completed" = "Completed";
+
+"sarlog_requests_quickFilters_createdByYou" = "Created by you";
+
+"sarlog_requests_quickFilters_declined" = "Declined";
+
+"sarlog_requests_quickFilters_emptyState_body" = "Try adjusting or removing your filters";
+
+"sarlog_requests_quickFilters_emptyState_clear" = "Clear filters";
+
+"sarlog_requests_quickFilters_emptyState_title" = "No results";
+
+"sarlog_requests_quickFilters_types_all" = "All types";
+
+"sarlog_requests_quickFilters_types_bottomSheet_title" = "Type";
+
+"sarlog_requests_quickFilters_types_end" = "End job";
+
+"sarlog_requests_quickFilters_types_extend" = "Extend";
+
+"sarlog_requests_quickFilters_types_hire" = "Hire";
+
+"sarlog_requests_quickFilters_types_multiple" = "selected";
+
+"sarlog_requests_quickFilters_types_replace" = "Replace";
+
+"sarlog_requests_quickFilters_wip" = "In progress";
+
+"sarlog_requests_title" = "Requests";
+
+"sarlog_requests_workercards_types_end" = "End job";
+
+"sarlog_requests_workercards_types_extend" = "Extend";
+
+"sarlog_requests_workercards_types_hire" = "Hire";
+
+"shift_clockings_approved_label" = "%d/%d clockings approved";
+
+"shift_day_todayLabel" = "Today";
+
+"shift_kpi_accepted_description" = "People confirmed";
+
+"shift_kpi_accepted_label" = "confirmed";
+
+"shift_kpi_assigned_description" = "People assigned";
+
+"shift_kpi_assigned_label" = "assigned";
+
+"shift_kpi_confirmed_label" = "confirmed";
+
+"shift_kpi_invited_label" = "invited";
+
+"shift_kpi_noResponse_label" = "no response";
+
+"shift_kpi_required_description" = "People required";
+
+"shift_kpi_required_label" = "required";
+
+"shift_kpi_reviewed_description" = "People reviewed";
+
+"shift_kpi_reviewed_label" = "reviewed";
+
+"shift_kpi_worked_description" = "People worked";
+
+"shift_kpi_worked_label" = "worked";
+
+"shift_kpi_working_description" = "People working";
+
+"shift_kpi_working_label" = "working";
+
+"shift_label_approved" = "Approved";
+
+"shift_label_done" = " ";
+
+"shift_label_draft" = "Draft";
+
+"shift_label_ended" = "Review";
+
+"shift_label_ongoing" = "Live";
+
+"shift_label_published" = "Published";
+
+"shift_publish_button" = "Publish";
+
+"shift_workers_accepted" = "accepted";
+
+"shift_workers_assigned" = "assigned";
+
+"shift_workers_attended" = "attended";
+
+"shift_workers_attending" = "attending";
+
+"shift_workers_confirmed" = "confirmed";
+
+"shift_workers_rated_label" = "%@/%@ rated";
+
+"shift_workers_requested" = "required";
+
+"shift_workers_reviewed" = "reviewed";
+
+"shift_workers_worked" = "worked";
+
+"shift_workers_working" = "working";
+
+"shiftColor_blue" = "Blue";
+
+"shiftColor_darkBlue" = "Dark blue";
+
+"shiftColor_darkGreen" = "Dark green";
+
+"shiftColor_darkOrange" = "Dark orange";
+
+"shiftColor_darkPurple" = "Dark purple";
+
+"shiftColor_darkRed" = "Dark red";
+
+"shiftColor_green" = "Green";
+
+"shiftColor_orange" = "Orange";
+
+"shiftColor_purple" = "Purple";
+
+"shiftColor_red" = "Red";
+
+"shiftColor_yellow" = "Yellow";
+
+"shiftcreation_people_secondarybutton_publish" = "Publish";
+
+"shiftDetails_attendance_warningAssignedRetroactively" = "Some workers were added after the shift's start time and date";
+
+"shiftDetails_attendance_warningRetroactive" = "This shift was published after its start time.";
+
+"shiftDetails_clockingsConfirmationError_description" = "We\'re sorry, we couldn\'t approve these hours. Please try again shortly.";
+
+"shiftDetails_clockingsReviewed" = "%@/%@ clockings reviewed";
+
+"shiftDetails_connectionError_action_title" = "Try again";
+
+"shiftDetails_connectionError_description" = "Please check your internet connection and try again.";
+
+"shiftDetails_connectionError_title" = "There was a network error";
+
+"shiftDetails_downloadingNextPageError_buttonText" = "Retry";
+
+"shiftDetails_downloadingNextPageError_description" = "Something went wrong while loading this content. Please try again.";
+
+"shiftDetails_manageWorkersButton_title" = "Manage people";
+
+"shiftDetails_notFoundError_action_title" = "Back to shift list";
+
+"shiftDetails_publish_warningPastShift" = "When you add people to a past shift, we use the shift times as clockings.";
+
+"shiftDetails_supervisors_title" = "Supervisors";
+
+"shiftDetails_unknownError_action_title" = "Try again";
+
+"shiftDetails_unknownError_description" = "Something went wrong while loading this content.";
+
+"shiftDetails_unknownError_title" = "Something went wrong";
+
+"shiftDetails_worker_accepted" = "Confirmed";
+
+"shiftDetails_worker_awaitingResponse" = "No response";
+
+"shiftDetails_worker_declined" = "Declined";
+
+"shiftDetails_worker_notAssigned_action_title" = "Assign work";
+
+"shiftDetails_worker_notAssigned_description" = "Assign work to any of the following available people";
+
+"shiftDetails_worker_notAssigned_title" = "No work assigned yet";
+
+"shiftDetails_worker_notRequested_action_title" = "Add quantity";
+
+"shiftDetails_worker_notRequested_description" = "Add number of people you need to work this shift";
+
+"shiftDetails_worker_notRequested_title" = "No quantity added yet";
+
+"shiftDetails_worker_rejected" = "Rejected";
+
+"shiftDetails_workerCard_noShow" = "No show";
+
+"shiftDetails_workerCard_noShowCannotAttend" = "No show (cannot attend)";
+
+"shiftDetails_workerCard_noShowJustified" = "No show (justified)";
+
+"shiftDetails_workerCard_noShowUnjustified" = "No show (not justified)";
+
+"shiftDetails_workersCapacity_assigned" = "People assigned";
+
+"shiftDetails_workersCapacity_attended" = "People attended";
+
+"shiftDetails_workersCapacity_confirmed" = "People confirmed";
+
+"shiftDetails_workersCapacity_notified" = "People notified";
+
+"shiftDetails_workersCapacity_requested" = "People required";
+
+"shiftDetails_workersList_title" = "Assigned";
+
+/* MARK: _ Shift Details */
+
+"shiftDetails_workersWarningDescription" = "These people have not been notified yet. Publish the shift to let them know they’re working.";
+
+"shiftHistory_approvalStatus_approved" = "Hours approved";
+
+"shiftHistory_approvalStatus_rejected" = "Hours rejected";
+
+"shiftHistory_operationType_finishTimeUpdated" = "Finish time updated";
+
+"shiftHistory_operationType_startAndFinishUpdated" = "Start & finish time updated";
+
+"shiftHistory_operationType_startTimeUpdated" = "Start time updated";
+
+"shiftHistory_operationType_timeRounded" = "Worked hours rounded";
+
+"shiftHistory_title" = "Shift history";
+
+"shiftInvitations_assignmentType_title" = "Assignment type";
+
+"shiftInvitations_fixedAssignement" = "Fixed assignment";
+
+"shiftInvitations_fixedAssignement_description" = "Attendance is mandatory, people must confirm attendance.";
+
+"shiftInvitations_openInvite" = "Open invite";
+
+"shiftInvitations_openInvite_description" = "Attendance is optional. Send invites to anyone in your pool and the first to accept is assigned.";
+
+"shiftInvitations_sendInvites" = "Send Invites";
+
+"shiftInvitations_sendInvites_confirmation_description" = "Once you send invites, everyone selected will be asked to respond.";
+
+"shiftInvitations_sendInvites_confirmation_title" = "Send Invites?";
+
+"shiftInvitations_sendMoreInvites" = "Send more invites";
+
+"shiftInvitations_shiftDetails_deleteFailure_snackbar_subtitle" = "We're sorry, we couldn't delete the shift. Please try again.";
+
+"shiftInvitations_shiftDetails_deleteSuccess_snackbar_subtitle" = "People invited have been notified";
+
+"shiftInvitations_shiftDetails_deleteSuccess_snackbar_title" = "Shift deleted";
+
+"shiftInvitations_shiftDetails_draft_empty_button" = "Invite people";
+
+"shiftInvitations_shiftDetails_draft_empty_description" = "Start choosing people and invite them to this shift";
+
+"shiftInvitations_shiftDetails_draft_empty_title" = "There is nobody here";
+
+"shiftInvitations_shiftDetails_expiredModal_description" = "You have %@ of %@ people required for this shift.";
+
+"shiftInvitations_shiftDetails_expiredModal_title" = "Open invite closed";
+
+"shiftInvitations_shiftDetails_filledModal_description" = "You have all the people you need. Nice one.";
+
+"shiftInvitations_shiftDetails_filledModal_title" = "Shift filled";
+
+"shiftInvitations_shiftDetails_invitesSent_subtitle" = "People will start confirming soon.";
+
+"shiftInvitations_shiftDetails_invitesSent_title" = "Invites sent";
+
+"shiftInvitations_shiftDetails_invitesSentSuccessfully_subtitle" = "We're notified these people.";
+
+"shiftInvitations_shiftDetails_panic_expiration" = "%@ remaining. Invites will expire once the shift starts.";
+
+"shiftInvitations_shiftDetails_panic_sendMoreInvites" = "Send more invites. You’ve not met your confirmed target yet.";
+
+"shiftInvitations_yesSendInvites" = "Yes, send invites";
+
+"shiftList_endListInfo_button" = "Create a shift";
+
+"shiftList_endListInfo_description" = "There are no more shifts scheduled for the future. Start creating upcoming shifts.";
+
+"shiftList_endListInfo_past_description" = "There are no more existing shifts";
+
+"shiftList_endListInfo_past_title" = "Nothing else was planned";
+
+"shiftList_endListInfo_title" = "Nothing else is planned";
+
+"shiftList_optimisticCreation_publishedSnackBar_description" = "The people you’ve assigned to work have been notified.";
+
+"shiftList_optimisticUpdate_actionWarning_description" = "This may take a few seconds.";
+
+"shiftList_optimisticUpdate_actionWarning_title" = "Shift creation in progress";
+
+"shiftList_shiftsToManage" = "Shifts to manage";
+
+"shiftList_stickyHeader_emptyDay" = "No shifts sheduled";
+
+"shiftList_stickyHeader_todayEmptyDay" = "No shifts scheduled for today";
+
+"shiftList_title" = "Shifts";
+
+"shifts_approveHours" = "Approve hours";
+
+"shifts_assignWorkers" = "Assign work";
+
+"shifts_emptylist_bottom_clickable_text" = "Visit our Help Center";
+
+"shifts_emptylist_bottom_hyperlink" = "https://jobandtalent-clients.kustomer.help/lang/en_us/";
+
+"shifts_emptylist_bottom_text" = "Got questions? %@";
+
+"shifts_emptyList_button" = "Create your first shift";
+
+"shifts_emptyList_description" = "Create upcoming shifts and publish them to start notifying people.";
+
+"shifts_emptyList_title" = "Start creating shifts";
+
+"shifts_error_action" = "Retry";
+
+"shifts_noShifts" = "No shifts or tracked hours";
+
+"shifts_publishShift" = "Publish shift";
+
+"shifts_requestWorkers" = "Add quantity";
+
+"shifts_title" = "Shifts";
+
+"shiftSeries_label" = "Repeats every %@ on %@";
+
+"shiftsPlanning_lastWeek_buttonTitle" = "Ok, go back to current week";
+
+"shiftsPlanning_lastWeek_message" = "You can manage shifts until 2 months ahead";
+
+"shiftsPlanning_lastWeek_title" = "Calendar view ends here";
+
+"shiftsPlanning_thisWeek" = "This week";
+
+"signOutConfirmationDialog_confirmButton" = "Log out";
+
+"signOutConfirmationDialog_title" = "Do you want to logout?";
+
+"snackbar_error_deletebreak" = "We couldn’t delete the break. Please try again. ";
+
+"snackbar_error_updatebreak" = "We couldn’t update the break. Please try again. ";
+
+"snackbar_linkexpiredError_title" = "Link expired or already used";
+
+"snackbar_successChangePassword_subtitle" = "You can now log in to your account.";
+
+"snackbar_successChangePassword_title" = "Password set";
+
+"snackbar_unknownError_subtitle" = "Please try again later";
+
+"snackbar_unknownError_title" = "Something went wrong";
+
+"starRatingView_value_1" = "Bad";
+
+"starRatingView_value_2" = "Poor";
+
+"starRatingView_value_3" = "Needs improvement";
+
+"starRatingView_value_4" = "Good";
+
+"starRatingView_value_5" = "Excellent";
+
+"stats_button_retry" = "Retry";
+
+"stats_chart_axisRelationship" = "People needed for the shift";
+
+"stats_chart_legend_planned" = "Planned";
+
+"stats_chart_legend_worked" = "Actual";
+
+"stats_chart_xAxis" = "Time";
+
+"stats_chart_yAxis" = "People";
+
+"stats_error_cantLoadData" = "Sorry, we could not load the data.";
+
+"stats_kpis_fulfilmentRate" = "attendance rate";
+
+"stats_kpis_fulfilmentRateDate" = "attendance rate • %@";
+
+"stats_kpis_peopleAttended" = "people attended";
+
+"stats_kpis_peopleAttending" = "people attending so far";
+
+"stats_kpis_peoplePlanned" = "people planned";
+
+"stats_kpis_previousPeriodDifference" = "%@ %@ p.p. vs %@";
+
+"stats_kpis_previousPeriodDifference_android" = "%@ p.p. vs %@";
+
+"stats_kpis_sameAsPreviousPeriod" = "Same as %@";
+
+"stats_message_doShiftsForDay" = "No shifts planned for this day";
+
+"stats_noShows_worker_attendanceRate" = "att. rate";
+
+"stats_noShows_worker_hoursWorked" = "%dh worked";
+
+"stats_noShows_worker_inactive" = "Inactive";
+
+"stats_noShows_worker_noShows" = "No shows";
+
+"stats_noShows_worker_numberOfShifts" = "in %d shifts";
+
+"stats_periodSelector_today" = "Today";
+
+"stats_tab_title" = "Stats";
+
+"stats_workerFilters_assignedFilter" = "Assigned (%d)";
+
+"stats_workerFilters_attendedFilter" = "Attended (%d)";
+
+"stats_workerFilters_noShowsFilter" = "No shows (%d)";
+
+"Tab" = "Week";
+
+"teo_chat_chatbox_empty" = "Ask me something...";
+
+"teo_chat_description_pastlimit" = "We’re unable to show you previous messages. ";
+
+"teo_chat_description_undermaintainance" = "He’ll be back faster, stronger and sharper\nin a couple of minutes.";
+
+"teo_chat_dislikecomment_askfeedback" = "I’m sorry this wasn’t helpful. Could you tell me why?";
+
+"teo_chat_dislikecomment_feedback_notaccurate" = "Not accurate";
+
+"teo_chat_dislikecomment_feedback_notasking" = "Not what I’m asking";
+
+"teo_chat_dislikecomment_feedback_other" = "Other";
+
+"teo_chat_dislikecomment_feedback_received" = "Thanks for the feedback. It’s really useful and helps me improve. ";
+
+"teo_chat_expertiseareas" = "I can provide information about: attendance, planning, people and insights. ";
+
+"teo_chat_freetrial_button_upgrade" = "Request now";
+
+"teo_chat_freetrial_ended" = "You've run out of free responses. Ask your admin to reactivate Teo.";
+
+"teo_chat_freetrial_hint_requestreceived" = "We've received your request. We'll be in touch shortly.";
+
+"teo_chat_greeting" = "Hey %s, how can I help you?";
+
+"teo_chat_helpyou" = "Can I help you with something else?";
+
+"teo_chat_internetback" = "Your connection is back 🛜 ✅.";
+
+"teo_chat_noinformation" = "I’m sorry but I don’t have that kind of information. ";
+
+"teo_chat_nointernet" = "⚠️  It appears you’re offline. Please check your internet connection. ";
+
+"teo_chat_notdelivered" = "Not delivered";
+
+"teo_chat_recommendation_help" = "Get help to use the app";
+
+"teo_chat_recommendation_peopleabsent" = "Tell me who’s absent this week";
+
+"teo_chat_recommendation_peopleassigned" = "Show people assigned today";
+
+"teo_chat_recommendation_shiftsatrisk" = "Show me shifts at risk";
+
+"teo_chat_title_undermaintainance" = "Teo’s getting a tune-up";
+
+"teo_chat_whatelse" = "Or something else?";
+
+"teo_feedback_bottomSheet_comment" = "Comment";
+
+"teo_feedback_confirmation_snackbar_body" = "Thank you for helping us improve. ";
+
+"teo_feedback_confirmation_snackbar_title" = "Feedback sent";
+
+"teo_name" = "Teo";
+
+"teo_presentation_button_requestaccess" = "Request access to Teo";
+
+"teo_presentation_button_start" = "Let's start";
+
+"teo_presentation_chip_beta" = "BETA";
+
+"teo_presentation_description" = "Your Job&Talent AI assistant.";
+
+"teo_presentation_description_askme" = "Learn more about planning, attendance, clocking, people and more. ";
+
+"teo_presentation_description_beta" = "Teo is still learning. He may not be an expert yet, but he’s improving every day. Try him for free for a limited time.";
+
+"teo_presentation_description_chat" = "Ask for my help any time, any day.";
+
+"teo_presentation_description_tips" = "I’ll help you enhance workforce performance to maximize productivity.";
+
+"teo_presentation_subtitle_askme" = "Ask me questions";
+
+"teo_presentation_title" = "Hey,  I’m Teo";
+
+"teo_presentation_title_chat" = "Chat 24/7";
+
+"teo_presentation_title_tips" = "Get tips and insights";
+
+"termsAndConditions_description" = "By logging in, you agree to Job&Talent Business' %@ and %@";
+
+"termsAndConditions_url" = "https://www.jobandtalent.co.uk/legal/terms-of-use-companies";
+
+"termsOfService" = "Terms of Use";
+
+"upcomingPlacements_active" = "Active";
+
+"upcomingPlacements_upcoming" = "Upcoming";
+
+"userProfile_attendanceRatedKpi_amount" = "%d shifts - last 30 days";
+
+"userProfile_attendanceRatedKpi_badHint" = "To improve this rate, try assigning people with higher response rates and attendance scores. You can also encourage people to use the app to confirm shifts and then actually attend.";
+
+"userProfile_attendanceRatedKpi_description" = "This shows how well attended your shifts are. It compares the number of people you assigned to the number that actually worked.";
+
+"userProfile_attendanceRatedKpi_goodHint" = "Great work. Your shifts are well attended. ";
+
+"userProfile_attendanceRatedKpi_rateLabel" = "Attended";
+
+"userProfile_attendanceRatedKpi_title" = "Shift attendance rate";
+
+"userProfile_editPhoto_button" = "Edit";
+
+"userProfile_editPhoto_menu_chooseAPicture" = "Choose a picture";
+
+"userProfile_editPhoto_menu_takeAPicture" = "Take a picture";
+
+"userProfile_editPhoto_menu_title" = "Edit profile picture";
+
+"userProfile_editPhoto_missingAccess_button_allowTitle" = "Allow access";
+
+"userProfile_editPhoto_preview_button_changePhotoTitle" = "Change photo";
+
+"userProfile_editPhoto_preview_button_looksGoodTitle" = "Looks good";
+
+"userProfile_editPhoto_preview_confirmation_button_doNotSaveTitle" = "Do not save";
+
+"userProfile_editPhoto_preview_confirmation_button_saveNewPictureTitle" = "Save new picture";
+
+"userProfile_editPhoto_preview_confirmation_description" = "If you do not save, you’ll lose your changes.";
+
+"userProfile_editPhoto_preview_confirmation_title" = "Leave without saving profile picture?";
+
+"userProfile_editPhoto_uploadFailure_description" = "We could not upload your photo. Please try again.";
+
+"userProfile_editPhoto_uploadFailure_title" = "Something went wrong ";
+
+"userProfile_editPhoto_uploadSuccess_description" = "We’ve successfully updated your picture.";
+
+"userProfile_editPhoto_uploadSuccess_title" = "Profile picture saved";
+
+"userProfile_kpis_attendance" = "Attendance";
+
+"userProfile_kpis_noRatings" = "No ratings yet";
+
+"userProfile_kpis_noShifts" = "No shifts yet";
+
+"userProfile_kpis_numberOfPeople" = "%d people";
+
+"userProfile_kpis_numberOfRatings" = "%d ratings";
+
+"userProfile_kpis_peopleRated" = "People rated";
+
+"userProfile_kpis_satisfaction" = "Satisfaction";
+
+"userProfile_peopleRatedKpi_amount" = "%d people - last 30 days";
+
+"userProfile_peopleRatedKpi_badHint" = "You have room to improve. Be sure to give ratings each shift. It’ll boost performance.";
+
+"userProfile_peopleRatedKpi_description" = "This shows how many people you’re rating. Ratings motivate top performers and nudge others to improve. They also help other supervisors know who’s performing well.";
+
+"userProfile_peopleRatedKpi_goodHint" = "Nice job. You’re great at rating people.";
+
+"userProfile_peopleRatedKpi_rateLabel" = "Rated";
+
+"userProfile_peopleRatedKpi_title" = "People you've rated";
+
+"userProfile_personalInformation_email" = "Email";
+
+"userProfile_personalInformation_fullName" = "Full name";
+
+"userProfile_personalInformation_phone" = "Cell phone";
+
+"userProfile_personalInformation_title" = "Personal information";
+
+"userProfile_workplaceAddress_noMapAppFoundError" = "No map apps were found. Please, install a maps application to proceed.";
+
+"vacancyRequestDetails_contractJustification" = "Contract justification";
+
+"vacancyRequestDetails_contractType" = "Contract type";
+
+"vacancyRequestDetails_createdOn" = "Created on %s";
+
+"vacancyRequestDetails_dates" = "Dates";
+
+"vacancyRequestDetails_id" = "ID %s";
+
+"vacancyRequestDetails_newRequestError_description" = "We're sorry, there was an error. Please try again.";
+
+"vacancyRequestDetails_newRequestError_title" = "Request not sent";
+
+"vacancyRequestDetails_payRate" = "Pay rate";
+
+"vacancyRequestDetails_peopleNeeded" = "People needed";
+
+"vacancyRequestDetails_timetable" = "Timetable";
+
+"vacancyRequests_created_action" = "OK, great";
+
+"vacancyRequests_created_description" = "We’ve received your request and will confirm receipt by email. Your requests appear in <b>Hiring</b> once we start working on it.";
+
+"vacancyRequests_created_title" = "Request sent";
+
+"vacancyRequests_empty_actionTitle" = "Get started";
+
+"vacancyRequests_empty_description" = "Submit a vacancy request for more people";
+
+"vacancyRequests_empty_title" = "Hire more people";
+
+"vacancyRequests_hint" = "Requests appear here once we start working on them. If you need to know the status of a request, please contact your Job&Talent account manager.";
+
+"vacancyRequests_jobCard_startToFinish" = "%@ to %@";
+
+"vacancyRequests_title" = "Hiring";
+
+"virtual_ongoing_shift_title" = "%d unassigned workers";
+
+"virtual_shift_title" = "Unassigned workers";
+
+"virtualShift_label" = "All day";
+
+"virtualShift_title_singular" = "Unassigned worker";
+
+"worker_list_empty_description" = "Once people are added, they'll appear here in a list.";
+
+"worker_list_empty_title" = "People not added yet";
+
+"worker_noRole_label" = "No roles assigned";
+
+"worker_profile_end_bottomsheet_inputselect_enddate" = "End date";
+
+"worker_profile_end_bottomsheet_inputselect_startdate" = "Replacement’s start date";
+
+"worker_profile_end_bottomsheet_inputselect_toggle_replace" = "Replace worker";
+
+"worker_profile_end_bottomsheet_reasons_title" = "Reason";
+
+"worker_profile_end_bottomsheet_title" = "Request to end job";
+
+"worker_profile_extend_bottomsheet_inputselect_newenddate" = "New end date";
+
+"worker_profile_extend_bottomsheet_title" = "Request to extend";
+
+"worker_profile_hire_bottomsheet_inputselect_enddate" = "End date with Job&Talent";
+
+"worker_profile_hire_bottomsheet_reasons_title" = "Reason";
+
+"worker_profile_hire_bottomsheet_title" = "Request to hire";
+
+"worker_profile_manage_shifts_common_save" = "Save";
+
+"worker_profile_manage_shifts_snackbar_error_subtitle" = "We're sorry, there was an error. Please try again.";
+
+"worker_profile_manage_shifts_snackbar_error_title" = "Shifts not assigned";
+
+"worker_profile_manage_shifts_snackbar_success_subtitle" = "We’ve notified %@.";
+
+"worker_profile_manage_shifts_snackbar_success_title" = "Shifts assigned successfully";
+
+"worker_profile_replace_bottomsheet_inputselect_enddate" = "End date for %@";
+
+"worker_profile_replace_bottomsheet_inputselect_replacementdate" = "Replacement’s start date";
+
+"worker_profile_replace_bottomsheet_reasons_title" = "Reason";
+
+"worker_profile_replace_bottomsheet_title" = "Request to replace";
+
+"worker_profile_service_actions_bottomsheet_people_selected" = "%@ people selected";
+
+"worker_profile_service_actions_bottomsheet_primarybutton_sendrequest" = "Send request";
+
+"worker_profile_service_actions_bottomsheet_textarea_other_specify" = "Please specify";
+
+"worker_profile_service_actions_bottomsheet_textarea_placeholder" = "Add a comment for your Job&Talent account manager";
+
+"worker_profile_service_actions_bottomsheet_textarea_subtitle" = "Optional";
+
+"worker_profile_service_actions_bottomsheet_textarea_title" = "Additional information";
+
+"worker_profile_serviceactions_bottomsheet_confirmation_body" = "Our account team will review your request. We’ll update you shortly.";
+
+"worker_profile_serviceactions_bottomsheet_confirmation_primarybutton_ok" = "OK, great";
+
+"worker_profile_serviceactions_bottomsheet_confirmation_title" = "We’re on it";
+
+"worker_profile_serviceactions_contextualmenu_end" = "End job";
+
+"worker_profile_serviceactions_contextualmenu_extend" = "Extend";
+
+"worker_profile_serviceactions_contextualmenu_hire" = "Hire";
+
+"worker_profile_serviceactions_contextualmenu_replace" = "Replace";
+
+"worker_profile_serviceactions_hint_status_end" = "Show details";
+
+"worker_profile_serviceactions_hint_status_hire" = "Show details";
+
+"worker_profile_serviceactions_hint_status_replace" = "Show details";
+
+"worker_profile_serviceactions_hint_status_showdetails" = "Show details";
+
+"worker_profile_serviceactions_reason_attendance" = "Attendance issues";
+
+"worker_profile_serviceactions_reason_cost_efficiency" = "Cost efficiency";
+
+"worker_profile_serviceactions_reason_great_team_player" = "Great team player";
+
+"worker_profile_serviceactions_reason_low_demand" = "Low demand";
+
+"worker_profile_serviceactions_reason_misconduct" = "Misconduct";
+
+"worker_profile_serviceactions_reason_op_flexibility" = "Operational flexibility";
+
+"worker_profile_serviceactions_reason_other" = "Other";
+
+"worker_profile_serviceactions_reason_outstanding_critical_expertise" = "Critical expertise";
+
+"worker_profile_serviceactions_reason_outstanding_performance" = "Outstanding performance";
+
+"worker_profile_serviceactions_reason_poor_performance" = "Poor performance";
+
+"worker_profile_serviceactions_reason_resignation" = "Resignation";
+
+"worker_profile_serviceactions_reasons_title" = "Reason";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_end_title" = "Requested to end job";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_enddate" = "End date";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_enddate_jt" = "End date with Job&Talent";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_enddatefor" = "End date for %@";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_extend_title" = "Requested to extend";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_hire_title" = "Requested to hire";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_newenddate" = "New end date";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_reason" = "Reason";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_replace_title" = "Requested to be replaced";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_replace_worker" = "Replace worker";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_replacement_startdate" = "Replacement’s start date";
+
+"worker_profile_serviceactions_showdetail_bottomsheet_requested_on" = "Requested on";
+
+"worker_start_date" = "Started on %@";
+
+"workerDetail_assignmentSnackbar_error_description" = "We're sorry, there was an error. The shift assignments were not updated.";
+
+"workerDetail_assignmentSnackbar_error_title" = "Shifts not updated";
+
+"workerDetail_assignmentSnackbar_success_description" = "We’ll notify people about published shifts, so they can accept or reject them. Remember that anyone who’s unavailable for the selected shifts will not be assigned.";
+
+"workerDetails_attendanceKpi_header" = "Attendance";
+
+"workerDetails_ratingKpi_header" = "Performance";
+
+"workerDetails_responseKpi_header" = "Response";
+
+"workerDetailsScreen_approve_hours_button" = "Approve hours";
+
+"workerDetailsScreen_clock_out_before_clock_in" = "The finish time must be after the start time";
+
+"workerDetailsScreen_clocking_break_form_title" = "Break";
+
+"workerDetailsScreen_clocking_finish_form_title" = "Finish";
+
+"workerDetailsScreen_clocking_start_form_title" = "Start";
+
+"workerDetailsScreen_reject_button" = "Reject";
+
+"workerDetailsScreen_save_changes_button" = "Save changes";
+
+"workerDetailsScreen_shift_exceeds_limit" = "Shift exceeds limit of 12 hours.";
+
+"workerDetailsScreen_toolbar_title" = "Attendance";
+
+"workerDetailsScreen_total_paid_hours" = "Total hours";
+
+"workerList_absent" = "No clocking";
+
+"workerList_assigned" = "Assigned";
+
+"workerList_clocking_hoursApproved" = "Hours approved";
+
+"workerList_clocking_missingFinish" = "Incomplete clocking";
+
+"workerList_clocking_onSite" = "On site";
+
+"workerList_clocking_worked" = "Worked";
+
+"workerList_hoursRejected" = "Hours rejected";
+
+"workerList_missingStart" = "Incomplete clocking";
+
+"workerprofile_performance_body_feedback_shift" = "\"%@\" shift";
+
+"workerprofile_performance_body_noratings" = "Help this person improve by giving them a quick star rating.";
+
+"workerprofile_performance_body_supervisor_you" = "(you)";
+
+"workerprofile_performance_button_body_seall" = "Show more";
+
+"workerprofile_performance_button_body_update" = "Update feedback";
+
+"workerprofile_performance_feedback_subhead_improve" = "Needs to improve";
+
+"workerprofile_performance_feedback_subhead_well" = "What they did well";
+
+"workerprofile_performance_header_title_feedback" = "Recent feedback";
+
+"workerprofile_performance_header_title_performance" = "Performance";
+
+"workerprofile_performance_hint_body_ratingsaved" = "Rating saved and shared with this person. You can rate them again tomorrow. ";
+
+"workerprofile_performance_performancegraph_body_norecentratings" = "No recent ratings. Rate this person now to help them improve.";
+
+"workerprofile_performance_ratingmodule_title_rate" = "Rate this person now";
+
+"workerprofile_performance_title_noratings" = "No ratings yet";
+
+"workers_assignShifts_button" = "Edit assignments";
+
+"workers_card_attendance_rate" = "attendance";
+
+"workers_card_attendance_rate_short" = "att.";
+
+"workers_card_role_noRoles" = "No roles assigned";
+
+"workers_hoursAssigned_label" = "%@h assigned this week";
+
+"workers_joiningSoon_label" = "Joining soon";
+
+"workers_newJoiner_label" = "New";
+
+"workers_selectedPeopleHeader_text" = "%@ selected";
+
+"workers_selectPeople_title" = "Select people";
+
+"workers_successfullyAssignedMessage_action" = "OK, great";
+
+"workers_successfullyAssignedMessage_description" = "We'll notify people about published shifts, so they can accept or reject them.";
+
+"workers_suggested_alreadyRequested_chipView_title" = "Requested";
+
+/* `4` part of `4 past workers` */
+
+"workers_suggested_dynamicLiquidity_prefix_default" = "%@";
+
+/* `4 of 456` parts of `4 of 456 total workers` */
+
+"workers_suggested_dynamicLiquidity_prefix_filters" = "%@ of %@";
+
+/* `past worker(s)` in `456 past worker(s)` */
+
+/* `of 456 past workers` part of `2 of of 456 past workers` */
+
+"workers_suggested_dynamicLiquidity_suffix_filtering" = "of %@ past workers";
+
+/* `past workers` part of `1 of 456 past workers` */
+
+"workers_suggested_dynamicLiquidity_suffix_filters" = "past workers";
+
+"workers_suggested_empty_subtitle" = "We’ll add people who previously worked with you to this page. You’ll be able to rehire them.";
+
+"workers_suggested_empty_title" = "No previous workers available";
+
+"workers_suggested_emptyFiltering_clear" = "Clear all";
+
+"workers_suggested_emptyFiltering_description" = "Try adjusting your filters or search term to get some results.";
+
+"workers_suggested_emptyFiltering_title" = "No results";
+
+"workers_suggested_expiration_date" = "Worked";
+
+"workers_suggested_filter_apply" = "Apply";
+
+"workers_suggested_filter_available_now" = "Quick rehire";
+
+"workers_suggested_filter_empty_placeholder_button" = "Clear all";
+
+"workers_suggested_filter_empty_placeholder_subtitle" = "We have not been able to find the workers you are looking for. ";
+
+"workers_suggested_filter_empty_placeholder_title" = "No results";
+
+"workers_suggested_filter_role" = "Role";
+
+"workers_suggested_filter_role_clear" = "Clear all";
+
+"workers_suggested_filter_role_empty_subtitle" = "Contact your Job&Talent account manager to create roles for your workplace.";
+
+"workers_suggested_filter_role_empty_title" = "No roles created yet";
+
+"workers_suggested_filter_supervisor_me" = "Supervised by me";
+
+"workers_suggested_filter_unrequested" = "Not requested";
+
+"workers_suggested_profile_action_select" = "Select";
+
+"workers_suggested_profile_action_unselect" = "Unselect";
+
+"workers_suggested_profile_requestFailure_title" = "Worker not rehired";
+
+"workers_suggested_rehire_button" = "Rehire";
+
+"workers_suggested_rehire_dialog_no" = "Rehire just this one";
+
+"workers_suggested_rehire_dialog_ok" = "Yes, rehire more";
+
+"workers_suggested_rehire_dialog_title" = "Need to rehire more people?";
+
+"workers_suggested_request_rehire" = "Request rehire";
+
+"workers_suggested_requestConfirmation_buttonTitle" = "OK, thanks";
+
+"workers_suggested_requestConfirmation_description" = "We've received your request. We'll contact you shortly.";
+
+"workers_suggested_requestConfirmation_title" = "Hiring request sent";
+
+"workers_suggested_requestFailure_description" = "We're sorry, there was an error. Please try again.";
+
+"workers_suggested_requestFailure_title" = "People not rehired";
+
+"workers_suggested_selection_confirmButton_title" = "Request hiring";
+
+"workers_suggested_sort_attendance_rate" = "Highest attendance rate";
+
+"workers_suggested_sort_button" = "Sort";
+
+"workers_suggested_sort_date" = "Most recent job (default)";
+
+"workers_suggested_sort_hours" = "Number of hours worked";
+
+"workers_suggested_sort_rating" = "Best rating";
+
+"workers_suggested_sort_response_rate" = "Highest response rate";
+
+"workers_suggested_sort_title" = "Sort by";
+
+"workers_suggested_title" = "Hiring";
+
+"workers_title" = "People";
+
+"workers_title_withCount" = "People (%@)";
+
+"workers_worker_contract_expired_on" = "Unavailable since %@";
+
+"workers_worker_contract_expires_on" = "Available until %@";
+
+"workersAssignShifts_multipleWorkers_title" = "Assign shifts";
+
+"workersAssignShifts_noAvailableShiftsState_description" = "There are not existing shifts in the placement period of this worker";
+
+"workersAssignShifts_noAvailableShiftsState_title" = "No shifts available";
+
+"workersAssignShifts_selectAllAction_title" = "Select all";
+
+"workersAssignShifts_singleWorker_title" = "Edit assignment of people selected";
+
+"workersAssignShifts_unselectAllAction_title" = "Unselect all";
+
+"workerSatisfaction_description" = "This shows the average satisfaction rating people have given your shifts.";
+
+"workerSatisfaction_numberOfRatings" = "%d ratings";
+
+"workerSatisfaction_title" = "Worker satisfaction";
+
+"workersDetail_emptyState_buttonTitle" = "Manage shifts";
+
+"workersDetail_emptyState_description" = "%@ doesn't have any shifts yet.";
+
+"workersDetail_emptyState_title" = "Manage shifts";
+
+"workersDetail_firstSubTab_title" = "Schedule";
+
+"workersDetail_header_noRatings" = "No ratings";
+
+"workersDetail_infoSection_role" = "Roles";
+
+"workersDetail_infoSection_selectRole" = "Update role";
+
+"workersDetail_infoSection_subtitle1" = "Start";
+
+"workersDetail_infoSection_subtitle2" = "Finish";
+
+"workersDetail_infoSection_subtitle3" = "Position";
+
+"workersDetail_infoSection_title" = "Latest job";
+
+"workersDetail_kpiSection_assigned_description" = "hours assigned";
+
+"workersDetail_kpiSection_secondaryAction_title" = "Show all";
+
+"workersDetail_kpiSection_title" = "This week";
+
+"workersDetail_kpiSection_worked_description" = "hours worked";
+
+"workersDetail_noKpis_button" = "Understood";
+
+"workersDetail_noKpis_subtitle" = "You'll see the KPIs here when this worker gets rehire and starts having shifts assigned.";
+
+"workersDetail_noKpis_title" = "No data";
+
+"workersDetail_roleAssignedSnackbar_description" = "You've successfully updated the role";
+
+"workersDetail_roleAssignedSnackbar_title" = "Role updated";
+
+"workersDetail_secondSubTab_title" = "General information";
+
+"workersFilter_ratings_noRating" = "No rating";
+
+"workersFilter_section_assignedHours" = "Hours assigned this week";
+
+"workersFilter_section_attendanceRate" = "Attendance rate";
+
+"workersFilter_section_position" = "Position";
+
+"workersFilter_section_ratings" = "Ratings";
+
+"workersFilter_section_status" = "Worker status";
+
+"workersFilter_status_active" = "Active";
+
+"workersFilter_status_inactive" = "Inactive";
+
+"workersFilter_status_joining_soon" = "Joining soon";
+
+"workersFilter_status_new" = "New";
+
+"workersShifts_emptyState_description" = "Go to the Shifts tab to create new shifts first, then assign them to people.";
+
+"workersShifts_emptyState_title" = "No shifts yet";
+
+"workersShifts_emptyStateForFilter_description" = "Try adjusting or removing your filters to get more results.";
+
+"workersShifts_emptyStateForFilter_title" = "No results";
+
+"workersShifts_emptyStateForSearch_description" = "Try writing the shift name differently. If no results, the shift may not exist.";
+
+"workersShifts_emptyStateForSearch_title" = "Shift not found";
+
+"workersShifts_title" = "%@\'s shifts";
+
+"clockingDetails_geolocation_timesConfirmed" = "Times confirmed with geolocation.";
+
+"clockingdetail_break_hint_longBreak" = "The total break time is longer than 2h. ";
+
+"clockingDetail_field_break" = "Break";

@@ -3,23 +3,33 @@ import Foundation
 
 @main
 struct Bragi: ParsableCommand {
-    static var configuration = CommandConfiguration(
+    static let configuration = CommandConfiguration(
         abstract: "A tool for generating type-safe localization strings",
         version: "1.0.0"
     )
     
-    @Option(name: .long, help: "Path to the configuration file")
-    var config: String = ".bragi.yml"
+    @Option(name: .shortAndLong, help: "Path to .lproj directory")
+    var path: String
     
     mutating func run() throws {
         let fileManager = FileManager.default
-        let configPath = (config as NSString).expandingTildeInPath
+        let lprojPath = (path as NSString).expandingTildeInPath
         
-        guard fileManager.fileExists(atPath: configPath) else {
-            throw ValidationError("Configuration file not found at path: \(configPath)")
+        var isDirectory: ObjCBool = false
+        guard fileManager.fileExists(atPath: lprojPath, isDirectory: &isDirectory),
+              isDirectory.boolValue,
+              lprojPath.hasSuffix(".lproj") else {
+            throw ValidationError("Path must be a valid .lproj directory: \(lprojPath)")
         }
         
-        // TODO: Parse configuration file
-        print("Configuration file found at: \(configPath)")
+        let parser = LprojParser()
+        let translations = try parser.parseDirectory(at: lprojPath)
+        print("\nTranslations found in \(lprojPath):")
+        translations.forEach { translation in
+            switch translation {
+            case .singular(let data):
+                print("Key: \"\(data.key)\" = \"\(data.value)\"")
+            }
+        }
     }
 }
