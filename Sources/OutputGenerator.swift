@@ -25,7 +25,7 @@ struct OutputGenerator {
         var currentNamespaces: [String] = []
         
         for translation in translations {
-            let components = translation.key.split(separator: "_").map(String.init)
+            let components = translation.key.components(separatedBy: Configuration.keySeparator)
             let lastIndex = components.count - 1
             
             // Close namespaces that are no longer needed
@@ -72,8 +72,8 @@ struct OutputGenerator {
         case .singular(let data):
             let key = data.key
             let value = data.value
-            let nameComponents = key.split(separator: "_")
-            let propertyName = nameComponents.last.map(String.init) ?? key
+            let nameComponents = key.components(separatedBy: Configuration.keySeparator)
+            let propertyName = nameComponents.last ?? key
             
             let parameters = extractParameters(from: value)
             
@@ -102,8 +102,8 @@ struct OutputGenerator {
             }
         case .plural(let data):
             let key = data.key
-            let nameComponents = key.split(separator: "_")
-            let propertyName = nameComponents.last.map(String.init) ?? key
+            let nameComponents = key.components(separatedBy: Configuration.keySeparator)
+            let propertyName = nameComponents.last ?? key
             
             // Create parameters list from variables
             let parametersList = data.variables.values.map { variable in

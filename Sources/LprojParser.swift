@@ -11,7 +11,7 @@ struct LprojParser {
         let stringsDictFiles = contents.filter { $0.hasSuffix(".stringsdict") }
         
         // Parse .strings files
-        for fileName in stringsFiles.sorted() {
+        for fileName in stringsFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
             if let dict = NSDictionary(contentsOfFile: filePath) as? [String: String] {
                 let fileTranslations = dict.map { createSingularTranslation(key: $0, value: $1) }
@@ -20,7 +20,7 @@ struct LprojParser {
         }
         
         // Parse .stringsdict files
-        for fileName in stringsDictFiles.sorted() {
+        for fileName in stringsDictFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
             if let dict = NSDictionary(contentsOfFile: filePath) as? [String: Any] {
                 let fileTranslations = try dict.compactMap { key, value -> Translation? in
@@ -90,8 +90,8 @@ struct LprojParser {
     }
     
     private func compareKeys(_ lhs: String, _ rhs: String) -> Bool {
-        let lhsComponents = lhs.split(separator: "_")
-        let rhsComponents = rhs.split(separator: "_")
+        let lhsComponents = lhs.components(separatedBy: Configuration.keySeparator)
+        let rhsComponents = rhs.components(separatedBy: Configuration.keySeparator)
         
         let minCount = min(lhsComponents.count, rhsComponents.count)
         for i in 0..<minCount {
