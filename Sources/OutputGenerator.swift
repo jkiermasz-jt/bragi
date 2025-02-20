@@ -16,66 +16,52 @@ struct OutputGenerator {
         try content.write(toFile: path, atomically: true, encoding: .utf8)
     }
     
+    private func indent(_ level: Int) -> String {
+        String(repeating: " ", count: level * Configuration.indentation)
+    }
+    
     private func generateTranslations(_ translations: [Translation]) -> String {
-        // First, organize translations into a tree structure
-        var tree: [String: Any] = [:] // Can contain either [String: Any] (namespace) or Translation (leaf)
+        var content = ""
+        var currentNamespaces: [String] = []
         
         for translation in translations {
-            switch translation {
-            case .singular(let data):
-                let components = data.key.split(separator: "_").map(String.init)
-                insertIntoTree(&tree, components: components, translation: translation)
-            }
-        }
-        
-        // Then generate code from the tree
-        return generateFromTree(tree, indent: "    ")
-    }
-    
-    private func insertIntoTree(_ tree: inout [String: Any], components: [String], translation: Translation) {
-        guard components.count > 1 else {
-            // Leaf node - actual translation
-            tree[components[0]] = translation
-            return
-        }
-        
-        // Create or get namespace
-        let namespace = components[0]
-        var subTree = tree[namespace] as? [String: Any] ?? [:]
-        
-        // Recurse with remaining components
-        insertIntoTree(&subTree, components: Array(components.dropFirst()), translation: translation)
-        
-        // Update tree
-        tree[namespace] = subTree
-    }
-    
-    private func generateFromTree(_ tree: [String: Any], indent: String) -> String {
-        var content = ""
-        
-        // Sort entries for consistent output
-        let sortedEntries = tree.sorted { $0.key < $1.key }
-        
-        for (key, value) in sortedEntries {
-            if let subTree = value as? [String: Any] {
-                // Namespace - capitalize only first letter
-                let namespaceName = key.prefix(1).uppercased() + key.dropFirst()
-                
+            let components = translation.key.split(separator: "_").map(String.init)
+            let lastIndex = components.count - 1
+            
+            // Close namespaces that are no longer needed
+            while !currentNamespaces.isEmpty && !components.starts(with: currentNamespaces) {
                 content += """
                 
-                \(indent)enum \(namespaceName) {
+                \(indent(currentNamespaces.count + 1))}
                 """
-                
-                content += generateFromTree(subTree, indent: indent + "    ")
-                
-                content += """
-                
-                \(indent)}
-                """
-            } else if let translation = value as? Translation {
-                // Leaf - translation
-                content += generateTranslationAnchor(translation, indent: indent)
+                currentNamespaces.removeLast()
             }
+            
+            // Open new namespaces if needed
+            for (index, component) in components.enumerated() {
+                if index == lastIndex { break }
+                
+                if currentNamespaces.count <= index {
+                    let namespaceName = component.prefix(1).uppercased() + component.dropFirst()
+                    content += """
+                    
+                    \(indent(index + 1))enum \(namespaceName) {
+                    """
+                    currentNamespaces.append(component)
+                }
+            }
+            
+            // Add translation
+            content += generateTranslationAnchor(translation, indent: indent(components.count))
+        }
+        
+        // Close remaining namespaces
+        while !currentNamespaces.isEmpty {
+            content += """
+            
+            \(indent(currentNamespaces.count + 1))}
+            """
+            currentNamespaces.removeLast()
         }
         
         return content
@@ -114,6 +100,25 @@ struct OutputGenerator {
                 \(indent)}
                 """
             }
+        case .plural(let data):
+            let key = data.key
+            let nameComponents = key.split(separator: "_")
+            let propertyName = nameComponents.last.map(String.init) ?? key
+            
+            // Create parameters list from variables
+            let parametersList = data.variables.values.map { variable in
+                "_ \(variable.name): \(swiftType(for: variable.formatValueType))"
+            }.joined(separator: ", ")
+            
+            // Create arguments list for tr function
+            let argumentsList = data.variables.values.map { $0.name }.joined(separator: ", ")
+            
+            return """
+            
+            \(indent)static func \(propertyName)(\(parametersList)) -> String {
+            \(indent)    tr("Localizable", "\(key)", \(argumentsList), fallback: "\(data.formatString)")
+            \(indent)}
+            """
         }
     }
     
@@ -130,6 +135,16 @@ struct OutputGenerator {
             case "f": return "Double"
             default: return "Any"
             }
+        }
+    }
+    
+    private func swiftType(for formatType: String) -> String {
+        switch formatType {
+        case "d", "u": return "Int"
+        case "ld", "lu": return "Int64"
+        case "f": return "Double"
+        case "@": return "String"
+        default: return "Any"
         }
     }
     
