@@ -1,6 +1,6 @@
 struct PluralVariable: Hashable {
     let name: String
-    let formatSpecType: String // Usually "NSStringPluralRuleType"
-    let formatValueType: String // "d", "ld", etc.
+    let formatSpecType: String
+    let formatValueType: String
     let variants: [PluralVariant: String]
 } 

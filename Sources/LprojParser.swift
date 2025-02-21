@@ -5,12 +5,10 @@ struct LprojParser {
         let fileManager = FileManager.default
         var translations: [Translation] = []
         
-        // Get all .strings and .stringsdict files
         let contents = try fileManager.contentsOfDirectory(atPath: path)
         let stringsFiles = contents.filter { $0.hasSuffix(".strings") }
         let stringsDictFiles = contents.filter { $0.hasSuffix(".stringsdict") }
         
-        // Parse .strings files
         for fileName in stringsFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
             guard let dict = NSDictionary(contentsOfFile: filePath) as? [String: String] else {
@@ -21,7 +19,6 @@ struct LprojParser {
             translations.append(contentsOf: fileTranslations)
         }
         
-        // Parse .stringsdict files
         for fileName in stringsDictFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
             guard let dict = NSDictionary(contentsOfFile: filePath) as? [String: Any] else {
@@ -37,7 +34,6 @@ struct LprojParser {
             translations.append(contentsOf: fileTranslations)
         }
         
-        // Sort translations by their full key path
         return translations.sorted { lhs, rhs in
             compareKeys(lhs.key, rhs.key)
         }
@@ -48,7 +44,6 @@ struct LprojParser {
     }
     
     private func createPluralTranslation(key: String, dict: [String: Any], table: String) throws -> Translation {
-        // Check required key
         if dict["NSStringLocalizedFormatKey"] == nil {
             throw ParsingError.invalidPluralDictionary(key: key, missingKeys: ["NSStringLocalizedFormatKey"])
         }
@@ -59,7 +54,6 @@ struct LprojParser {
         
         var variables: [String: PluralVariable] = [:]
         
-        // Process each variable in the plural dictionary
         for (varName, varDict) in dict {
             guard varName != "NSStringLocalizedFormatKey" else { continue }
             
@@ -73,7 +67,6 @@ struct LprojParser {
             
             var variants: [PluralVariant: String] = [:]
             
-            // Extract plural variants
             for variant in PluralVariant.allCases {
                 if let variantString = variableDict[variant.rawValue] as? String {
                     variants[variant] = variantString
@@ -120,7 +113,6 @@ struct LprojParser {
     }
 }
 
-// MARK: - Errors
 
 extension LprojParser {
     enum ParsingError: LocalizedError {
@@ -134,17 +126,17 @@ extension LprojParser {
         var errorDescription: String? {
             switch self {
             case .missingFormatString(let key):
-                return "Missing NSStringLocalizedFormatKey for key: \(key)"
+                "Missing NSStringLocalizedFormatKey for key: \(key)"
             case .noValidVariables(let key):
-                return "No valid plural variables found for key: \(key)"
+                "No valid plural variables found for key: \(key)"
             case .invalidPluralDictionary(let key, let missingKeys):
-                return "Invalid plural dictionary for key '\(key)'. Missing required keys: \(missingKeys.joined(separator: ", "))"
+                "Invalid plural dictionary for key '\(key)'. Missing required keys: \(missingKeys.joined(separator: ", "))"
             case .invalidVariableFormat(let varName, let key):
-                return "Invalid format for variable '\(varName)' in key '\(key)'. Missing NSStringFormatSpecTypeKey or NSStringFormatValueTypeKey"
+                "Invalid format for variable '\(varName)' in key '\(key)'. Missing NSStringFormatSpecTypeKey or NSStringFormatValueTypeKey"
             case .emptyVariants(let varName, let key):
-                return "No plural variants found for variable '\(varName)' in key '\(key)'"
+                "No plural variants found for variable '\(varName)' in key '\(key)'"
             case .invalidFileFormat(let path):
-                return "Invalid file format at path: \(path)"
+                "Invalid file format at path: \(path)"
             }
         }
     }

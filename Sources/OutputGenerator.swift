@@ -28,7 +28,6 @@ struct OutputGenerator {
             let components = translation.key.components(separatedBy: Configuration.keySeparator)
             let lastIndex = components.count - 1
             
-            // Close namespaces that are no longer needed
             while !currentNamespaces.isEmpty && !components.starts(with: currentNamespaces) {
                 content += """
                 
@@ -37,7 +36,6 @@ struct OutputGenerator {
                 currentNamespaces.removeLast()
             }
             
-            // Open new namespaces if needed
             for (index, component) in components.enumerated() {
                 if index == lastIndex { break }
                 
@@ -51,11 +49,9 @@ struct OutputGenerator {
                 }
             }
             
-            // Add translation
             content += generateTranslationAnchor(translation, indent: indent(components.count))
         }
         
-        // Close remaining namespaces
         while !currentNamespaces.isEmpty {
             content += """
             
@@ -78,13 +74,11 @@ struct OutputGenerator {
             let parameters = extractParameters(from: value)
             
             if parameters.isEmpty {
-                // Generate constant for parameterless translations
                 return """
                 
                 \(indent)static let \(propertyName) = tr("\(data.table)", "\(key)", fallback: "\(value)")
                 """
             } else {
-                // Generate function with typed parameters
                 let parametersList = parameters.enumerated().map { index, type in
                     "_ p\(index): \(type)"
                 }.joined(separator: ", ")
@@ -105,12 +99,10 @@ struct OutputGenerator {
             let nameComponents = key.components(separatedBy: Configuration.keySeparator)
             let propertyName = nameComponents.last ?? key
             
-            // Create parameters list from variables
             let parametersList = data.variables.values.map { variable in
                 "_ \(variable.name): \(swiftType(for: variable.formatValueType))"
             }.joined(separator: ", ")
             
-            // Create arguments list for tr function
             let argumentsList = data.variables.values.map { $0.name }.joined(separator: ", ")
             
             return """
@@ -123,19 +115,7 @@ struct OutputGenerator {
     }
     
     private func extractParameters(from value: String) -> [String] {
-        let pattern = "%[\\d]*[@df]"
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
-        let matches = regex.matches(in: value, options: [], range: NSRange(value.startIndex..., in: value))
-        
-        return matches.map { match in
-            let format = (value as NSString).substring(with: match.range)
-            switch format.last {
-            case "@": return "String"
-            case "d": return "Int64"
-            case "f": return "Double"
-            default: return "Any"
-            }
-        }
+        (try? FormatSpecifier.parse(from: value).map { $0.swiftType }) ?? []
     }
     
     private func swiftType(for formatType: String) -> String {

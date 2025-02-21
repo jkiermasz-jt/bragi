@@ -179,7 +179,9 @@ enum L10n {
       static let empty = tr("Localizable", "attendance_attendeeList_empty", fallback: "No one turned up at work today.")
       }
     enum Chart {
-      static let peopleCount = tr("Localizable", "attendance_chart_peopleCount", fallback: "%s people")
+      static func peopleCount(_ p0: String) -> String {
+          tr("Localizable", "attendance_chart_peopleCount", p0, fallback: "%s people")
+      }
       }
     enum Count {
       static let assignedTitle = tr("Localizable", "attendance_count_assignedTitle", fallback: "assigned")
@@ -202,7 +204,7 @@ enum L10n {
       static let empty = tr("Localizable", "attendance_noShowList_empty", fallback: "Everyone turned up today.")
       }
     enum ShiftList {
-      static func header(_ p0: Int64) -> String {
+      static func header(_ p0: Int) -> String {
           tr("Localizable", "attendance_shiftList_header", p0, fallback: "%d shifts")
       }
       }
@@ -236,14 +238,18 @@ enum L10n {
     }
   enum BulkApprove {
     enum Error {
-      static let description = tr("Localizable", "bulkApprove_error_description", fallback: "We could not approve hours for %1$d people. 
+      static func description(_ p0: Int) -> String {
+          tr("Localizable", "bulkApprove_error_description", p0, fallback: "We could not approve hours for %1$d people. 
 Try again?")
+      }
       static let title = tr("Localizable", "bulkApprove_error_title", fallback: "Something went wrong")
       }
     static let header = tr("Localizable", "bulkApprove_header", fallback: "Approve hours")
     static let tryAgainButton = tr("Localizable", "bulkApprove_tryAgainButton", fallback: "Try again")
-    static let unapproveMessage = tr("Localizable", "bulkApprove_unapproveMessage", fallback: "We could not approve hours for %1$d people. 
+    static func unapproveMessage(_ p0: Int) -> String {
+        tr("Localizable", "bulkApprove_unapproveMessage", p0, fallback: "We could not approve hours for %1$d people. 
 Try again?")
+    }
     }
   enum Button {
     static let cancel = tr("Localizable", "button_cancel", fallback: "Cancel")
@@ -313,16 +319,22 @@ Try again?")
       }
     enum Approved {
       static let chip = tr("Localizable", "clockingShiftDetails_approved_chip", fallback: "Approved")
-      static let title = tr("Localizable", "clockingShiftDetails_approved_title", fallback: "%1$d people")
+      static func title(_ p0: Int) -> String {
+          tr("Localizable", "clockingShiftDetails_approved_title", p0, fallback: "%1$d people")
+      }
       }
     enum BulkComplete {
-      static let selectedPeople = tr("Localizable", "clockingShiftDetails_bulkComplete_selectedPeople", fallback: "%1$d selected")
+      static func selectedPeople(_ p0: Int) -> String {
+          tr("Localizable", "clockingShiftDetails_bulkComplete_selectedPeople", p0, fallback: "%1$d selected")
+      }
       }
     enum Button {
       static let approveHours = tr("Localizable", "clockingShiftDetails_button_approveHours", fallback: "Approve hours")
       }
     enum Date {
-      static let info = tr("Localizable", "clockingShiftDetails_date_info", fallback: "Started on %s")
+      static func info(_ p0: String) -> String {
+          tr("Localizable", "clockingShiftDetails_date_info", p0, fallback: "Started on %s")
+      }
       }
     static func editedHours(_ p0: String, _ p1: String) -> String {
         tr("Localizable", "clockingShiftDetails_editedHours", p0, p1, fallback: "Times edited, was %@ - %@")
@@ -336,7 +348,9 @@ Try again?")
       }
     enum Ended {
       static let chip = tr("Localizable", "clockingShiftDetails_ended_chip", fallback: "Review")
-      static let title = tr("Localizable", "clockingShiftDetails_ended_title", fallback: "%1$d people")
+      static func title(_ p0: Int) -> String {
+          tr("Localizable", "clockingShiftDetails_ended_title", p0, fallback: "%1$d people")
+      }
       }
     enum HoursApprovedAndRatingSaved {
       static let description = tr("Localizable", "clockingShiftDetails_hoursApprovedAndRatingSaved_description", fallback: "Recognize this person’s work with a star rating. ")
@@ -353,7 +367,9 @@ Try again?")
       }
     enum Live {
       static let chip = tr("Localizable", "clockingShiftDetails_live_chip", fallback: "Live")
-      static let title = tr("Localizable", "clockingShiftDetails_live_title", fallback: "%1$d people")
+      static func title(_ p0: Int) -> String {
+          tr("Localizable", "clockingShiftDetails_live_title", p0, fallback: "%1$d people")
+      }
       }
     enum No {
       enum Show {
@@ -622,11 +638,11 @@ Contact your Job&Talent account manager to add your hour types. ")
           }
         enum Hourtypes {
           static let configured = tr("Localizable", "clockingdetail_hoursbreakdown_bottomsheet_hourtypes_configured", fallback: "Configured")
-          static func dayovertime(_ p0: Int64) -> String {
+          static func dayovertime(_ p0: Int) -> String {
               tr("Localizable", "clockingdetail_hoursbreakdown_bottomsheet_hourtypes_dayovertime", p0, fallback: "More than %dh per day")
           }
           static let overtime = tr("Localizable", "clockingdetail_hoursbreakdown_bottomsheet_hourtypes_overtime", fallback: "Overtime")
-          static func weekovertime(_ p0: Int64) -> String {
+          static func weekovertime(_ p0: Int) -> String {
               tr("Localizable", "clockingdetail_hoursbreakdown_bottomsheet_hourtypes_weekovertime", p0, fallback: "More than %dh per week")
           }
           }
@@ -719,13 +735,19 @@ Contact your Job&Talent account manager to add your hour types. ")
     static let deactivated = tr("Localizable", "common_deactivated", fallback: "Deactivated")
     static let done = tr("Localizable", "common_done", fallback: "Done")
     enum Duration {
-      static let hours = tr("Localizable", "common_duration_hours", fallback: "%sh")
+      static func hours(_ p0: String) -> String {
+          tr("Localizable", "common_duration_hours", p0, fallback: "%sh")
+      }
       enum Hours {
         enum And {
-          static let minutes = tr("Localizable", "common_duration_hours_and_minutes", fallback: "%1$dh %2$dm")
+          static func minutes(_ p0: Int, _ p1: Int) -> String {
+              tr("Localizable", "common_duration_hours_and_minutes", p0, p1, fallback: "%1$dh %2$dm")
+          }
           }
         }
-      static let minutes = tr("Localizable", "common_duration_minutes", fallback: "%sm")
+      static func minutes(_ p0: String) -> String {
+          tr("Localizable", "common_duration_minutes", p0, fallback: "%sm")
+      }
       }
     enum Error {
       enum Action {
@@ -773,11 +795,17 @@ Contact your Job&Talent account manager to add your hour types. ")
     static let on = tr("Localizable", "common_on", fallback: "On")
     enum Payable {
       enum Time {
-        static let hours = tr("Localizable", "common_payable_time_hours", fallback: "%s h")
+        static func hours(_ p0: String) -> String {
+            tr("Localizable", "common_payable_time_hours", p0, fallback: "%s h")
+        }
         enum Hours {
-          static let minutes = tr("Localizable", "common_payable_time_hours_minutes", fallback: "%1$d h %2$d min")
+          static func minutes(_ p0: Int, _ p1: Int) -> String {
+              tr("Localizable", "common_payable_time_hours_minutes", p0, p1, fallback: "%1$d h %2$d min")
           }
-        static let minutes = tr("Localizable", "common_payable_time_minutes", fallback: "%s min")
+          }
+        static func minutes(_ p0: String) -> String {
+            tr("Localizable", "common_payable_time_minutes", p0, fallback: "%s min")
+        }
         }
       }
     static let reload = tr("Localizable", "common_reload", fallback: "Reload")
@@ -809,7 +837,9 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
       }
     enum TextField {
-      static let charactersCount = tr("Localizable", "common_textField_charactersCount", fallback: "%1$d/%2$d characters")
+      static func charactersCount(_ p0: Int, _ p1: Int) -> String {
+          tr("Localizable", "common_textField_charactersCount", p0, p1, fallback: "%1$d/%2$d characters")
+      }
       }
     static let to = tr("Localizable", "common_to", fallback: "to")
     static let tomorrow = tr("Localizable", "common_tomorrow", fallback: "Tomorrow")
@@ -894,7 +924,9 @@ Contact your Job&Talent account manager to add your hour types. ")
       static let title = tr("Localizable", "createShift_people_title", fallback: "People")
       }
     enum PeopleAssigned {
-      static let label = tr("Localizable", "createShift_peopleAssigned_label", fallback: "Assigned %1$d/%2$d")
+      static func label(_ p0: Int, _ p1: Int) -> String {
+          tr("Localizable", "createShift_peopleAssigned_label", p0, p1, fallback: "Assigned %1$d/%2$d")
+      }
       }
     enum PeopleRequired {
       static let label = tr("Localizable", "createShift_peopleRequired_label", fallback: "Required")
@@ -982,15 +1014,23 @@ Contact your Job&Talent account manager to add your hour types. ")
       static let title = tr("Localizable", "createShift_shiftName_title", fallback: "Shift name")
       }
     enum ShiftTimeframeDuration {
-      static let text = tr("Localizable", "createShift_shiftTimeframeDuration_text", fallback: "%s shift")
+      static func text(_ p0: String) -> String {
+          tr("Localizable", "createShift_shiftTimeframeDuration_text", p0, fallback: "%s shift")
+      }
       enum Text {
-        static let 2 = tr("Localizable", "createShift_shiftTimeframeDuration_text_2", fallback: "%s")
+        static func 2(_ p0: String) -> String {
+            tr("Localizable", "createShift_shiftTimeframeDuration_text_2", p0, fallback: "%s")
+        }
         }
       }
     enum ShiftTimeframeDurationNextDay {
-      static let text = tr("Localizable", "createShift_shiftTimeframeDurationNextDay_text", fallback: "%s shift (+1 day)")
+      static func text(_ p0: String) -> String {
+          tr("Localizable", "createShift_shiftTimeframeDurationNextDay_text", p0, fallback: "%s shift (+1 day)")
+      }
       enum Text {
-        static let 2 = tr("Localizable", "createShift_shiftTimeframeDurationNextDay_text_2", fallback: "%s (+1 day)")
+        static func 2(_ p0: String) -> String {
+            tr("Localizable", "createShift_shiftTimeframeDurationNextDay_text_2", p0, fallback: "%s (+1 day)")
+        }
         }
       }
     enum ShiftTimeframeRepeatOn {
@@ -1156,7 +1196,9 @@ Contact your Job&Talent account manager to add your hour types. ")
       static let title = tr("Localizable", "editShift_peopleAssigned_title", fallback: "People assigned")
       }
     enum PeopleTab {
-      static let title = tr("Localizable", "editShift_peopleTab_title", fallback: "People (%1$d/%2$d)")
+      static func title(_ p0: Int, _ p1: Int) -> String {
+          tr("Localizable", "editShift_peopleTab_title", p0, p1, fallback: "People (%1$d/%2$d)")
+      }
       enum WorkersUnavailable {
         static let message = tr("Localizable", "editShift_peopleTab_workersUnavailable_message", fallback: "Some people might not be available for the new time and date selected.")
         }
@@ -1314,7 +1356,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
       enum Form {
         enum Char {
-          static func limit(_ p0: Int64) -> String {
+          static func limit(_ p0: Int) -> String {
               tr("Localizable", "hiring_suggested_form_char_limit", p0, fallback: "%d/250 characters")
           }
           }
@@ -1694,7 +1736,9 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum ConfirmCode {
       static let action = tr("Localizable", "login_ConfirmCode_action", fallback: "Confirm")
       static let footer = tr("Localizable", "login_ConfirmCode_footer", fallback: "Didn’t get a passcode? Go back and log in again.")
-      static let subtitle = tr("Localizable", "login_ConfirmCode_subtitle", fallback: "Enter the passcode sent to %1$s")
+      static func subtitle(_ p0: String) -> String {
+          tr("Localizable", "login_ConfirmCode_subtitle", p0, fallback: "Enter the passcode sent to %1$s")
+      }
       static let title = tr("Localizable", "login_ConfirmCode_title", fallback: "Enter passcode")
       }
     enum Confirmation {
@@ -1778,7 +1822,7 @@ Contact your Job&Talent account manager to add your hour types. ")
       static let title = tr("Localizable", "manageWorkers_actionButtonForPublishedShift_title", fallback: "Notify assigned people")
       }
     enum AvailableWorker {
-      static func description(_ p0: Int64) -> String {
+      static func description(_ p0: Int) -> String {
           tr("Localizable", "manageWorkers_availableWorker_description", p0, fallback: "%d people available for this shift")
       }
       }
@@ -2082,7 +2126,7 @@ Contact your Job&Talent account manager to add your hour types. ")
       static let title = tr("Localizable", "planningShiftDetails_workersAttendanceList_title", fallback: "Attendance")
       }
     enum WorkersConfirmedList {
-      static func title(_ p0: Int64) -> String {
+      static func title(_ p0: Int) -> String {
           tr("Localizable", "planningShiftDetails_workersConfirmedList_title", p0, fallback: "%d confirmed")
       }
       }
@@ -2347,7 +2391,7 @@ Contact your Job&Talent account manager to add your hour types. ")
   enum Shift {
     enum Clockings {
       enum Approved {
-        static func label(_ p0: Int64, _ p1: Int64) -> String {
+        static func label(_ p0: Int, _ p1: Int) -> String {
             tr("Localizable", "shift_clockings_approved_label", p0, p1, fallback: "%d/%d clockings approved")
         }
         }
@@ -2757,12 +2801,12 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum NoShows {
       enum Worker {
         static let attendanceRate = tr("Localizable", "stats_noShows_worker_attendanceRate", fallback: "att. rate")
-        static func hoursWorked(_ p0: Int64) -> String {
+        static func hoursWorked(_ p0: Int) -> String {
             tr("Localizable", "stats_noShows_worker_hoursWorked", p0, fallback: "%dh worked")
         }
         static let inactive = tr("Localizable", "stats_noShows_worker_inactive", fallback: "Inactive")
         static let noShows = tr("Localizable", "stats_noShows_worker_noShows", fallback: "No shows")
-        static func numberOfShifts(_ p0: Int64) -> String {
+        static func numberOfShifts(_ p0: Int) -> String {
             tr("Localizable", "stats_noShows_worker_numberOfShifts", p0, fallback: "in %d shifts")
         }
         }
@@ -2774,13 +2818,13 @@ Contact your Job&Talent account manager to add your hour types. ")
       static let title = tr("Localizable", "stats_tab_title", fallback: "Stats")
       }
     enum WorkerFilters {
-      static func assignedFilter(_ p0: Int64) -> String {
+      static func assignedFilter(_ p0: Int) -> String {
           tr("Localizable", "stats_workerFilters_assignedFilter", p0, fallback: "Assigned (%d)")
       }
-      static func attendedFilter(_ p0: Int64) -> String {
+      static func attendedFilter(_ p0: Int) -> String {
           tr("Localizable", "stats_workerFilters_attendedFilter", p0, fallback: "Attended (%d)")
       }
-      static func noShowsFilter(_ p0: Int64) -> String {
+      static func noShowsFilter(_ p0: Int) -> String {
           tr("Localizable", "stats_workerFilters_noShowsFilter", p0, fallback: "No shows (%d)")
       }
       }
@@ -2814,7 +2858,9 @@ in a couple of minutes.")
           static let requestreceived = tr("Localizable", "teo_chat_freetrial_hint_requestreceived", fallback: "We've received your request. We'll be in touch shortly.")
           }
         }
-      static let greeting = tr("Localizable", "teo_chat_greeting", fallback: "Hey %s, how can I help you?")
+      static func greeting(_ p0: String) -> String {
+          tr("Localizable", "teo_chat_greeting", p0, fallback: "Hey %s, how can I help you?")
+      }
       static let helpyou = tr("Localizable", "teo_chat_helpyou", fallback: "Can I help you with something else?")
       static let internetback = tr("Localizable", "teo_chat_internetback", fallback: "Your connection is back 🛜 ✅.")
       static let noinformation = tr("Localizable", "teo_chat_noinformation", fallback: "I’m sorry but I don’t have that kind of information. ")
@@ -2881,7 +2927,7 @@ in a couple of minutes.")
     }
   enum UserProfile {
     enum AttendanceRatedKpi {
-      static func amount(_ p0: Int64) -> String {
+      static func amount(_ p0: Int) -> String {
           tr("Localizable", "userProfile_attendanceRatedKpi_amount", p0, fallback: "%d shifts - last 30 days")
       }
       static let badHint = tr("Localizable", "userProfile_attendanceRatedKpi_badHint", fallback: "To improve this rate, try assigning people with higher response rates and attendance scores. You can also encourage people to use the app to confirm shifts and then actually attend.")
@@ -2929,10 +2975,10 @@ in a couple of minutes.")
       static let attendance = tr("Localizable", "userProfile_kpis_attendance", fallback: "Attendance")
       static let noRatings = tr("Localizable", "userProfile_kpis_noRatings", fallback: "No ratings yet")
       static let noShifts = tr("Localizable", "userProfile_kpis_noShifts", fallback: "No shifts yet")
-      static func numberOfPeople(_ p0: Int64) -> String {
+      static func numberOfPeople(_ p0: Int) -> String {
           tr("Localizable", "userProfile_kpis_numberOfPeople", p0, fallback: "%d people")
       }
-      static func numberOfRatings(_ p0: Int64) -> String {
+      static func numberOfRatings(_ p0: Int) -> String {
           tr("Localizable", "userProfile_kpis_numberOfRatings", p0, fallback: "%d ratings")
       }
       static func numberOfShifts(_ localized_format_key: Int) -> String {
@@ -2942,7 +2988,7 @@ in a couple of minutes.")
       static let satisfaction = tr("Localizable", "userProfile_kpis_satisfaction", fallback: "Satisfaction")
       }
     enum PeopleRatedKpi {
-      static func amount(_ p0: Int64) -> String {
+      static func amount(_ p0: Int) -> String {
           tr("Localizable", "userProfile_peopleRatedKpi_amount", p0, fallback: "%d people - last 30 days")
       }
       static let badHint = tr("Localizable", "userProfile_peopleRatedKpi_badHint", fallback: "You have room to improve. Be sure to give ratings each shift. It’ll boost performance.")
@@ -2964,9 +3010,13 @@ in a couple of minutes.")
   enum VacancyRequestDetails {
     static let contractJustification = tr("Localizable", "vacancyRequestDetails_contractJustification", fallback: "Contract justification")
     static let contractType = tr("Localizable", "vacancyRequestDetails_contractType", fallback: "Contract type")
-    static let createdOn = tr("Localizable", "vacancyRequestDetails_createdOn", fallback: "Created on %s")
+    static func createdOn(_ p0: String) -> String {
+        tr("Localizable", "vacancyRequestDetails_createdOn", p0, fallback: "Created on %s")
+    }
     static let dates = tr("Localizable", "vacancyRequestDetails_dates", fallback: "Dates")
-    static let id = tr("Localizable", "vacancyRequestDetails_id", fallback: "ID %s")
+    static func id(_ p0: String) -> String {
+        tr("Localizable", "vacancyRequestDetails_id", p0, fallback: "ID %s")
+    }
     enum NewRequestError {
       static let description = tr("Localizable", "vacancyRequestDetails_newRequestError_description", fallback: "We're sorry, there was an error. Please try again.")
       static let title = tr("Localizable", "vacancyRequestDetails_newRequestError_title", fallback: "Request not sent")
@@ -3000,7 +3050,7 @@ in a couple of minutes.")
   enum Virtual {
     enum Ongoing {
       enum Shift {
-        static func title(_ p0: Int64) -> String {
+        static func title(_ p0: Int) -> String {
             tr("Localizable", "virtual_ongoing_shift_title", p0, fallback: "%d unassigned workers")
         }
         }
@@ -3312,7 +3362,7 @@ in a couple of minutes.")
     }
   enum WorkerSatisfaction {
     static let description = tr("Localizable", "workerSatisfaction_description", fallback: "This shows the average satisfaction rating people have given your shifts.")
-    static func numberOfRatings(_ p0: Int64) -> String {
+    static func numberOfRatings(_ p0: Int) -> String {
         tr("Localizable", "workerSatisfaction_numberOfRatings", p0, fallback: "%d ratings")
     }
     static let title = tr("Localizable", "workerSatisfaction_title", fallback: "Worker satisfaction")
