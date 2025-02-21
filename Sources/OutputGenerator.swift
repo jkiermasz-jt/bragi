@@ -116,7 +116,7 @@ struct OutputGenerator {
             return """
             
             \(indent)static func \(propertyName)(\(parametersList)) -> String {
-            \(indent)    tr("\(data.table)", "\(key)", \(argumentsList), fallback: "\(data.formatString)")
+            \(indent)    tr("\(data.table)", "\(key)", \(argumentsList), fallback: "\(data.fallbackFormat)")
             \(indent)}
             """
         }
@@ -171,5 +171,16 @@ struct OutputGenerator {
         }
         
         """
+    }
+}
+
+private extension PluralizedTranslationData {
+    var fallbackFormat: String {
+        // Use the "other" variant from the first variable as fallback
+        guard let firstVariable = variables.values.first,
+              let otherVariant = firstVariable.variants[.other] else {
+            return formatString // Fallback to formatString if no "other" variant found
+        }
+        return otherVariant
     }
 }
