@@ -31,7 +31,9 @@ struct Bragi: ParsableCommand {
     let translations = try parser.parseDirectory(at: lprojPath)
 
     let generator = OutputGenerator()
-    try generator.generate(translations: translations, to: outputPath)
+    let content = generator.generate(translations: translations)
+
+    try content.write(toFile: outputPath, atomically: true, encoding: .utf8)
 
     print("Successfully generated localizations to: \(outputPath)")
   }

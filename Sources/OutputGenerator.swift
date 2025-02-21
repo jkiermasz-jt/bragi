@@ -4,7 +4,7 @@ struct OutputGenerator {
   private let parameterExtractor: FormatParameterExtractor
   private let namespaceManager: NamespaceManager
   private let codeGenerator: CodeGenerator
-  
+
   init(
     parameterExtractor: FormatParameterExtractor = FormatParameterExtractor(),
     namespaceManager: NamespaceManager = NamespaceManager(),
@@ -15,7 +15,7 @@ struct OutputGenerator {
     self.codeGenerator = codeGenerator
   }
 
-  func generate(translations: [Translation], to path: String) throws {
+  func generate(translations: [Translation]) -> String {
     var content = """
     // Generated using Bragi - do not edit directly
 
@@ -27,7 +27,7 @@ struct OutputGenerator {
     content += "\n}\n"
     content += implementationDetails()
 
-    try content.write(toFile: path, atomically: true, encoding: .utf8)
+    return content
   }
 
   private func generateTranslations(_ translations: [Translation]) -> String {
@@ -41,7 +41,7 @@ struct OutputGenerator {
       while !currentNamespaces.isEmpty, !components.starts(with: currentNamespaces) {
         content += """
 
-        \(namespaceManager.indent(currentNamespaces.count + 1))}
+        \(namespaceManager.indentForClosingBracket(level: currentNamespaces.count + 1))}
         """
         currentNamespaces.removeLast()
       }
@@ -66,7 +66,7 @@ struct OutputGenerator {
     while !currentNamespaces.isEmpty {
       content += """
 
-      \(namespaceManager.indent(currentNamespaces.count + 1))}
+      \(namespaceManager.indentForClosingBracket(level: currentNamespaces.count + 1))}
       """
       currentNamespaces.removeLast()
     }
@@ -76,8 +76,9 @@ struct OutputGenerator {
 
   private func createTranslationAnchor(from translation: Translation) -> TranslationAnchor {
     let components = translation.key.components(separatedBy: Configuration.keySeparator)
-    let name = components.last ?? translation.key
-    
+    let lastComponent = components.last ?? translation.key
+    let name = lastComponent.prefix(1).lowercased() + lastComponent.dropFirst()
+
     switch translation {
     case .singular(let data):
       return TranslationAnchor(
