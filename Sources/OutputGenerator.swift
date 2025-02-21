@@ -1,6 +1,20 @@
 import Foundation
 
 struct OutputGenerator {
+  private let parameterExtractor: FormatParameterExtractor
+  private let namespaceManager: NamespaceManager
+  private let codeGenerator: CodeGenerator
+  
+  init(
+    parameterExtractor: FormatParameterExtractor = FormatParameterExtractor(),
+    namespaceManager: NamespaceManager = NamespaceManager(),
+    codeGenerator: CodeGenerator = CodeGenerator()
+  ) {
+    self.parameterExtractor = parameterExtractor
+    self.namespaceManager = namespaceManager
+    self.codeGenerator = codeGenerator
+  }
+
   func generate(translations: [Translation], to path: String) throws {
     var content = """
     // Generated using Bragi - do not edit directly
@@ -16,10 +30,6 @@ struct OutputGenerator {
     try content.write(toFile: path, atomically: true, encoding: .utf8)
   }
 
-  private func indent(_ level: Int) -> String {
-    String(repeating: " ", count: level * Configuration.indentation)
-  }
-
   private func generateTranslations(_ translations: [Translation]) -> String {
     var content = ""
     var currentNamespaces: [String] = []
@@ -31,7 +41,7 @@ struct OutputGenerator {
       while !currentNamespaces.isEmpty, !components.starts(with: currentNamespaces) {
         content += """
 
-        \(indent(currentNamespaces.count + 1))}
+        \(namespaceManager.indent(currentNamespaces.count + 1))}
         """
         currentNamespaces.removeLast()
       }
@@ -43,19 +53,20 @@ struct OutputGenerator {
           let namespaceName = component.prefix(1).uppercased() + component.dropFirst()
           content += """
 
-          \(indent(index + 1))enum \(namespaceName) {
+          \(namespaceManager.indent(index + 1))enum \(namespaceName) {
           """
           currentNamespaces.append(component)
         }
       }
 
-      content += generateTranslationAnchor(translation, indent: indent(components.count))
+      let anchor = createTranslationAnchor(from: translation)
+      content += codeGenerator.generateAnchor(anchor, indentLevel: components.count)
     }
 
     while !currentNamespaces.isEmpty {
       content += """
 
-      \(indent(currentNamespaces.count + 1))}
+      \(namespaceManager.indent(currentNamespaces.count + 1))}
       """
       currentNamespaces.removeLast()
     }
@@ -63,68 +74,27 @@ struct OutputGenerator {
     return content
   }
 
-  private func generateTranslationAnchor(_ translation: Translation, indent: String) -> String {
+  private func createTranslationAnchor(from translation: Translation) -> TranslationAnchor {
+    let components = translation.key.components(separatedBy: Configuration.keySeparator)
+    let name = components.last ?? translation.key
+    
     switch translation {
     case .singular(let data):
-      let key = data.key
-      let value = data.value
-      let nameComponents = key.components(separatedBy: Configuration.keySeparator)
-      let propertyName = nameComponents.last ?? key
-
-      let parameters = extractParameters(from: value)
-
-      if parameters.isEmpty {
-        return """
-
-        \(indent)static let \(propertyName) = tr("\(data.table)", "\(key)", fallback: "\(value)")
-        """
-      } else {
-        let parametersList = parameters.enumerated().map { index, type in
-          "_ p\(index): \(type)"
-        }.joined(separator: ", ")
-
-        let argumentsList = parameters.enumerated().map { index, type in
-          type == "Any" ? "String(describing: p\(index))" : "p\(index)"
-        }.joined(separator: ", ")
-
-        return """
-
-        \(indent)static func \(propertyName)(\(parametersList)) -> String {
-        \(indent)    tr("\(data.table)", "\(key)", \(argumentsList), fallback: "\(value)")
-        \(indent)}
-        """
-      }
+      return TranslationAnchor(
+        name: name,
+        table: data.table,
+        key: data.key,
+        parameters: parameterExtractor.extractParameters(from: translation),
+        fallback: data.value
+      )
     case .plural(let data):
-      let key = data.key
-      let nameComponents = key.components(separatedBy: Configuration.keySeparator)
-      let propertyName = nameComponents.last ?? key
-
-      let parametersList = data.variables.values.map { variable in
-        "_ \(variable.name): \(swiftType(for: variable.formatValueType))"
-      }.joined(separator: ", ")
-
-      let argumentsList = data.variables.values.map(\.name).joined(separator: ", ")
-
-      return """
-
-      \(indent)static func \(propertyName)(\(parametersList)) -> String {
-      \(indent)    tr("\(data.table)", "\(key)", \(argumentsList), fallback: "\(data.fallbackFormat)")
-      \(indent)}
-      """
-    }
-  }
-
-  private func extractParameters(from value: String) -> [String] {
-    (try? FormatSpecifier.parse(from: value).map(\.swiftType)) ?? []
-  }
-
-  private func swiftType(for formatType: String) -> String {
-    switch formatType {
-    case "d", "u": "Int"
-    case "ld", "lu": "Int64"
-    case "f": "Double"
-    case "@": "String"
-    default: "Any"
+      return TranslationAnchor(
+        name: name,
+        table: data.table,
+        key: data.key,
+        parameters: parameterExtractor.extractParameters(from: translation),
+        fallback: data.fallbackFormat
+      )
     }
   }
 
