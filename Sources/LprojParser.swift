@@ -13,24 +13,28 @@ struct LprojParser {
         // Parse .strings files
         for fileName in stringsFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
-            if let dict = NSDictionary(contentsOfFile: filePath) as? [String: String] {
-                let table = (fileName as NSString).deletingPathExtension
-                let fileTranslations = dict.map { createSingularTranslation(key: $0, value: $1, table: table) }
-                translations.append(contentsOf: fileTranslations)
+            guard let dict = NSDictionary(contentsOfFile: filePath) as? [String: String] else {
+                throw ParsingError.invalidFileFormat(path: filePath)
             }
+            let table = (fileName as NSString).deletingPathExtension
+            let fileTranslations = dict.map { createSingularTranslation(key: $0, value: $1, table: table) }
+            translations.append(contentsOf: fileTranslations)
         }
         
         // Parse .stringsdict files
         for fileName in stringsDictFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
-            if let dict = NSDictionary(contentsOfFile: filePath) as? [String: Any] {
-                let table = (fileName as NSString).deletingPathExtension
-                let fileTranslations = try dict.compactMap { key, value -> Translation? in
-                    guard let pluralDict = value as? [String: Any] else { return nil }
-                    return try createPluralTranslation(key: key, dict: pluralDict, table: table)
-                }
-                translations.append(contentsOf: fileTranslations)
+            guard let dict = NSDictionary(contentsOfFile: filePath) as? [String: Any] else {
+                throw ParsingError.invalidFileFormat(path: filePath)
             }
+            let table = (fileName as NSString).deletingPathExtension
+            let fileTranslations = try dict.compactMap { key, value -> Translation? in
+                guard let pluralDict = value as? [String: Any] else {
+                    throw ParsingError.invalidPluralDictionary(key: key, missingKeys: ["root dictionary"])
+                }
+                return try createPluralTranslation(key: key, dict: pluralDict, table: table)
+            }
+            translations.append(contentsOf: fileTranslations)
         }
         
         // Sort translations by their full key path
@@ -44,20 +48,28 @@ struct LprojParser {
     }
     
     private func createPluralTranslation(key: String, dict: [String: Any], table: String) throws -> Translation {
+        // Check required key
+        if dict["NSStringLocalizedFormatKey"] == nil {
+            throw ParsingError.invalidPluralDictionary(key: key, missingKeys: ["NSStringLocalizedFormatKey"])
+        }
+        
         guard let formatString = dict["NSStringLocalizedFormatKey"] as? String else {
-            throw ParsingError.missingFormatString(key: key)
+            throw ParsingError.invalidPluralDictionary(key: key, missingKeys: ["NSStringLocalizedFormatKey (invalid type)"])
         }
         
         var variables: [String: PluralVariable] = [:]
         
         // Process each variable in the plural dictionary
         for (varName, varDict) in dict {
+            guard varName != "NSStringLocalizedFormatKey" else { continue }
+            
             guard 
-                varName != "NSStringLocalizedFormatKey",
                 let variableDict = varDict as? [String: Any],
                 let formatSpecType = variableDict["NSStringFormatSpecTypeKey"] as? String,
                 let formatValueType = variableDict["NSStringFormatValueTypeKey"] as? String
-            else { continue }
+            else {
+                throw ParsingError.invalidVariableFormat(variableName: varName, key: key)
+            }
             
             var variants: [PluralVariant: String] = [:]
             
@@ -68,7 +80,9 @@ struct LprojParser {
                 }
             }
             
-            guard !variants.isEmpty else { continue }
+            if variants.isEmpty {
+                throw ParsingError.emptyVariants(variableName: varName, key: key)
+            }
             
             let variable = PluralVariable(
                 name: varName,
@@ -112,6 +126,10 @@ extension LprojParser {
     enum ParsingError: LocalizedError {
         case missingFormatString(key: String)
         case noValidVariables(key: String)
+        case invalidPluralDictionary(key: String, missingKeys: [String])
+        case invalidVariableFormat(variableName: String, key: String)
+        case emptyVariants(variableName: String, key: String)
+        case invalidFileFormat(path: String)
         
         var errorDescription: String? {
             switch self {
@@ -119,6 +137,14 @@ extension LprojParser {
                 return "Missing NSStringLocalizedFormatKey for key: \(key)"
             case .noValidVariables(let key):
                 return "No valid plural variables found for key: \(key)"
+            case .invalidPluralDictionary(let key, let missingKeys):
+                return "Invalid plural dictionary for key '\(key)'. Missing required keys: \(missingKeys.joined(separator: ", "))"
+            case .invalidVariableFormat(let varName, let key):
+                return "Invalid format for variable '\(varName)' in key '\(key)'. Missing NSStringFormatSpecTypeKey or NSStringFormatValueTypeKey"
+            case .emptyVariants(let varName, let key):
+                return "No plural variants found for variable '\(varName)' in key '\(key)'"
+            case .invalidFileFormat(let path):
+                return "Invalid file format at path: \(path)"
             }
         }
     }
