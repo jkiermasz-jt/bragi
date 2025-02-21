@@ -81,7 +81,7 @@ struct OutputGenerator {
                 // Generate constant for parameterless translations
                 return """
                 
-                \(indent)static let \(propertyName) = tr("Localizable", "\(key)", fallback: "\(value)")
+                \(indent)static let \(propertyName) = tr("\(data.table)", "\(key)", fallback: "\(value)")
                 """
             } else {
                 // Generate function with typed parameters
@@ -96,7 +96,7 @@ struct OutputGenerator {
                 return """
                 
                 \(indent)static func \(propertyName)(\(parametersList)) -> String {
-                \(indent)    tr("Localizable", "\(key)", \(argumentsList), fallback: "\(value)")
+                \(indent)    tr("\(data.table)", "\(key)", \(argumentsList), fallback: "\(value)")
                 \(indent)}
                 """
             }
@@ -116,7 +116,7 @@ struct OutputGenerator {
             return """
             
             \(indent)static func \(propertyName)(\(parametersList)) -> String {
-            \(indent)    tr("Localizable", "\(key)", \(argumentsList), fallback: "\(data.formatString)")
+            \(indent)    tr("\(data.table)", "\(key)", \(argumentsList), fallback: "\(data.formatString)")
             \(indent)}
             """
         }

@@ -13,7 +13,7 @@ enum L10n {
             static let noconflicts = tr("Localizable", "absence_conflicts_manageshifts_bottomsheet_subtitle_noconflicts", fallback: "All people are available for the shifts assigned")
             }
           static func title(_ localized_format_key: Int) -> String {
-              tr("Localizable", "absence_conflicts_manageshifts_bottomsheet_title", localized_format_key, fallback: "%#@localized_format_key@")
+              tr("Plurals", "absence_conflicts_manageshifts_bottomsheet_title", localized_format_key, fallback: "%#@localized_format_key@")
           }
           enum Title {
             static let noconflicts = tr("Localizable", "absence_conflicts_manageshifts_bottomsheet_title_noconflicts", fallback: "No conflicts")
@@ -490,7 +490,7 @@ Please try again.")
       }
     static let selectAll = tr("Localizable", "clockingShiftDetails_selectAll", fallback: "Select all")
     static func title(_ localized_format_key: Int) -> String {
-        tr("Localizable", "clockingShiftDetails_title", localized_format_key, fallback: "%#@localized_format_key@")
+        tr("Plurals", "clockingShiftDetails_title", localized_format_key, fallback: "%#@localized_format_key@")
     }
     static let unselectAll = tr("Localizable", "clockingShiftDetails_unselectAll", fallback: "Unselect all")
     enum Worker {
@@ -714,7 +714,7 @@ Contact your Job&Talent account manager to add your hour types. ")
       }
     static let day = tr("Localizable", "common_day", fallback: "day")
     static func days(_ localized_format_key: Int) -> String {
-        tr("Localizable", "common_days", localized_format_key, fallback: "%#@localized_format_key@")
+        tr("Plurals", "common_days", localized_format_key, fallback: "%#@localized_format_key@")
     }
     static let deactivated = tr("Localizable", "common_deactivated", fallback: "Deactivated")
     static let done = tr("Localizable", "common_done", fallback: "Done")
@@ -751,7 +751,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     static let from = tr("Localizable", "common_from", fallback: "From")
     static let gotit = tr("Localizable", "common_gotit", fallback: "Got it")
     static func hours(_ localized_format_key: Int) -> String {
-        tr("Localizable", "common_hours", localized_format_key, fallback: "%#@localized_format_key@")
+        tr("Plurals", "common_hours", localized_format_key, fallback: "%#@localized_format_key@")
     }
     enum Leave {
       static let confirm = tr("Localizable", "common_leave_confirm", fallback: "Leave")
@@ -761,10 +761,10 @@ Contact your Job&Talent account manager to add your hour types. ")
     static let max = tr("Localizable", "common_max", fallback: "max")
     static let min = tr("Localizable", "common_min", fallback: "min")
     static func mins(_ localized_format_key: Int) -> String {
-        tr("Localizable", "common_mins", localized_format_key, fallback: "%#@localized_format_key@")
+        tr("Plurals", "common_mins", localized_format_key, fallback: "%#@localized_format_key@")
     }
     static func minutes(_ localized_format_key: Int) -> String {
-        tr("Localizable", "common_minutes", localized_format_key, fallback: "%#@localized_format_key@")
+        tr("Plurals", "common_minutes", localized_format_key, fallback: "%#@localized_format_key@")
     }
     static let never = tr("Localizable", "common_never", fallback: "Never")
     static let no = tr("Localizable", "common_no", fallback: "No")
@@ -884,7 +884,7 @@ Contact your Job&Talent account manager to add your hour types. ")
           enum Snackbar {
             static let description = tr("Localizable", "createShift_operation_in_progress_snackbar_description", fallback: "Remember to publish it to notify everyone that they’re working. ")
             static func title(_ localized_format_key: Int) -> String {
-                tr("Localizable", "createShift_operation_in_progress_snackbar_title", localized_format_key, fallback: "%#@localized_format_key@")
+                tr("Plurals", "createShift_operation_in_progress_snackbar_title", localized_format_key, fallback: "%#@localized_format_key@")
             }
             }
           }
@@ -901,10 +901,10 @@ Contact your Job&Talent account manager to add your hour types. ")
       }
     enum RepeatEvery {
       static func months(_ localized_format_key: Int) -> String {
-          tr("Localizable", "createShift_repeatEvery_months", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "createShift_repeatEvery_months", localized_format_key, fallback: "%#@localized_format_key@")
       }
       static func weeks(_ localized_format_key: Int) -> String {
-          tr("Localizable", "createShift_repeatEvery_weeks", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "createShift_repeatEvery_weeks", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     enum RepeatEveryDialog {
@@ -1021,7 +1021,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     static let attendedWorkersEmptyHint = tr("Localizable", "dayDetails_attendedWorkersEmptyHint", fallback: "People who attend will appear here after the shifts start.")
     enum BulkApproval {
       static func title(_ localized_format_key: Int) -> String {
-          tr("Localizable", "dayDetails_bulkApproval_title", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "dayDetails_bulkApproval_title", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     static let noShowWorkersEmptyHint = tr("Localizable", "dayDetails_noShowWorkersEmptyHint", fallback: "No shows will appear here if you have any after the shifts start.")
@@ -1229,7 +1229,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         static let title = tr("Localizable", "filter_supervisor_bottomsheet_title", fallback: "Filters")
         enum Title {
           static func selected(_ localized_format_key: Int) -> String {
-              tr("Localizable", "filter_supervisor_bottomsheet_title_selected", localized_format_key, fallback: "%#@localized_format_key@")
+              tr("Plurals", "filter_supervisor_bottomsheet_title_selected", localized_format_key, fallback: "%#@localized_format_key@")
           }
           }
         }
@@ -1905,7 +1905,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum Shiftdetail {
       enum Invited {
         static func title(_ localized_format_key: Int) -> String {
-            tr("Localizable", "openinvites_shiftdetail_invited_title", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "openinvites_shiftdetail_invited_title", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       }
@@ -2018,7 +2018,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum WorkerAssignments {
       static let manageShifts = tr("Localizable", "peoplePlanning_workerAssignments_manageShifts", fallback: "Manage shifts")
       static func shifts(_ localized_format_key: Int) -> String {
-          tr("Localizable", "peoplePlanning_workerAssignments_shifts", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "peoplePlanning_workerAssignments_shifts", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     }
@@ -2088,7 +2088,7 @@ Contact your Job&Talent account manager to add your hour types. ")
       }
     enum WorkersInvitedList {
       static func title(_ localized_format_key: Int) -> String {
-          tr("Localizable", "planningShiftDetails_workersInvitedList_title", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "planningShiftDetails_workersInvitedList_title", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     enum WorkersNotifiedList {
@@ -2139,7 +2139,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum Confirmation {
       static let button = tr("Localizable", "publishBulkShifts_confirmation_button", fallback: "Yes, publish")
       static func description(_ localized_format_key: Int) -> String {
-          tr("Localizable", "publishBulkShifts_confirmation_description", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "publishBulkShifts_confirmation_description", localized_format_key, fallback: "%#@localized_format_key@")
       }
       static let hint = tr("Localizable", "publishBulkShifts_confirmation_hint", fallback: "Some shifts in the selected days are not publishable. Make sure that all shifts are assigned.")
       enum Title {
@@ -2532,7 +2532,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum CreateShift {
       enum WorkersPicker {
         static func title(_ localized_format_key: Int) -> String {
-            tr("Localizable", "shiftInvitations_createShift_workersPicker_title", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "shiftInvitations_createShift_workersPicker_title", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       }
@@ -2555,7 +2555,7 @@ Contact your Job&Talent account manager to add your hour types. ")
     enum ShiftDetails {
       enum DeleteDialog {
         static func description(_ localized_format_key: Int) -> String {
-            tr("Localizable", "shiftInvitations_shiftDetails_deleteDialog_description", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "shiftInvitations_shiftDetails_deleteDialog_description", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       enum DeleteFailure {
@@ -2593,7 +2593,7 @@ Contact your Job&Talent account manager to add your hour types. ")
       enum InvitesSentSuccessfully {
         static let subtitle = tr("Localizable", "shiftInvitations_shiftDetails_invitesSentSuccessfully_subtitle", fallback: "We're notified these people.")
         static func title(_ localized_format_key: Int) -> String {
-            tr("Localizable", "shiftInvitations_shiftDetails_invitesSentSuccessfully_title", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "shiftInvitations_shiftDetails_invitesSentSuccessfully_title", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       enum Panic {
@@ -2621,7 +2621,7 @@ Contact your Job&Talent account manager to add your hour types. ")
         }
       enum SavedSnackBar {
         static func description(_ localized_format_key: Int) -> String {
-            tr("Localizable", "shiftList_optimisticCreation_savedSnackBar_description", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "shiftList_optimisticCreation_savedSnackBar_description", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       }
@@ -2936,7 +2936,7 @@ in a couple of minutes.")
           tr("Localizable", "userProfile_kpis_numberOfRatings", p0, fallback: "%d ratings")
       }
       static func numberOfShifts(_ localized_format_key: Int) -> String {
-          tr("Localizable", "userProfile_kpis_numberOfShifts", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "userProfile_kpis_numberOfShifts", localized_format_key, fallback: "%#@localized_format_key@")
       }
       static let peopleRated = tr("Localizable", "userProfile_kpis_peopleRated", fallback: "People rated")
       static let satisfaction = tr("Localizable", "userProfile_kpis_satisfaction", fallback: "Satisfaction")
@@ -2989,7 +2989,7 @@ in a couple of minutes.")
     static let hint = tr("Localizable", "vacancyRequests_hint", fallback: "Requests appear here once we start working on them. If you need to know the status of a request, please contact your Job&Talent account manager.")
     enum JobCard {
       static func peopleNeeded(_ localized_format_key: Int) -> String {
-          tr("Localizable", "vacancyRequests_jobCard_peopleNeeded", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "vacancyRequests_jobCard_peopleNeeded", localized_format_key, fallback: "%#@localized_format_key@")
       }
       static func startToFinish(_ p0: String, _ p1: String) -> String {
           tr("Localizable", "vacancyRequests_jobCard_startToFinish", p0, p1, fallback: "%@ to %@")
@@ -3220,7 +3220,7 @@ in a couple of minutes.")
       enum Success {
         static let description = tr("Localizable", "workerDetail_assignmentSnackbar_success_description", fallback: "We’ll notify people about published shifts, so they can accept or reject them. Remember that anyone who’s unavailable for the selected shifts will not be assigned.")
         static func title(_ localized_format_key: Int) -> String {
-            tr("Localizable", "workerDetail_assignmentSnackbar_success_title", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "workerDetail_assignmentSnackbar_success_title", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       }
@@ -3228,13 +3228,13 @@ in a couple of minutes.")
   enum WorkerDetails {
     enum AttendanceKpi {
       static func footer(_ localized_format_key: Int) -> String {
-          tr("Localizable", "workerDetails_attendanceKpi_footer", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "workerDetails_attendanceKpi_footer", localized_format_key, fallback: "%#@localized_format_key@")
       }
       static let header = tr("Localizable", "workerDetails_attendanceKpi_header", fallback: "Attendance")
       }
     enum HoursWorked {
       static func label(_ localized_format_key: Int) -> String {
-          tr("Localizable", "workerDetails_hoursWorked_label", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "workerDetails_hoursWorked_label", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     enum RatingKpi {
@@ -3345,7 +3345,7 @@ in a couple of minutes.")
       enum Header {
         enum Label {
           static func ratings(_ localized_format_key: Int) -> String {
-              tr("Localizable", "workerprofile_performance_header_label_ratings", localized_format_key, fallback: "%#@localized_format_key@")
+              tr("Plurals", "workerprofile_performance_header_label_ratings", localized_format_key, fallback: "%#@localized_format_key@")
           }
           }
         enum Title {
@@ -3376,7 +3376,7 @@ in a couple of minutes.")
   enum Workers {
     enum ActiveCounter {
       static func label(_ localized_format_key: Int) -> String {
-          tr("Localizable", "workers_activeCounter_label", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "workers_activeCounter_label", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     enum AssignShifts {
@@ -3394,7 +3394,7 @@ in a couple of minutes.")
         }
       enum Shifts {
         static func count(_ localized_format_key: Int) -> String {
-            tr("Localizable", "workers_card_shifts_count", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "workers_card_shifts_count", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       }
@@ -3411,7 +3411,7 @@ in a couple of minutes.")
       }
     enum ResultsCounter {
       static func label(_ localized_format_key: Int) -> String {
-          tr("Localizable", "workers_resultsCounter_label", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "workers_resultsCounter_label", localized_format_key, fallback: "%#@localized_format_key@")
       }
       }
     enum SelectPeople {
@@ -3443,7 +3443,7 @@ in a couple of minutes.")
           }
         enum Suffix {
           static func default(_ localized_format_key: Int) -> String {
-              tr("Localizable", "workers_suggested_dynamicLiquidity_suffix_default", localized_format_key, fallback: "%#@localized_format_key@")
+              tr("Plurals", "workers_suggested_dynamicLiquidity_suffix_default", localized_format_key, fallback: "%#@localized_format_key@")
           }
           static func filtering(_ p0: String) -> String {
               tr("Localizable", "workers_suggested_dynamicLiquidity_suffix_filtering", p0, fallback: "of %@ past workers")
@@ -3453,7 +3453,7 @@ in a couple of minutes.")
         }
       enum Elapsed {
         static func time(_ localized_format_key: Int) -> String {
-            tr("Localizable", "workers_suggested_elapsed_time", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "workers_suggested_elapsed_time", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       enum Empty {
@@ -3494,7 +3494,7 @@ in a couple of minutes.")
         static let unrequested = tr("Localizable", "workers_suggested_filter_unrequested", fallback: "Not requested")
         }
       static func liquidity(_ localized_format_key: Int) -> String {
-          tr("Localizable", "workers_suggested_liquidity", localized_format_key, fallback: "%#@localized_format_key@")
+          tr("Plurals", "workers_suggested_liquidity", localized_format_key, fallback: "%#@localized_format_key@")
       }
       enum Profile {
         enum Action {
@@ -3530,7 +3530,7 @@ in a couple of minutes.")
           static let title = tr("Localizable", "workers_suggested_selection_confirmButton_title", fallback: "Request hiring")
           }
         static func selectedCount(_ localized_format_key: Int) -> String {
-            tr("Localizable", "workers_suggested_selection_selectedCount", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "workers_suggested_selection_selectedCount", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       enum Sort {
@@ -3602,7 +3602,7 @@ in a couple of minutes.")
       static let noRatings = tr("Localizable", "workersDetail_header_noRatings", fallback: "No ratings")
       enum Rating {
         static func description(_ localized_format_key: Int) -> String {
-            tr("Localizable", "workersDetail_header_rating_description", localized_format_key, fallback: "%#@localized_format_key@")
+            tr("Plurals", "workersDetail_header_rating_description", localized_format_key, fallback: "%#@localized_format_key@")
         }
         }
       }

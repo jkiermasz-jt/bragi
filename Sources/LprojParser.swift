@@ -14,7 +14,8 @@ struct LprojParser {
         for fileName in stringsFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
             if let dict = NSDictionary(contentsOfFile: filePath) as? [String: String] {
-                let fileTranslations = dict.map { createSingularTranslation(key: $0, value: $1) }
+                let table = (fileName as NSString).deletingPathExtension
+                let fileTranslations = dict.map { createSingularTranslation(key: $0, value: $1, table: table) }
                 translations.append(contentsOf: fileTranslations)
             }
         }
@@ -23,9 +24,10 @@ struct LprojParser {
         for fileName in stringsDictFiles {
             let filePath = (path as NSString).appendingPathComponent(fileName)
             if let dict = NSDictionary(contentsOfFile: filePath) as? [String: Any] {
+                let table = (fileName as NSString).deletingPathExtension
                 let fileTranslations = try dict.compactMap { key, value -> Translation? in
                     guard let pluralDict = value as? [String: Any] else { return nil }
-                    return try createPluralTranslation(key: key, dict: pluralDict)
+                    return try createPluralTranslation(key: key, dict: pluralDict, table: table)
                 }
                 translations.append(contentsOf: fileTranslations)
             }
@@ -37,11 +39,11 @@ struct LprojParser {
         }
     }
     
-    private func createSingularTranslation(key: String, value: String) -> Translation {
-        .singular(SingularTranslationData(key: key, value: value))
+    private func createSingularTranslation(key: String, value: String, table: String) -> Translation {
+        .singular(SingularTranslationData(key: key, value: value, table: table))
     }
     
-    private func createPluralTranslation(key: String, dict: [String: Any]) throws -> Translation {
+    private func createPluralTranslation(key: String, dict: [String: Any], table: String) throws -> Translation {
         guard let formatString = dict["NSStringLocalizedFormatKey"] as? String else {
             throw ParsingError.missingFormatString(key: key)
         }
@@ -85,7 +87,8 @@ struct LprojParser {
         return .plural(PluralizedTranslationData(
             key: key,
             formatString: formatString,
-            variables: variables
+            variables: variables,
+            table: table
         ))
     }
     
