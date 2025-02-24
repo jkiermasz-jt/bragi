@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag for the release (e.g., v1.0.0)'
+        required: true
+        type: string
+
+jobs:
+  create-release:
+    name: Create Release
+    runs-on: macos-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: '6.0.0'
+
+      - name: Create Tag
+        run: |
+          git tag ${{ github.event.inputs.tag }}
+          git push origin ${{ github.event.inputs.tag }}
+
+      - name: Build Release Binary
+        run: |
+          swift build -c release
+          cd .build/release
+          zip -r bragi-macos.zip bragi
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: .build/release/bragi-macos.zip
+          name: Release ${{ github.event.inputs.tag }}
+          tag_name: ${{ github.event.inputs.tag }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true 
