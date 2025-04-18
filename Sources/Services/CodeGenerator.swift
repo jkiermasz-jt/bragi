@@ -7,11 +7,14 @@ struct CodeGenerator {
 
   func generateAnchor(_ anchor: TranslationAnchor, indentLevel: Int) -> String {
     let indent = namespaceManager.indent(indentLevel)
+    
+    // Escape newline characters in the fallback string
+    let escapedFallback = anchor.fallback.replacingOccurrences(of: "\n", with: "\\n")
 
     if anchor.isConstant {
       return """
 
-      \(indent)static let \(anchor.name) = tr("\(anchor.table)", "\(anchor.key)", fallback: "\(anchor.fallback)")
+      \(indent)static let \(anchor.name) = tr("\(anchor.table)", "\(anchor.key)", fallback: "\(escapedFallback)")
       """
     }
 
@@ -26,7 +29,7 @@ struct CodeGenerator {
     return """
 
     \(indent)static func \(anchor.name)(\(parametersList)) -> String {
-    \(namespaceManager.indent(indentLevel + 1))tr("\(anchor.table)", "\(anchor.key)", \(argumentsList), fallback: "\(anchor.fallback)")
+    \(namespaceManager.indent(indentLevel + 1))tr("\(anchor.table)", "\(anchor.key)", \(argumentsList), fallback: "\(escapedFallback)")
     \(indent)}
     """
   }

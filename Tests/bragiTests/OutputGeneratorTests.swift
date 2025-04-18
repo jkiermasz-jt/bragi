@@ -72,4 +72,19 @@ import Testing
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let hello = tr(\"Localizable\", \"hello\", fallback: \"Hello, World!\")"))
   }
+  
+  @Test func preserveNewlineCharactersInFallbacks() {
+    let generator = OutputGenerator()
+    
+    let translations = [
+      Translation.singular(SingularTranslationData(
+        key: "bulkApprove_unapproveMessage",
+        value: "We could not approve hours for %1$d people. \nTry again?",
+        table: "Localizable"
+      )),
+    ]
+    
+    let output = generator.generate(translations: translations)
+    #expect(output.contains("fallback: \"We could not approve hours for %1$d people. \\nTry again?\""))
+  }
 }
