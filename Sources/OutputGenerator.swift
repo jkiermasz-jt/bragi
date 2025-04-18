@@ -6,26 +6,29 @@ struct OutputGenerator {
   private let codeGenerator: CodeGenerator
   private let enumSanitizer: IdentifierSanitizer
   private let propertySanitizer: IdentifierSanitizer
+  private let accessLevel: Configuration.AccessLevel
 
   init(
     parameterExtractor: FormatParameterExtractor = FormatParameterExtractor(),
     namespaceManager: NamespaceManager = NamespaceManager(),
     codeGenerator: CodeGenerator = CodeGenerator(),
     enumSanitizer: IdentifierSanitizer = IdentifierSanitizer(capitalized: true),
-    propertySanitizer: IdentifierSanitizer = IdentifierSanitizer(capitalized: false)
+    propertySanitizer: IdentifierSanitizer = IdentifierSanitizer(capitalized: false),
+    accessLevel: Configuration.AccessLevel = Configuration.accessLevel
   ) {
     self.parameterExtractor = parameterExtractor
     self.namespaceManager = namespaceManager
     self.codeGenerator = codeGenerator
     self.enumSanitizer = enumSanitizer
     self.propertySanitizer = propertySanitizer
+    self.accessLevel = accessLevel
   }
 
   func generate(translations: [Translation]) -> String {
     var content = """
     // Generated using Bragi - do not edit directly
 
-    enum L10n {
+    \(accessLevel.prefix)enum L10n {
 
     """
 
@@ -59,14 +62,14 @@ struct OutputGenerator {
           let namespaceName = enumSanitizer.sanitize(component)
           content += """
 
-          \(namespaceManager.indent(index + 1))enum \(namespaceName) {
+          \(namespaceManager.indent(index + 1))\(accessLevel.prefix)enum \(namespaceName) {
           """
           currentNamespaces.append(component)
         }
       }
 
       let anchor = createTranslationAnchor(from: translation)
-      content += codeGenerator.generateAnchor(anchor, indentLevel: components.count)
+      content += codeGenerator.generateAnchor(anchor, indentLevel: components.count, accessLevel: accessLevel)
     }
 
     while !currentNamespaces.isEmpty {

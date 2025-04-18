@@ -22,12 +22,12 @@ import Testing
     let expected = """
     // Generated using Bragi - do not edit directly
 
-    enum L10n {
+    public enum L10n {
 
-      enum Absence {
-        enum Conflicts {
-          static let title = tr("Localizable", "Absence_Conflicts_Title", fallback: "Conflicts")
-          static func subtitle(_ p0: Int) -> String {
+      public enum Absence {
+        public enum Conflicts {
+          public static let title = tr("Localizable", "Absence_Conflicts_Title", fallback: "Conflicts")
+          public static func subtitle(_ p0: Int) -> String {
             tr("Localizable", "Absence_Conflicts_Subtitle", p0, fallback: "Found %d conflicts")
           }
         }
@@ -72,7 +72,7 @@ import Testing
     ]
 
     let output = generator.generate(translations: translations)
-    #expect(output.contains("static let hello = tr(\"Localizable\", \"hello\", fallback: \"Hello, World!\")"))
+    #expect(output.contains("public static let hello = tr(\"Localizable\", \"hello\", fallback: \"Hello, World!\")"))
   }
 
   @Test func preserveNewlineCharactersInFallbacks() {
@@ -102,7 +102,7 @@ import Testing
     ]
 
     let output = generator.generate(translations: translations)
-    #expect(output.contains("static let _1star = tr(\"Localizable\", \"ratingsExplanation_list_1star\", fallback:"))
+    #expect(output.contains("public static let _1star = tr(\"Localizable\", \"ratingsExplanation_list_1star\", fallback:"))
   }
 
   @Test func handlePureNumericIdentifiers() {
@@ -117,7 +117,7 @@ import Testing
     ]
 
     let output = generator.generate(translations: translations)
-    #expect(output.contains("static let _401 = tr(\"Localizable\", \"error_401\", fallback: \"Unauthorized\")"))
+    #expect(output.contains("public static let _401 = tr(\"Localizable\", \"error_401\", fallback: \"Unauthorized\")"))
   }
 
   @Test func handleSwiftKeywords() {
@@ -132,7 +132,7 @@ import Testing
     ]
 
     let output = generator.generate(translations: translations)
-    #expect(output.contains("static let `self` = tr(\"Localizable\", \"profile_self\", fallback: \"Your profile\")"))
+    #expect(output.contains("public static let `self` = tr(\"Localizable\", \"profile_self\", fallback: \"Your profile\")"))
   }
 
   @Test func doNotEscapeIdentifiersContainingKeywords() {
@@ -149,8 +149,8 @@ import Testing
     let output = generator.generate(translations: translations)
 
     // Check that "selfie" is not escaped with backticks (it contains "self" but isn't the keyword)
-    #expect(output.contains("static let selfie = tr(\"Localizable\", \"profile_selfie\", fallback: \"Your selfie\")"))
-    #expect(!output.contains("static let `selfie`"))
+    #expect(output.contains("public static let selfie = tr(\"Localizable\", \"profile_selfie\", fallback: \"Your selfie\")"))
+    #expect(!output.contains("public static let `selfie`"))
   }
 
   @Test func handleNumericKeysWithoutPrefix() {
@@ -165,7 +165,7 @@ import Testing
     ]
 
     let output = generator.generate(translations: translations)
-    #expect(output.contains("static let _401 = tr(\"Localizable\", \"Error_401\", fallback: \"Unauthorized\")"))
+    #expect(output.contains("public static let _401 = tr(\"Localizable\", \"Error_401\", fallback: \"Unauthorized\")"))
   }
 
   @Test func handlePureNumericKey() {
@@ -180,7 +180,7 @@ import Testing
     ]
 
     let output = generator.generate(translations: translations)
-    #expect(output.contains("static let _401 = tr(\"Localizable\", \"401\", fallback: \"Unauthorized\")"))
+    #expect(output.contains("public static let _401 = tr(\"Localizable\", \"401\", fallback: \"Unauthorized\")"))
   }
 
   @Test func handleNumericNamespaces() {
@@ -197,9 +197,9 @@ import Testing
     let output = generator.generate(translations: translations)
 
     // Check that numeric namespace "401" is properly sanitized
-    #expect(output.contains("enum _401 {"))
+    #expect(output.contains("public enum _401 {"))
     // And that property "error" is correctly generated
-    #expect(output.contains("static let error = tr(\"Localizable\", \"401_error\", fallback: \"Unauthorized\")"))
+    #expect(output.contains("public static let error = tr(\"Localizable\", \"401_error\", fallback: \"Unauthorized\")"))
   }
 
   @Test func handleKeywordNamespaces() {
@@ -216,11 +216,11 @@ import Testing
     let output = generator.generate(translations: translations)
 
     // Check that keyword namespace "self" is properly escaped
-    #expect(output.contains("enum `Self` {"))
+    #expect(output.contains("public enum `Self` {"))
     // Check for nested namespace
-    #expect(output.contains("enum Profile {"))
+    #expect(output.contains("public enum Profile {"))
     // And that property "title" is correctly generated
-    #expect(output.contains("static let title = tr(\"Localizable\", \"self_profile_title\", fallback: \"My Profile\")"))
+    #expect(output.contains("public static let title = tr(\"Localizable\", \"self_profile_title\", fallback: \"My Profile\")"))
   }
 
   @Test func handleMultipleNumericNamespaces() {
@@ -237,10 +237,10 @@ import Testing
     let output = generator.generate(translations: translations)
 
     // Check that both numeric namespaces are properly sanitized
-    #expect(output.contains("enum _401 {"))
-    #expect(output.contains("enum _404 {"))
+    #expect(output.contains("public enum _401 {"))
+    #expect(output.contains("public enum _404 {"))
     // And that property is correctly generated
-    #expect(output.contains("static let comparison = tr(\"Localizable\", \"401_404_comparison\", fallback: \"Unauthorized vs Not Found\")"))
+    #expect(output.contains("public static let comparison = tr(\"Localizable\", \"401_404_comparison\", fallback: \"Unauthorized vs Not Found\")"))
   }
 
   @Test func handleTypeKeywordInNamespace() {
@@ -257,8 +257,38 @@ import Testing
     let output = generator.generate(translations: translations)
 
     // Check that the "Type" keyword is properly escaped in the namespace
-    #expect(output.contains("enum `Type` {"))
+    #expect(output.contains("public enum `Type` {"))
     // And that the property "description" is correctly generated
-    #expect(output.contains("static let description = tr(\"Localizable\", \"Type_description\", fallback: \"Type description\")"))
+    #expect(output.contains("public static let description = tr(\"Localizable\", \"Type_description\", fallback: \"Type description\")"))
+  }
+
+  @Test func generateWithDifferentAccessLevels() {
+    // Test with internal access level
+    let internalGenerator = OutputGenerator(accessLevel: .internal)
+    let internalTranslations = [
+      Translation.singular(SingularTranslationData(
+        key: "test_key",
+        value: "Internal Test",
+        table: "Localizable"
+      )),
+    ]
+
+    let internalOutput = internalGenerator.generate(translations: internalTranslations)
+    #expect(internalOutput.contains("internal enum L10n {"))
+    #expect(internalOutput.contains("internal static let key = tr(\"Localizable\", \"test_key\", fallback: \"Internal Test\")"))
+
+    // Test with package access level
+    let packageGenerator = OutputGenerator(accessLevel: .package)
+    let packageTranslations = [
+      Translation.singular(SingularTranslationData(
+        key: "test_key",
+        value: "Package Test",
+        table: "Localizable"
+      )),
+    ]
+
+    let packageOutput = packageGenerator.generate(translations: packageTranslations)
+    #expect(packageOutput.contains("package enum L10n {"))
+    #expect(packageOutput.contains("package static let key = tr(\"Localizable\", \"test_key\", fallback: \"Package Test\")"))
   }
 }

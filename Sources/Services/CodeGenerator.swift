@@ -10,7 +10,11 @@ struct CodeGenerator {
     self.identifierSanitizer = identifierSanitizer
   }
 
-  func generateAnchor(_ anchor: TranslationAnchor, indentLevel: Int) -> String {
+  func generateAnchor(
+    _ anchor: TranslationAnchor,
+    indentLevel: Int,
+    accessLevel: Configuration.AccessLevel = Configuration.accessLevel
+  ) -> String {
     let indent = namespaceManager.indent(indentLevel)
 
     // Escape special characters in the fallback string
@@ -24,7 +28,7 @@ struct CodeGenerator {
     if anchor.isConstant {
       return """
 
-      \(indent)static let \(sanitizedName) = tr("\(anchor.table)", "\(anchor.key)", fallback: "\(escapedFallback)")
+      \(indent)\(accessLevel.prefix)static let \(sanitizedName) = tr("\(anchor.table)", "\(anchor.key)", fallback: "\(escapedFallback)")
       """
     }
 
@@ -38,7 +42,7 @@ struct CodeGenerator {
 
     return """
 
-    \(indent)static func \(sanitizedName)(\(parametersList)) -> String {
+    \(indent)\(accessLevel.prefix)static func \(sanitizedName)(\(parametersList)) -> String {
     \(namespaceManager.indent(indentLevel + 1))tr("\(anchor.table)", "\(anchor.key)", \(argumentsList), fallback: "\(escapedFallback)")
     \(indent)}
     """

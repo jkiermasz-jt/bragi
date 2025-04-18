@@ -16,7 +16,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static let title = tr("Localizable", "Common_Alert_Title", fallback: "Alert")
+        public static let title = tr("Localizable", "Common_Alert_Title", fallback: "Alert")
     """)
   }
 
@@ -37,7 +37,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static func message(_ count: Int, _ type: String) -> String {
+        public static func message(_ count: Int, _ type: String) -> String {
           tr("Localizable", "Common_Alert_Message", count, type, fallback: "You have %d new %@ messages")
         }
     """)
@@ -57,7 +57,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static let _1star = tr("Localizable", "ratingsExplanation_list_1star", fallback: "<b>1 star</b> = Their performance was significantly below expectations.")
+        public static let _1star = tr("Localizable", "ratingsExplanation_list_1star", fallback: "<b>1 star</b> = Their performance was significantly below expectations.")
     """)
   }
 
@@ -77,7 +77,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static func _1starDescription(_ name: String) -> String {
+        public static func _1starDescription(_ name: String) -> String {
           tr("Localizable", "ratingsExplanation_list_1starDescription", name, fallback: "<b>1 star</b> = %@ performed significantly below expectations.")
         }
     """)
@@ -97,7 +97,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static let _401 = tr("Localizable", "error_401", fallback: "Unauthorized")
+        public static let _401 = tr("Localizable", "error_401", fallback: "Unauthorized")
     """)
   }
 
@@ -115,7 +115,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static let `self` = tr("Localizable", "profile_self", fallback: "Your profile")
+        public static let `self` = tr("Localizable", "profile_self", fallback: "Your profile")
     """)
   }
 
@@ -133,7 +133,7 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static let selfie = tr("Localizable", "profile_selfie", fallback: "Your selfie")
+        public static let selfie = tr("Localizable", "profile_selfie", fallback: "Your selfie")
     """)
 
     let anchor2 = TranslationAnchor(
@@ -147,7 +147,7 @@ import Testing
     let code2 = generator.generateAnchor(anchor2, indentLevel: 2)
     #expect(code2 == """
 
-        static let notification = tr("Localizable", "profile_notification", fallback: "Notification settings")
+        public static let notification = tr("Localizable", "profile_notification", fallback: "Notification settings")
     """)
   }
 
@@ -167,9 +167,55 @@ import Testing
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
-        static func shift(_ p0: String) -> String {
+        public static func shift(_ p0: String) -> String {
           tr("Localizable", "workerprofile_performance_body_feedback_shift", p0, fallback: "\\\"%@\\\" shift")
         }
+    """)
+  }
+
+  @Test func generateWithDifferentAccessLevels() {
+    let anchor = TranslationAnchor(
+      name: "title",
+      table: "Localizable",
+      key: "Common_Title",
+      parameters: [],
+      fallback: "Common Title"
+    )
+
+    // Test internal access level
+    let internalGenerator = CodeGenerator()
+    let internalCode = internalGenerator.generateAnchor(
+      anchor,
+      indentLevel: 2,
+      accessLevel: .internal
+    )
+    #expect(internalCode == """
+
+        internal static let title = tr("Localizable", "Common_Title", fallback: "Common Title")
+    """)
+
+    // Test package access level
+    let packageGenerator = CodeGenerator()
+    let packageCode = packageGenerator.generateAnchor(
+      anchor,
+      indentLevel: 2,
+      accessLevel: .package
+    )
+    #expect(packageCode == """
+
+        package static let title = tr("Localizable", "Common_Title", fallback: "Common Title")
+    """)
+
+    // Test public access level
+    let publicGenerator = CodeGenerator()
+    let publicCode = publicGenerator.generateAnchor(
+      anchor,
+      indentLevel: 2,
+      accessLevel: .public
+    )
+    #expect(publicCode == """
+
+        public static let title = tr("Localizable", "Common_Title", fallback: "Common Title")
     """)
   }
 }
