@@ -12,12 +12,12 @@ struct CodeGenerator {
 
   func generateAnchor(_ anchor: TranslationAnchor, indentLevel: Int) -> String {
     let indent = namespaceManager.indent(indentLevel)
-    
+
     // Escape special characters in the fallback string
     let escapedFallback = anchor.fallback
       .replacingOccurrences(of: "\n", with: "\\n")
       .replacingOccurrences(of: "\"", with: "\\\"")
-    
+
     // Sanitize name if it's a problematic identifier
     let sanitizedName = identifierSanitizer.sanitize(anchor.name)
 

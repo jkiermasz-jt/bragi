@@ -42,10 +42,10 @@ import Testing
         }
     """)
   }
-  
+
   @Test func sanitizeNumericStartingNames() {
     let generator = CodeGenerator()
-    
+
     let anchor = TranslationAnchor(
       name: "1star",
       table: "Localizable",
@@ -53,27 +53,27 @@ import Testing
       parameters: [],
       fallback: "<b>1 star</b> = Their performance was significantly below expectations."
     )
-    
+
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
         static let _1star = tr("Localizable", "ratingsExplanation_list_1star", fallback: "<b>1 star</b> = Their performance was significantly below expectations.")
     """)
   }
-  
+
   @Test func sanitizeNumericStartingNamesForFunction() {
     let generator = CodeGenerator()
-    
+
     let anchor = TranslationAnchor(
       name: "1starDescription",
       table: "Localizable",
       key: "ratingsExplanation_list_1starDescription",
       parameters: [
-        (name: "name", type: "String")
+        (name: "name", type: "String"),
       ],
       fallback: "<b>1 star</b> = %@ performed significantly below expectations."
     )
-    
+
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
@@ -82,10 +82,10 @@ import Testing
         }
     """)
   }
-  
+
   @Test func sanitizePurelyNumericNames() {
     let generator = CodeGenerator()
-    
+
     let anchor = TranslationAnchor(
       name: "401",
       table: "Localizable",
@@ -93,17 +93,17 @@ import Testing
       parameters: [],
       fallback: "Unauthorized"
     )
-    
+
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
         static let _401 = tr("Localizable", "error_401", fallback: "Unauthorized")
     """)
   }
-  
+
   @Test func sanitizeSwiftKeywords() {
     let generator = CodeGenerator()
-    
+
     let anchor = TranslationAnchor(
       name: "self",
       table: "Localizable",
@@ -111,17 +111,17 @@ import Testing
       parameters: [],
       fallback: "Your profile"
     )
-    
+
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
         static let `self` = tr("Localizable", "profile_self", fallback: "Your profile")
     """)
   }
-  
+
   @Test func doNotSanitizeIdentifiersContainingKeywords() {
     let generator = CodeGenerator()
-    
+
     let anchor = TranslationAnchor(
       name: "selfie",
       table: "Localizable",
@@ -129,13 +129,13 @@ import Testing
       parameters: [],
       fallback: "Your selfie"
     )
-    
+
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 
         static let selfie = tr("Localizable", "profile_selfie", fallback: "Your selfie")
     """)
-    
+
     let anchor2 = TranslationAnchor(
       name: "notification",
       table: "Localizable",
@@ -143,27 +143,27 @@ import Testing
       parameters: [],
       fallback: "Notification settings"
     )
-    
+
     let code2 = generator.generateAnchor(anchor2, indentLevel: 2)
     #expect(code2 == """
 
         static let notification = tr("Localizable", "profile_notification", fallback: "Notification settings")
     """)
   }
-  
+
   @Test func escapeQuotationMarksInFallbacks() {
     let generator = CodeGenerator()
-    
+
     let anchor = TranslationAnchor(
       name: "shift",
       table: "Localizable",
       key: "workerprofile_performance_body_feedback_shift",
       parameters: [
-        (name: "p0", type: "String")
+        (name: "p0", type: "String"),
       ],
       fallback: "\"%@\" shift"
     )
-    
+
     let code = generator.generateAnchor(anchor, indentLevel: 2)
     #expect(code == """
 

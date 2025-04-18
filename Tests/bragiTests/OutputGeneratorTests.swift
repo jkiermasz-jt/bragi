@@ -74,10 +74,10 @@ import Testing
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let hello = tr(\"Localizable\", \"hello\", fallback: \"Hello, World!\")"))
   }
-  
+
   @Test func preserveNewlineCharactersInFallbacks() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "bulkApprove_unapproveMessage",
@@ -85,14 +85,14 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
     #expect(output.contains("fallback: \"We could not approve hours for %1$d people. \\nTry again?\""))
   }
-  
+
   @Test func handleNumericIdentifiers() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "ratingsExplanation_list_1star",
@@ -100,14 +100,14 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let _1star = tr(\"Localizable\", \"ratingsExplanation_list_1star\", fallback:"))
   }
-  
+
   @Test func handlePureNumericIdentifiers() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "error_401",
@@ -115,14 +115,14 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let _401 = tr(\"Localizable\", \"error_401\", fallback: \"Unauthorized\")"))
   }
-  
+
   @Test func handleSwiftKeywords() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "profile_self",
@@ -130,14 +130,14 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let `self` = tr(\"Localizable\", \"profile_self\", fallback: \"Your profile\")"))
   }
-  
+
   @Test func doNotEscapeIdentifiersContainingKeywords() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "profile_selfie",
@@ -145,17 +145,17 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
-    
+
     // Check that "selfie" is not escaped with backticks (it contains "self" but isn't the keyword)
     #expect(output.contains("static let selfie = tr(\"Localizable\", \"profile_selfie\", fallback: \"Your selfie\")"))
     #expect(!output.contains("static let `selfie`"))
   }
-  
+
   @Test func handleNumericKeysWithoutPrefix() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "Error_401",
@@ -163,29 +163,29 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let _401 = tr(\"Localizable\", \"Error_401\", fallback: \"Unauthorized\")"))
   }
-  
+
   @Test func handlePureNumericKey() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
-        key: "401",  // Key is just a number with no namespace
+        key: "401", // Key is just a number with no namespace
         value: "Unauthorized",
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
     #expect(output.contains("static let _401 = tr(\"Localizable\", \"401\", fallback: \"Unauthorized\")"))
   }
-  
+
   @Test func handleNumericNamespaces() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "401_error",
@@ -193,18 +193,18 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
-    
+
     // Check that numeric namespace "401" is properly sanitized
     #expect(output.contains("enum _401 {"))
     // And that property "error" is correctly generated
     #expect(output.contains("static let error = tr(\"Localizable\", \"401_error\", fallback: \"Unauthorized\")"))
   }
-  
+
   @Test func handleKeywordNamespaces() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "self_profile_title",
@@ -212,9 +212,9 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
-    
+
     // Check that keyword namespace "self" is properly escaped
     #expect(output.contains("enum `Self` {"))
     // Check for nested namespace
@@ -222,10 +222,10 @@ import Testing
     // And that property "title" is correctly generated
     #expect(output.contains("static let title = tr(\"Localizable\", \"self_profile_title\", fallback: \"My Profile\")"))
   }
-  
+
   @Test func handleMultipleNumericNamespaces() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "401_404_comparison",
@@ -233,19 +233,19 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
-    
+
     // Check that both numeric namespaces are properly sanitized
     #expect(output.contains("enum _401 {"))
     #expect(output.contains("enum _404 {"))
     // And that property is correctly generated
     #expect(output.contains("static let comparison = tr(\"Localizable\", \"401_404_comparison\", fallback: \"Unauthorized vs Not Found\")"))
   }
-  
+
   @Test func handleTypeKeywordInNamespace() {
     let generator = OutputGenerator()
-    
+
     let translations = [
       Translation.singular(SingularTranslationData(
         key: "Type_description",
@@ -253,9 +253,9 @@ import Testing
         table: "Localizable"
       )),
     ]
-    
+
     let output = generator.generate(translations: translations)
-    
+
     // Check that the "Type" keyword is properly escaped in the namespace
     #expect(output.contains("enum `Type` {"))
     // And that the property "description" is correctly generated
