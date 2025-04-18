@@ -4,7 +4,7 @@ Bragi, named after the Norse god of poetry and eloquence, is a Swift command-lin
 
 ## Installation
 
-The easiest way to install Bragi is to download the pre-built binary from the [Releases](https://github.com/YOUR_REPOSITORY/bragi/releases) page.
+The easiest way to install Bragi is to download the pre-built binary from the [Releases](https://github.com/jkiermasz-jt/bragi/releases) page.
 
 ## Usage
 
