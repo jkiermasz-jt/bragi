@@ -1,20 +1,30 @@
 struct CodeGenerator {
   private let namespaceManager: NamespaceManager
+  private let identifierSanitizer: IdentifierSanitizer
 
-  init(namespaceManager: NamespaceManager = NamespaceManager()) {
+  init(
+    namespaceManager: NamespaceManager = NamespaceManager(),
+    identifierSanitizer: IdentifierSanitizer = IdentifierSanitizer(capitalized: false)
+  ) {
     self.namespaceManager = namespaceManager
+    self.identifierSanitizer = identifierSanitizer
   }
 
   func generateAnchor(_ anchor: TranslationAnchor, indentLevel: Int) -> String {
     let indent = namespaceManager.indent(indentLevel)
     
-    // Escape newline characters in the fallback string
-    let escapedFallback = anchor.fallback.replacingOccurrences(of: "\n", with: "\\n")
+    // Escape special characters in the fallback string
+    let escapedFallback = anchor.fallback
+      .replacingOccurrences(of: "\n", with: "\\n")
+      .replacingOccurrences(of: "\"", with: "\\\"")
+    
+    // Sanitize name if it's a problematic identifier
+    let sanitizedName = identifierSanitizer.sanitize(anchor.name)
 
     if anchor.isConstant {
       return """
 
-      \(indent)static let \(anchor.name) = tr("\(anchor.table)", "\(anchor.key)", fallback: "\(escapedFallback)")
+      \(indent)static let \(sanitizedName) = tr("\(anchor.table)", "\(anchor.key)", fallback: "\(escapedFallback)")
       """
     }
 
@@ -28,7 +38,7 @@ struct CodeGenerator {
 
     return """
 
-    \(indent)static func \(anchor.name)(\(parametersList)) -> String {
+    \(indent)static func \(sanitizedName)(\(parametersList)) -> String {
     \(namespaceManager.indent(indentLevel + 1))tr("\(anchor.table)", "\(anchor.key)", \(argumentsList), fallback: "\(escapedFallback)")
     \(indent)}
     """

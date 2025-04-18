@@ -4,15 +4,21 @@ struct OutputGenerator {
   private let parameterExtractor: FormatParameterExtractor
   private let namespaceManager: NamespaceManager
   private let codeGenerator: CodeGenerator
+  private let enumSanitizer: IdentifierSanitizer
+  private let propertySanitizer: IdentifierSanitizer
 
   init(
     parameterExtractor: FormatParameterExtractor = FormatParameterExtractor(),
     namespaceManager: NamespaceManager = NamespaceManager(),
-    codeGenerator: CodeGenerator = CodeGenerator()
+    codeGenerator: CodeGenerator = CodeGenerator(),
+    enumSanitizer: IdentifierSanitizer = IdentifierSanitizer(capitalized: true),
+    propertySanitizer: IdentifierSanitizer = IdentifierSanitizer(capitalized: false)
   ) {
     self.parameterExtractor = parameterExtractor
     self.namespaceManager = namespaceManager
     self.codeGenerator = codeGenerator
+    self.enumSanitizer = enumSanitizer
+    self.propertySanitizer = propertySanitizer
   }
 
   func generate(translations: [Translation]) -> String {
@@ -50,7 +56,7 @@ struct OutputGenerator {
         if index == lastIndex { break }
 
         if currentNamespaces.count <= index {
-          let namespaceName = component.prefix(1).uppercased() + component.dropFirst()
+          let namespaceName = enumSanitizer.sanitize(component)
           content += """
 
           \(namespaceManager.indent(index + 1))enum \(namespaceName) {
@@ -77,7 +83,7 @@ struct OutputGenerator {
   private func createTranslationAnchor(from translation: Translation) -> TranslationAnchor {
     let components = translation.key.components(separatedBy: Configuration.keySeparator)
     let lastComponent = components.last ?? translation.key
-    let name = lastComponent.prefix(1).lowercased() + lastComponent.dropFirst()
+    let name = lastComponent
 
     switch translation {
     case .singular(let data):
@@ -103,6 +109,8 @@ struct OutputGenerator {
     """
 
     // MARK: - Implementation Details
+
+    import Foundation
 
     extension L10n {
       private static func tr(_ table: String, _ key: String, _ args: CVarArg..., fallback value: String) -> String {
